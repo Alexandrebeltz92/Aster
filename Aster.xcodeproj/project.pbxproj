@@ -23,6 +23,7 @@
 		ACE3603728AEE466002E5897 /* CardBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE3603628AEE466002E5897 /* CardBack.swift */; };
 		ACE3603928B029C9002E5897 /* HomeModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE3603828B029C9002E5897 /* HomeModelView.swift */; };
 		ACE3603B28B02AE2002E5897 /* HoroscopeModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE3603A28B02AE2002E5897 /* HoroscopeModelView.swift */; };
+		ACE3603D28B02C48002E5897 /* TarotCardModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE3603C28B02C48002E5897 /* TarotCardModelView.swift */; };
 		AEE0807E1BF42795405CA705 /* Pods_Aster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D65EC6174C97B474420CEBE /* Pods_Aster.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		ACE3603628AEE466002E5897 /* CardBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBack.swift; sourceTree = "<group>"; };
 		ACE3603828B029C9002E5897 /* HomeModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModelView.swift; sourceTree = "<group>"; };
 		ACE3603A28B02AE2002E5897 /* HoroscopeModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeModelView.swift; sourceTree = "<group>"; };
+		ACE3603C28B02C48002E5897 /* TarotCardModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotCardModelView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 			children = (
 				ACE3603828B029C9002E5897 /* HomeModelView.swift */,
 				ACE3603A28B02AE2002E5897 /* HoroscopeModelView.swift */,
+				ACE3603C28B02C48002E5897 /* TarotCardModelView.swift */,
 			);
 			path = ModelViews;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				AC2ED94128AD90E2007981C3 /* NetworkService.swift in Sources */,
 				ACE3603528AEE445002E5897 /* CardFront.swift in Sources */,
 				AC2ED94D28AE2156007981C3 /* HoroscopeView.swift in Sources */,
+				ACE3603D28B02C48002E5897 /* TarotCardModelView.swift in Sources */,
 				AC2ED93A28AD8CD0007981C3 /* Person.swift in Sources */,
 				AC2ED92928AD8A8B007981C3 /* HomeView.swift in Sources */,
 				AC2ED94928AD91C1007981C3 /* HoroscopeResponse.swift in Sources */,
