@@ -16,8 +16,8 @@ struct HoroscopeView: View {
                 .scaledToFill()
             
             TabView {
-                OnboardCardView()
-                OnboardCardView()
+                OnboardCardViewToday()
+                OnboardCardViewYesterday()
             }
             .tabViewStyle(PageTabViewStyle())
         }
@@ -30,21 +30,39 @@ struct HoroscopeView_Previews: PreviewProvider {
     }
 }
 
-struct OnboardCardView: View {
+struct OnboardCardViewToday: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 60) {
-            Text("Horoscope")
+            Text("Today")
                 .bold()
                 .font(.largeTitle)
-                .foregroundColor(.white)
-            Text("Hola")
+                .foregroundColor(.black)
+            Text("Horoscope of the day")
                 .font(.subheadline)
                 .fontWeight(.semibold)
-                .foregroundColor(.white)
-            Text("JOjo")
+                .foregroundColor(.black)
         }
         .padding(30)
-        .background(LinearGradient(gradient: .init(colors: [Color.blue, Color.white]), startPoint: UnitPoint.top, endPoint: UnitPoint.bottom)).opacity(30)
+        .background(Color.white)
+        .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
+        .padding(20)
+    }
+}
+
+struct OnboardCardViewYesterday: View {
+    var body: some View {
+        VStack(alignment: .leading, spacing: 60) {
+            Text("Yesterday")
+                .bold()
+                .font(.largeTitle)
+                .foregroundColor(.black)
+            Text("Horoscope of yesterday")
+                .font(.subheadline)
+                .fontWeight(.semibold)
+                .foregroundColor(.black)
+        }
+        .padding(30)
+        .background(Color.white)
         .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
         .padding(20)
     }

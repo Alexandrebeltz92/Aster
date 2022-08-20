@@ -11,6 +11,7 @@ struct HomeView: View {
 
     init() {
         UITabBar.appearance().backgroundColor = UIColor.black
+        UITabBar.appearance().unselectedItemTintColor = UIColor.white
     }
 
     var body: some View {
