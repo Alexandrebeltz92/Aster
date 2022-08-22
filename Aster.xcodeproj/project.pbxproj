@@ -131,31 +131,11 @@
 		AC2ED93528AD8BF5007981C3 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				AC2ED93728AD8BFF007981C3 /* ModelViews */,
-				AC2ED93628AD8BF9007981C3 /* Views */,
+				ACE3604028B37167002E5897 /* Tarot */,
+				ACE3603F28B3715A002E5897 /* Horoscope */,
+				ACE3603E28B3714F002E5897 /* Home */,
 			);
 			path = Scenes;
-			sourceTree = "<group>";
-		};
-		AC2ED93628AD8BF9007981C3 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				ACE3603328AEE429002E5897 /* TarotCard */,
-				AC2ED92828AD8A8B007981C3 /* HomeView.swift */,
-				AC2ED94C28AE2156007981C3 /* HoroscopeView.swift */,
-				AC2ED94E28AE2163007981C3 /* TarotCardView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		AC2ED93728AD8BFF007981C3 /* ModelViews */ = {
-			isa = PBXGroup;
-			children = (
-				ACE3603828B029C9002E5897 /* HomeModelView.swift */,
-				ACE3603A28B02AE2002E5897 /* HoroscopeModelView.swift */,
-				ACE3603C28B02C48002E5897 /* TarotCardModelView.swift */,
-			);
-			path = ModelViews;
 			sourceTree = "<group>";
 		};
 		AC2ED93828AD8C15007981C3 /* Ressources */ = {
@@ -192,6 +172,34 @@
 				ACE3603628AEE466002E5897 /* CardBack.swift */,
 			);
 			path = TarotCard;
+			sourceTree = "<group>";
+		};
+		ACE3603E28B3714F002E5897 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				AC2ED92828AD8A8B007981C3 /* HomeView.swift */,
+				ACE3603828B029C9002E5897 /* HomeModelView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		ACE3603F28B3715A002E5897 /* Horoscope */ = {
+			isa = PBXGroup;
+			children = (
+				AC2ED94C28AE2156007981C3 /* HoroscopeView.swift */,
+				ACE3603A28B02AE2002E5897 /* HoroscopeModelView.swift */,
+			);
+			path = Horoscope;
+			sourceTree = "<group>";
+		};
+		ACE3604028B37167002E5897 /* Tarot */ = {
+			isa = PBXGroup;
+			children = (
+				ACE3603328AEE429002E5897 /* TarotCard */,
+				AC2ED94E28AE2163007981C3 /* TarotCardView.swift */,
+				ACE3603C28B02C48002E5897 /* TarotCardModelView.swift */,
+			);
+			path = Tarot;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
