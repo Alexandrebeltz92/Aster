@@ -19,6 +19,7 @@
 		AC2ED94928AD91C1007981C3 /* HoroscopeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2ED94828AD91C1007981C3 /* HoroscopeResponse.swift */; };
 		AC2ED94D28AE2156007981C3 /* HoroscopeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2ED94C28AE2156007981C3 /* HoroscopeView.swift */; };
 		AC2ED94F28AE2163007981C3 /* TarotCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2ED94E28AE2163007981C3 /* TarotCardView.swift */; };
+		ACC6AB7228B6706500096209 /* ProfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC6AB7128B6706500096209 /* ProfilView.swift */; };
 		ACE3603528AEE445002E5897 /* CardFront.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE3603428AEE445002E5897 /* CardFront.swift */; };
 		ACE3603728AEE466002E5897 /* CardBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE3603628AEE466002E5897 /* CardBack.swift */; };
 		ACE3603928B029C9002E5897 /* HomeModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE3603828B029C9002E5897 /* HomeModelView.swift */; };
@@ -44,6 +45,7 @@
 		AC2ED94828AD91C1007981C3 /* HoroscopeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeResponse.swift; sourceTree = "<group>"; };
 		AC2ED94C28AE2156007981C3 /* HoroscopeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeView.swift; sourceTree = "<group>"; };
 		AC2ED94E28AE2163007981C3 /* TarotCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotCardView.swift; sourceTree = "<group>"; };
+		ACC6AB7128B6706500096209 /* ProfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilView.swift; sourceTree = "<group>"; };
 		ACE3603428AEE445002E5897 /* CardFront.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFront.swift; sourceTree = "<group>"; };
 		ACE3603628AEE466002E5897 /* CardBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBack.swift; sourceTree = "<group>"; };
 		ACE3603828B029C9002E5897 /* HomeModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModelView.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 		AC2ED93528AD8BF5007981C3 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				ACC6AB7028B6705700096209 /* Profil */,
 				ACE3604028B37167002E5897 /* Tarot */,
 				ACE3603F28B3715A002E5897 /* Horoscope */,
 				ACE3603E28B3714F002E5897 /* Home */,
@@ -163,6 +166,14 @@
 				AC2ED94828AD91C1007981C3 /* HoroscopeResponse.swift */,
 			);
 			path = HoroscopeService;
+			sourceTree = "<group>";
+		};
+		ACC6AB7028B6705700096209 /* Profil */ = {
+			isa = PBXGroup;
+			children = (
+				ACC6AB7128B6706500096209 /* ProfilView.swift */,
+			);
+			path = Profil;
 			sourceTree = "<group>";
 		};
 		ACE3603328AEE429002E5897 /* TarotCard */ = {
@@ -300,6 +311,7 @@
 			files = (
 				ACE3603728AEE466002E5897 /* CardBack.swift in Sources */,
 				ACE3603928B029C9002E5897 /* HomeModelView.swift in Sources */,
+				ACC6AB7228B6706500096209 /* ProfilView.swift in Sources */,
 				AC2ED94128AD90E2007981C3 /* NetworkService.swift in Sources */,
 				ACE3603528AEE445002E5897 /* CardFront.swift in Sources */,
 				AC2ED94D28AE2156007981C3 /* HoroscopeView.swift in Sources */,
