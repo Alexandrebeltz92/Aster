@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct CardFront: View {
+    @StateObject var viewModel = CardFrontModelView()
+
     let width: CGFloat
     let height: CGFloat
     @Binding var degree: Double
@@ -19,10 +21,13 @@ struct CardFront: View {
                 .frame(width: width, height: height)
                 .shadow(color: .gray, radius: 2, x: 0, y: 0)
 
-            Image(systemName: "suit.club.fill")
+            Image("\(viewModel.tarotCard)")
                 .resizable()
-                .frame(width: 80, height: 80)
-                .foregroundColor(.red)
+                .frame(width: 250, height: 350, alignment: .center)
+                .cornerRadius(20)
+                .onAppear() {
+                    viewModel.getRandomCard()
+                }
         }
         .rotation3DEffect(Angle(degrees: degree), axis: (x: 0, y: 1, z: 0))
     }

@@ -46,7 +46,10 @@ struct TarotCardView: View {
 
             CardFront(width: width, height: height, degree: $frontDegree)
             CardBack(width: width, height: height, degree: $backDegree)
-        }.onTapGesture {
+        }.onDisappear() {
+            flipCard()
+        }
+        .onTapGesture {
             flipCard()
         }
     }

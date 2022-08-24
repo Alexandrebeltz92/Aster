@@ -66,6 +66,7 @@ extension OnboardCardViewYesterday {
                     guard let response = response else {
                         return
                     }
+
                     let horoscope = response.text.replacingOccurrences(of: "<span style=\"font-weight: 400\">", with: "")
                     let newHoroscope = horoscope.replacingOccurrences(of: "</span>", with: "")
 
