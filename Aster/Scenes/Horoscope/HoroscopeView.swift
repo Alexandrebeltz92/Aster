@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct HoroscopeView: View {
+    @StateObject var viewModel = HoroscopeModelView()
+
     var body: some View {
         ZStack {
             Image("background1")
@@ -31,39 +33,51 @@ struct HoroscopeView_Previews: PreviewProvider {
 }
 
 struct OnboardCardViewToday: View {
+    @StateObject var viewModel = OnboardCardModelViewToday()
+
     var body: some View {
         VStack(alignment: .leading, spacing: 60) {
-            Text("Today")
+            Text(viewModel.horoscopeLabelToday)
                 .bold()
                 .font(.largeTitle)
                 .foregroundColor(.black)
-            Text("Horoscope of the day")
+            Text(viewModel.horoscopeOfTheDay)
+                .minimumScaleFactor(0.2)
                 .font(.subheadline)
-                .fontWeight(.semibold)
                 .foregroundColor(.black)
         }
+        .frame(width: 250, height: 350, alignment: .center)
         .padding(30)
         .background(Color.white)
         .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
         .padding(20)
+        .onAppear() {
+            viewModel.getHorosocpe()
+        }
     }
 }
 
 struct OnboardCardViewYesterday: View {
+    @StateObject var viewModel = OnboardCardModelViewYesterday()
+
     var body: some View {
         VStack(alignment: .leading, spacing: 60) {
-            Text("Yesterday")
+            Text(viewModel.horoscopeLabelYesterday)
                 .bold()
                 .font(.largeTitle)
                 .foregroundColor(.black)
-            Text("Horoscope of yesterday")
+            Text(viewModel.horoscopeOfYesterday)
+                .minimumScaleFactor(0.2)
                 .font(.subheadline)
-                .fontWeight(.semibold)
                 .foregroundColor(.black)
         }
+        .frame(width: 250, height: 350, alignment: .center)
         .padding(30)
         .background(Color.white)
         .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
         .padding(20)
+        .onAppear() {
+            viewModel.getHorosocpe()
+        }
     }
 }

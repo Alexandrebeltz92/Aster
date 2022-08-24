@@ -10,8 +10,8 @@ import SwiftUI
 struct HomeView: View {
 
     init() {
-        UITabBar.appearance().backgroundColor = UIColor.black
-        UITabBar.appearance().unselectedItemTintColor = UIColor.white
+        UITabBar.appearance().backgroundColor = UIColor.white
+        UITabBar.appearance().unselectedItemTintColor = UIColor.gray
     }
 
     var body: some View {
@@ -28,6 +28,11 @@ struct HomeView: View {
                 }
         }
         .accentColor(.blue)
+//        .toolbar {
+//            ToolbarItemGroup(placement: .navigationBarTrailing) {
+//                Image(systemName: "person")
+//            }
+//        }
     }
 }
 
