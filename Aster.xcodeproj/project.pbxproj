@@ -21,6 +21,11 @@
 		AC2ED94F28AE2163007981C3 /* TarotCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2ED94E28AE2163007981C3 /* TarotCardView.swift */; };
 		ACBE539928B7672200DFC604 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE539828B7672200DFC604 /* LoginView.swift */; };
 		ACBE53B028BEAD7600DFC604 /* LoginModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE53AF28BEAD7600DFC604 /* LoginModelView.swift */; };
+		ACBE53B228BEB3AD00DFC604 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE53B128BEB3AD00DFC604 /* CoreDataStack.swift */; };
+		ACBE53B528BEB43C00DFC604 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE53B428BEB43C00DFC604 /* CoreDataService.swift */; };
+		ACBE53B728BEB48E00DFC604 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE53B628BEB48E00DFC604 /* Card.swift */; };
+		ACBE53B928BEB51A00DFC604 /* CoreDataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE53B828BEB51A00DFC604 /* CoreDataPersistence.swift */; };
+		ACBE53BC28BEB64E00DFC604 /* Aster.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ACBE53BA28BEB64E00DFC604 /* Aster.xcdatamodeld */; };
 		ACC6AB7228B6706500096209 /* ProfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC6AB7128B6706500096209 /* ProfilView.swift */; };
 		ACE3603528AEE445002E5897 /* CardFront.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE3603428AEE445002E5897 /* CardFront.swift */; };
 		ACE3603728AEE466002E5897 /* CardBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE3603628AEE466002E5897 /* CardBack.swift */; };
@@ -49,6 +54,11 @@
 		AC2ED94E28AE2163007981C3 /* TarotCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotCardView.swift; sourceTree = "<group>"; };
 		ACBE539828B7672200DFC604 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		ACBE53AF28BEAD7600DFC604 /* LoginModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModelView.swift; sourceTree = "<group>"; };
+		ACBE53B128BEB3AD00DFC604 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		ACBE53B428BEB43C00DFC604 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		ACBE53B628BEB48E00DFC604 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		ACBE53B828BEB51A00DFC604 /* CoreDataPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPersistence.swift; sourceTree = "<group>"; };
+		ACBE53BB28BEB64E00DFC604 /* Aster.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Aster.xcdatamodel; sourceTree = "<group>"; };
 		ACC6AB7128B6706500096209 /* ProfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilView.swift; sourceTree = "<group>"; };
 		ACE3603428AEE445002E5897 /* CardFront.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFront.swift; sourceTree = "<group>"; };
 		ACE3603628AEE466002E5897 /* CardBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBack.swift; sourceTree = "<group>"; };
@@ -130,6 +140,7 @@
 			children = (
 				AC2ED93928AD8CD0007981C3 /* Person.swift */,
 				AC2ED93C28AD8D4F007981C3 /* AstrologicalSigns.swift */,
+				ACBE53B628BEB48E00DFC604 /* Card.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -186,6 +197,10 @@
 		ACBE53AE28BE8E9D00DFC604 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				ACBE53BA28BEB64E00DFC604 /* Aster.xcdatamodeld */,
+				ACBE53B828BEB51A00DFC604 /* CoreDataPersistence.swift */,
+				ACBE53B428BEB43C00DFC604 /* CoreDataService.swift */,
+				ACBE53B128BEB3AD00DFC604 /* CoreDataStack.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -334,19 +349,24 @@
 				ACE3603728AEE466002E5897 /* CardBack.swift in Sources */,
 				ACE3603928B029C9002E5897 /* HomeModelView.swift in Sources */,
 				ACC6AB7228B6706500096209 /* ProfilView.swift in Sources */,
+				ACBE53B728BEB48E00DFC604 /* Card.swift in Sources */,
 				AC2ED94128AD90E2007981C3 /* NetworkService.swift in Sources */,
 				ACBE53B028BEAD7600DFC604 /* LoginModelView.swift in Sources */,
 				ACE3603528AEE445002E5897 /* CardFront.swift in Sources */,
 				AC2ED94D28AE2156007981C3 /* HoroscopeView.swift in Sources */,
 				ACE3603D28B02C48002E5897 /* TarotCardModelView.swift in Sources */,
+				ACBE53B228BEB3AD00DFC604 /* CoreDataStack.swift in Sources */,
 				AC2ED93A28AD8CD0007981C3 /* Person.swift in Sources */,
 				AC2ED92928AD8A8B007981C3 /* HomeView.swift in Sources */,
+				ACBE53B928BEB51A00DFC604 /* CoreDataPersistence.swift in Sources */,
 				AC2ED94928AD91C1007981C3 /* HoroscopeResponse.swift in Sources */,
+				ACBE53B528BEB43C00DFC604 /* CoreDataService.swift in Sources */,
 				ACBE539928B7672200DFC604 /* LoginView.swift in Sources */,
 				AC2ED93D28AD8D4F007981C3 /* AstrologicalSigns.swift in Sources */,
 				AC2ED94428AD9108007981C3 /* Error.swift in Sources */,
 				AC2ED94F28AE2163007981C3 /* TarotCardView.swift in Sources */,
 				ACE3603B28B02AE2002E5897 /* HoroscopeModelView.swift in Sources */,
+				ACBE53BC28BEB64E00DFC604 /* Aster.xcdatamodeld in Sources */,
 				AC2ED94728AD913B007981C3 /* HoroscopeService.swift in Sources */,
 				AC2ED92728AD8A8B007981C3 /* AsterApp.swift in Sources */,
 			);
@@ -551,6 +571,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		ACBE53BA28BEB64E00DFC604 /* Aster.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				ACBE53BB28BEB64E00DFC604 /* Aster.xcdatamodel */,
+			);
+			currentVersion = ACBE53BB28BEB64E00DFC604 /* Aster.xcdatamodel */;
+			path = Aster.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AC2ED91B28AD8A8B007981C3 /* Project object */;
 }
