@@ -15,24 +15,26 @@ struct HomeView: View {
     }
 
     var body: some View {
-        TabView {
-            HoroscopeView()
-                .tabItem {
-                    Image(systemName: "wand.and.stars")
-                        .foregroundColor(.red)
+        NavigationView {
+            TabView {
+                    HoroscopeView()
+                        .tabItem {
+                            Image(systemName: "wand.and.stars")
+                                .foregroundColor(.red)
+                        }
+                    TarotCardView()
+                        .tabItem {
+                            Image(systemName: "moon.stars")
+                                .foregroundColor(.red)
+                        }
                 }
-            TarotCardView()
-                .tabItem {
-                    Image(systemName: "moon.stars")
-                        .foregroundColor(.red)
-                }
-        }
-        .accentColor(.blue)
-//        .toolbar {
-//            ToolbarItemGroup(placement: .navigationBarTrailing) {
-//                Image(systemName: "person")
-//            }
-//        }
+                .accentColor(.blue)
+        }.navigationBarHidden(true)
+            //        .toolbar {
+            //            ToolbarItemGroup(placement: .navigationBarTrailing) {
+            //                Image(systemName: "person")
+            //            }
+            //        }
     }
 }
 

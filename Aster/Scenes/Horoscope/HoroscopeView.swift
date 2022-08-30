@@ -18,10 +18,9 @@ struct HoroscopeView: View {
                 .scaledToFill()
             
             TabView {
-                OnboardCardViewToday()
-                OnboardCardViewYesterday()
-            }
-            .tabViewStyle(PageTabViewStyle())
+                OnboardCardViewToday(sign: "Leo")
+                OnboardCardViewYesterday(sign: "Leo")
+            }.tabViewStyle(PageTabViewStyle())
         }
     }
 }
@@ -33,6 +32,7 @@ struct HoroscopeView_Previews: PreviewProvider {
 }
 
 struct OnboardCardViewToday: View {
+    var sign: String
     @StateObject var viewModel = OnboardCardModelViewToday()
 
     var body: some View {
@@ -52,12 +52,13 @@ struct OnboardCardViewToday: View {
         .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
         .padding(20)
         .onAppear() {
-            viewModel.getHorosocpe()
+            viewModel.getHoroscope(for: sign)
         }
     }
 }
 
 struct OnboardCardViewYesterday: View {
+    var sign: String
     @StateObject var viewModel = OnboardCardModelViewYesterday()
 
     var body: some View {
@@ -77,7 +78,7 @@ struct OnboardCardViewYesterday: View {
         .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
         .padding(20)
         .onAppear() {
-            viewModel.getHorosocpe()
+            viewModel.getHorosocpe(for: sign)
         }
     }
 }

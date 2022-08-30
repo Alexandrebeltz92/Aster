@@ -7,13 +7,20 @@
 
 import Foundation
 
+// MARK: - HoroscopeView
 extension HoroscopeView {
+
+    // MARK: - HoroscopeModelView
     class HoroscopeModelView: ObservableObject {
     }
 }
 
+// MARK: - OnboardCardViewToday
 extension OnboardCardViewToday {
+
+    // MARK: - Class OnboardCardModelViewToday
     class OnboardCardModelViewToday: ObservableObject {
+
         // MARK: - Properties
         @Published var horoscopeLabelToday = "Today"
         @Published var horoscopeOfTheDay = "Follow the stars, they're never wrong."
@@ -21,8 +28,8 @@ extension OnboardCardViewToday {
         let service = HoroscopeService()
 
         // MARK: - Functions
-        func getHorosocpe() {
-            service.getHoroscope(for: "aries", for: "today") { [weak self] (result: Result<HoroscopeResponse?, ServiceError>) in
+        func getHoroscope(for sign: String) {
+            service.getHoroscope(for: sign, for: "today") { [weak self] (result: Result<HoroscopeResponse?, ServiceError>) in
                 guard let self = self else {
                     return
                 }
@@ -47,16 +54,21 @@ extension OnboardCardViewToday {
     }
 }
 
+// MARK: - OnboardCardViewYesterday
 extension OnboardCardViewYesterday {
+
+    // MARK: - Class OnboardCardModelViewYesterday
     class OnboardCardModelViewYesterday: ObservableObject {
+
+        // MARK: - Properties
         @Published var horoscopeLabelYesterday = "Yesterday"
         @Published var horoscopeOfYesterday = "The Sun is looking down on you."
 
         let service = HoroscopeService()
 
         // MARK: - Functions
-        func getHorosocpe() {
-            service.getHoroscope(for: "aries", for: "yesterday") { [weak self] (result: Result<HoroscopeResponse?, ServiceError>) in
+        func getHorosocpe(for sign: String) {
+            service.getHoroscope(for: sign, for: "yesterday") { [weak self] (result: Result<HoroscopeResponse?, ServiceError>) in
                 guard let self = self else {
                     return
                 }
