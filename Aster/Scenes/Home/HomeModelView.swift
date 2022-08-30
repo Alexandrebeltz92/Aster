@@ -8,7 +8,7 @@
 import Foundation
 
 extension HomeView {
-    @MainActor class HomeModelView: ObservableObject {
+    class HomeModelView: ObservableObject {
         
     }
 }
