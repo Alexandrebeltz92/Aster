@@ -12,6 +12,7 @@ struct User {
     let pseudo: String
     let dateOfBirth: String
     let astrologicalSign: String
+    let cards: [Card]
     
     func getSign() -> String {
         let birthday = dateOfBirth.replacingOccurrences(of: "/", with: "")
@@ -58,6 +59,6 @@ extension User: Equatable {
     }
 
     static func == (lhs: Self, rhs: Self) -> Bool {
-        (lhs.pseudo, lhs.dateOfBirth, lhs.astrologicalSign) == (rhs.pseudo, rhs.dateOfBirth, rhs.astrologicalSign)
+        (lhs.pseudo, lhs.dateOfBirth, lhs.astrologicalSign, lhs.cards) == (rhs.pseudo, rhs.dateOfBirth, rhs.astrologicalSign, rhs.cards)
     }
 }

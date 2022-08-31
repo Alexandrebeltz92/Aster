@@ -22,7 +22,7 @@
 		ACBE539928B7672200DFC604 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE539828B7672200DFC604 /* LoginView.swift */; };
 		ACBE53B028BEAD7600DFC604 /* LoginModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE53AF28BEAD7600DFC604 /* LoginModelView.swift */; };
 		ACBE53B228BEB3AD00DFC604 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE53B128BEB3AD00DFC604 /* CoreDataStack.swift */; };
-		ACBE53B528BEB43C00DFC604 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE53B428BEB43C00DFC604 /* CoreDataService.swift */; };
+		ACBE53B528BEB43C00DFC604 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE53B428BEB43C00DFC604 /* UserService.swift */; };
 		ACBE53B728BEB48E00DFC604 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE53B628BEB48E00DFC604 /* Card.swift */; };
 		ACBE53B928BEB51A00DFC604 /* CoreDataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE53B828BEB51A00DFC604 /* CoreDataPersistence.swift */; };
 		ACBE53BC28BEB64E00DFC604 /* Aster.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ACBE53BA28BEB64E00DFC604 /* Aster.xcdatamodeld */; };
@@ -32,6 +32,8 @@
 		ACBE53CC28BF50C900DFC604 /* CardEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE53CB28BF50C900DFC604 /* CardEntity+CoreDataProperties.swift */; };
 		ACBE53CE28BF534700DFC604 /* UserEntity+Transformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE53CD28BF534700DFC604 /* UserEntity+Transformation.swift */; };
 		ACBE53D028BF546200DFC604 /* CardEntity+Transformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE53CF28BF546200DFC604 /* CardEntity+Transformation.swift */; };
+		ACBE53D328BF947F00DFC604 /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE53D228BF947F00DFC604 /* UserStore.swift */; };
+		ACBE53D528BFAA5100DFC604 /* ProfilModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE53D428BFAA5100DFC604 /* ProfilModelView.swift */; };
 		ACC6AB7228B6706500096209 /* ProfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC6AB7128B6706500096209 /* ProfilView.swift */; };
 		ACE3603528AEE445002E5897 /* CardFront.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE3603428AEE445002E5897 /* CardFront.swift */; };
 		ACE3603728AEE466002E5897 /* CardBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE3603628AEE466002E5897 /* CardBack.swift */; };
@@ -61,7 +63,7 @@
 		ACBE539828B7672200DFC604 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		ACBE53AF28BEAD7600DFC604 /* LoginModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModelView.swift; sourceTree = "<group>"; };
 		ACBE53B128BEB3AD00DFC604 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
-		ACBE53B428BEB43C00DFC604 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		ACBE53B428BEB43C00DFC604 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		ACBE53B628BEB48E00DFC604 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		ACBE53B828BEB51A00DFC604 /* CoreDataPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPersistence.swift; sourceTree = "<group>"; };
 		ACBE53BB28BEB64E00DFC604 /* Aster.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Aster.xcdatamodel; sourceTree = "<group>"; };
@@ -71,6 +73,8 @@
 		ACBE53CB28BF50C900DFC604 /* CardEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		ACBE53CD28BF534700DFC604 /* UserEntity+Transformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserEntity+Transformation.swift"; sourceTree = "<group>"; };
 		ACBE53CF28BF546200DFC604 /* CardEntity+Transformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardEntity+Transformation.swift"; sourceTree = "<group>"; };
+		ACBE53D228BF947F00DFC604 /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
+		ACBE53D428BFAA5100DFC604 /* ProfilModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilModelView.swift; sourceTree = "<group>"; };
 		ACC6AB7128B6706500096209 /* ProfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilView.swift; sourceTree = "<group>"; };
 		ACE3603428AEE445002E5897 /* CardFront.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFront.swift; sourceTree = "<group>"; };
 		ACE3603628AEE466002E5897 /* CardBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBack.swift; sourceTree = "<group>"; };
@@ -129,13 +133,14 @@
 		AC2ED92528AD8A8B007981C3 /* Aster */ = {
 			isa = PBXGroup;
 			children = (
-				ACBE53BE28BF4D5100DFC604 /* Entities */,
 				AC2ED92628AD8A8B007981C3 /* AsterApp.swift */,
+				ACBE53BE28BF4D5100DFC604 /* Entities */,
 				AC2ED93428AD8BF1007981C3 /* Models */,
 				AC2ED92C28AD8A8D007981C3 /* Preview Content */,
 				AC2ED93828AD8C15007981C3 /* Ressources */,
 				AC2ED93528AD8BF5007981C3 /* Scenes */,
 				AC2ED93E28AD8E93007981C3 /* Services */,
+				ACBE53D128BF947000DFC604 /* Store */,
 			);
 			path = Aster;
 			sourceTree = "<group>";
@@ -212,7 +217,7 @@
 			children = (
 				ACBE53BA28BEB64E00DFC604 /* Aster.xcdatamodeld */,
 				ACBE53B828BEB51A00DFC604 /* CoreDataPersistence.swift */,
-				ACBE53B428BEB43C00DFC604 /* CoreDataService.swift */,
+				ACBE53B428BEB43C00DFC604 /* UserService.swift */,
 				ACBE53B128BEB3AD00DFC604 /* CoreDataStack.swift */,
 			);
 			path = CoreData;
@@ -247,10 +252,19 @@
 			path = CardEntity;
 			sourceTree = "<group>";
 		};
+		ACBE53D128BF947000DFC604 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				ACBE53D228BF947F00DFC604 /* UserStore.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
 		ACC6AB7028B6705700096209 /* Profil */ = {
 			isa = PBXGroup;
 			children = (
 				ACC6AB7128B6706500096209 /* ProfilView.swift */,
+				ACBE53D428BFAA5100DFC604 /* ProfilModelView.swift */,
 			);
 			path = Profil;
 			sourceTree = "<group>";
@@ -394,6 +408,7 @@
 				ACBE53D028BF546200DFC604 /* CardEntity+Transformation.swift in Sources */,
 				ACBE53C728BF4FBE00DFC604 /* UserEntity+CoreDataProperties.swift in Sources */,
 				ACC6AB7228B6706500096209 /* ProfilView.swift in Sources */,
+				ACBE53D328BF947F00DFC604 /* UserStore.swift in Sources */,
 				ACBE53B728BEB48E00DFC604 /* Card.swift in Sources */,
 				AC2ED94128AD90E2007981C3 /* NetworkService.swift in Sources */,
 				ACBE53B028BEAD7600DFC604 /* LoginModelView.swift in Sources */,
@@ -407,12 +422,13 @@
 				AC2ED92928AD8A8B007981C3 /* HomeView.swift in Sources */,
 				ACBE53B928BEB51A00DFC604 /* CoreDataPersistence.swift in Sources */,
 				AC2ED94928AD91C1007981C3 /* HoroscopeResponse.swift in Sources */,
-				ACBE53B528BEB43C00DFC604 /* CoreDataService.swift in Sources */,
+				ACBE53B528BEB43C00DFC604 /* UserService.swift in Sources */,
 				ACBE539928B7672200DFC604 /* LoginView.swift in Sources */,
 				AC2ED93D28AD8D4F007981C3 /* AstrologicalSigns.swift in Sources */,
 				AC2ED94428AD9108007981C3 /* Error.swift in Sources */,
 				AC2ED94F28AE2163007981C3 /* TarotCardView.swift in Sources */,
 				ACE3603B28B02AE2002E5897 /* HoroscopeModelView.swift in Sources */,
+				ACBE53D528BFAA5100DFC604 /* ProfilModelView.swift in Sources */,
 				ACBE53CA28BF509700DFC604 /* CardEntity+CoreDataClass.swift in Sources */,
 				ACBE53BC28BEB64E00DFC604 /* Aster.xcdatamodeld in Sources */,
 				AC2ED94728AD913B007981C3 /* HoroscopeService.swift in Sources */,

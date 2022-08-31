@@ -8,60 +8,56 @@
 import Foundation
 import CoreData
 
-class CoreDataPersistence: CoreDataService {
+class CoreDataPersistence: UserService {
 
     // MARK: - Properties
-
-    private var cards: [Card] = []
+    private var users: [User] = []
     private let coreDataStack: CoreDataStack
 
     // MARK: - Init
-
     init(coreDataStack: CoreDataStack = CoreDataStack.sharedInstance) {
         self.coreDataStack = coreDataStack
     }
 
     // MARK: - Functions
-
-    func getCards() -> [Card] {
-
-        let request: NSFetchRequest<CardEntity> = CardEntity.fetchRequest()
+    func getUsers() -> [User] {
+        let request: NSFetchRequest<UserEntity> = UserEntity.fetchRequest()
         do {
-            return try coreDataStack.viewContext.fetch(request).map { $0.toCard() }
+            return try coreDataStack.viewContext.fetch(request).map { $0.toUser() }
         } catch {
             print("Oups something went wrong")
             return []
         }
     }
+    
+    func persist(user: User) {
+        guard !users.contains(user) else {
+            return
+        }
 
-    func persist(card: Card) {
-//        guard !cards.contains() else {
-//            return
-//        }
-
-        _ = card.toEntity(context: coreDataStack.viewContext)
+        _ = user.toEntity(context: coreDataStack.viewContext)
 
         do {
             try coreDataStack.viewContext.save()
 
-            cards.append(card)
+            users.append(user)
         } catch {
-            print("We were unable to save \(card.name)")
+            print("We were unable to save \(user.pseudo)")
         }
     }
-
-    func delete(card: Card) {
-        let request: NSFetchRequest<CardEntity> = CardEntity.fetchRequest()
-        request.predicate = NSPredicate(format: "name == %@", card.name)
+    
+    func delete(user: User) {
+        let request: NSFetchRequest<UserEntity> = UserEntity.fetchRequest()
+        request.predicate = NSPredicate(format: "pseudo == %@", user.pseudo)
 
         do {
-            guard let cardToDelete = try coreDataStack.viewContext.fetch(request).first else {
+            guard let userToDelete = try coreDataStack.viewContext.fetch(request).first else {
                 return
             }
 
-            coreDataStack.viewContext.delete(cardToDelete)
+            coreDataStack.viewContext.delete(userToDelete)
             try coreDataStack.viewContext.save()
-            cards.removeAll(where: { $0 == card })
+            users.removeAll(where: { $0 == user })
         } catch {
             print("Sorry a problem occured")
         }

@@ -17,6 +17,7 @@ extension UserEntity {
     @NSManaged public var pseudo: String
     @NSManaged public var dateOfBirth: String
     @NSManaged public var sign: String
+    @NSManaged public var cards: NSSet
 
 }
 
