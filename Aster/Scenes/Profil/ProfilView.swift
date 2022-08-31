@@ -15,7 +15,8 @@ struct ProfilView: View {
         VStack {
             Spacer(minLength: 20)
 
-            Image("background1")
+            Image(modelView.signImage)
+                .resizable()
                 .frame(width: 150, height: 150, alignment: .top)
                 .clipShape(Circle())
                 .shadow(radius: 15)
@@ -26,21 +27,39 @@ struct ProfilView: View {
             Text(modelView.pseudo)
                 .font(.largeTitle)
                 .bold()
-            
+
             Text(modelView.sign)
                 .font(.title2)
 
             Spacer()
 
-            HStack(alignment: .bottom, spacing: 25) {
-                    Image(systemName: "star")
-                    Image(systemName: "person")
-                    Image(systemName: "cloud")
-                    Image(systemName: "moon")
-            }.foregroundColor(.blue)
+            Text(modelView.savedCardsText)
+                .font(.subheadline)
+                .foregroundColor(.black)
+                .bold()
+
+            ScrollView(.horizontal, showsIndicators: true) {
+                HStack(alignment: .center, spacing: 25) {
+                    ForEach(modelView.cards, id: \.name) {card in
+                        SavedCardView(card: card)
+                    }
+                }
+            }
 
             Spacer()
         }
+    }
+}
+
+struct SavedCardView: View {
+
+    let card: Card
+
+    var body: some View {
+        Image("\(card.name)")
+            .resizable()
+            .frame(width: 100, height: 200, alignment: .center)
+            .cornerRadius(25)
     }
 }
 
