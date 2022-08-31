@@ -1,5 +1,5 @@
 //
-//  Person.swift
+//  User.swift
 //  Aster
 //
 //  Created by Alexandre Graverol on 17/08/2022.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Person {
+struct User {
     
     let pseudo: String
     let dateOfBirth: String
@@ -46,5 +46,18 @@ struct Person {
         } else {
             return pseudo
         }
+    }
+}
+
+extension User: Equatable {
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(pseudo)
+        hasher.combine(dateOfBirth)
+        hasher.combine(astrologicalSign)
+    }
+
+    static func == (lhs: Self, rhs: Self) -> Bool {
+        (lhs.pseudo, lhs.dateOfBirth, lhs.astrologicalSign) == (rhs.pseudo, rhs.dateOfBirth, rhs.astrologicalSign)
     }
 }

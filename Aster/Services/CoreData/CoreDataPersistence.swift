@@ -25,9 +25,9 @@ class CoreDataPersistence: CoreDataService {
 
     func getCards() -> [Card] {
 
-        let request: NSFetchRequest<RecipeEntity> = RecipeEntity.fetchRequest()
+        let request: NSFetchRequest<CardEntity> = CardEntity.fetchRequest()
         do {
-            return try coreDataStack.viewContext.fetch(request).map { $0.toRecipe() }
+            return try coreDataStack.viewContext.fetch(request).map { $0.toCard() }
         } catch {
             print("Oups something went wrong")
             return []
@@ -35,33 +35,33 @@ class CoreDataPersistence: CoreDataService {
     }
 
     func persist(card: Card) {
-        guard !recipes.contains(recipe) else {
-            return
-        }
+//        guard !cards.contains() else {
+//            return
+//        }
 
-        _ = recipe.toEntity(context: coreDataStack.viewContext)
+        _ = card.toEntity(context: coreDataStack.viewContext)
 
         do {
             try coreDataStack.viewContext.save()
 
-            recipes.append(recipe)
+            cards.append(card)
         } catch {
-            print("We were unable to save \(recipe.label)")
+            print("We were unable to save \(card.name)")
         }
     }
 
     func delete(card: Card) {
-        let request: NSFetchRequest<RecipeEntity> = RecipeEntity.fetchRequest()
-        request.predicate = NSPredicate(format: "label == %@", recipe.label)
+        let request: NSFetchRequest<CardEntity> = CardEntity.fetchRequest()
+        request.predicate = NSPredicate(format: "name == %@", card.name)
 
         do {
-            guard let recipeToDelete = try coreDataStack.viewContext.fetch(request).first else {
+            guard let cardToDelete = try coreDataStack.viewContext.fetch(request).first else {
                 return
             }
 
-            coreDataStack.viewContext.delete(recipeToDelete)
+            coreDataStack.viewContext.delete(cardToDelete)
             try coreDataStack.viewContext.save()
-            recipes.removeAll(where: { $0 == recipe })
+            cards.removeAll(where: { $0 == card })
         } catch {
             print("Sorry a problem occured")
         }
