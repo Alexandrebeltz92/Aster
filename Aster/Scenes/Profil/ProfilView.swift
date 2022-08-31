@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ProfilView: View {
+
+    let modelView = ProfilModelView()
+
     var body: some View {
         VStack {
             Spacer(minLength: 20)
@@ -20,11 +23,11 @@ struct ProfilView: View {
 
             Spacer()
 
-            Text("Pseudo")
+            Text(modelView.pseudo)
                 .font(.largeTitle)
                 .bold()
             
-            Text("Sign")
+            Text(modelView.sign)
                 .font(.title2)
 
             Spacer()

@@ -14,9 +14,8 @@ extension ProfilView {
     class ProfilModelView: ObservableObject {
 
         // MARK: - Properties
-//        @Published var catchPhrase = "The Stars greets you!"
-//        @Published var pseudo = "Pseudo"
-//        @Published var dateOfBirth = "Birthday: Day/Month"
+        @Published var pseudo = "Pseudo"
+        @Published var sign = "Sign"
 
         // MARK: - Functions
     }
