@@ -39,7 +39,7 @@ struct ProfilView: View {
                 .bold()
 
             ScrollView(.horizontal, showsIndicators: true) {
-                HStack(alignment: .center, spacing: 25) {
+                HStack(alignment: .center, spacing: 20) {
                     ForEach(modelView.cards, id: \.name) {card in
                         SavedCardView(card: card)
                     }

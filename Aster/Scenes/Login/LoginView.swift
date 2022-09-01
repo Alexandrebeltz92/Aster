@@ -24,23 +24,28 @@ struct LoginView: View {
                     .font(.largeTitle)
                     .fontWeight(.medium)
                     .padding(.bottom, 20)
-                Image("background1")
+
+                Image("Logo")
+                    .resizable()
                     .frame(width: 150, height: 150, alignment: .top)
                     .clipShape(Circle())
                     .shadow(radius: 15)
                     .overlay(Circle().stroke(Color.black, lineWidth: 1))
+
                 Spacer()
                 TextField(modelView.pseudo, text: $username)
                     .padding()
                     .background(lighGreyColor)
                     .cornerRadius(15)
                     .padding(15)
+
                 TextField(modelView.dateOfBirth, text: $birthday)
                     .keyboardType(.numberPad)
                     .padding()
                     .background(lighGreyColor)
                     .cornerRadius(15)
                     .padding(15)
+
                 Spacer()
                 NavigationLink(destination: HomeView(), label: {
                     Text("Login")

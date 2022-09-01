@@ -39,8 +39,7 @@ struct TarotCardView: View {
     
     var body: some View {
         ZStack {
-            Image("background1")
-                .resizable()
+            Image("background")
                 .ignoresSafeArea()
                 .scaledToFill()
 
