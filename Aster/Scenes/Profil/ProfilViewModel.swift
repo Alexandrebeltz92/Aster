@@ -1,5 +1,5 @@
 //
-//  ProfilModelView.swift
+//  ProfilViewModel.swift
 //  Aster
 //
 //  Created by Alexandre Graverol on 31/08/2022.
@@ -11,7 +11,7 @@ import Foundation
 extension ProfilView {
 
     // MARK: - Class LoginModelView
-    class ProfilModelView: ObservableObject {
+    class ProfilViewModel: ObservableObject {
 
         // MARK: - Properties
         @Published var pseudo = "Mozart"

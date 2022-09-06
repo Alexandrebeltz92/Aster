@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TarotCardView: View {
     // MARK: - Properties
-    @StateObject var viewModel = TarotCardModelView()
+    @StateObject var viewModel = TarotCardViewModel()
 
     let width: CGFloat = 250
     let height: CGFloat = 350
@@ -18,6 +18,7 @@ struct TarotCardView: View {
     @State var backDegree = 0.0
     @State var frontDegree = -90.0
     @State var isFlipped = false
+    @State private var navigateToLearnMore = false
     
     // MARK: - Functions
     func flipCard() {
@@ -40,13 +41,24 @@ struct TarotCardView: View {
     }
     
     var body: some View {
-        ZStack {
-            Image("background")
-                .ignoresSafeArea()
-                .scaledToFill()
+        VStack(alignment: .center, spacing: 15) {
+            ZStack {
+                Image("background")
+                    .ignoresSafeArea()
+                    .scaledToFill()
 
-            CardFront(width: width, height: height, degree: $frontDegree)
-            CardBack(width: width, height: height, degree: $backDegree)
+                CardFront(width: width, height: height, degree: $frontDegree)
+                CardBack(width: width, height: height, degree: $backDegree)
+                
+                Button("Seek the truth") {
+                    self.navigateToLearnMore = true
+                }.sheet(isPresented: $navigateToLearnMore) {
+                    TarotCardDetailView()
+                }
+            }
+            
+            // TODO: cant figure how to place it
+           
         }.onTapGesture {
             flipCard()
         }

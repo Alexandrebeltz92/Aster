@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HoroscopeView: View {
-    @StateObject var viewModel = HoroscopeModelView()
+    @StateObject var viewModel = HoroscopeViewModel()
 
     var body: some View {
         ZStack {
@@ -32,7 +32,7 @@ struct HoroscopeView_Previews: PreviewProvider {
 
 struct OnboardCardViewToday: View {
     var sign: String
-    @StateObject var viewModel = OnboardCardModelViewToday()
+    @StateObject var viewModel = OnboardCardViewModelToday()
 
     var body: some View {
         VStack(alignment: .leading, spacing: 60) {
@@ -58,7 +58,7 @@ struct OnboardCardViewToday: View {
 
 struct OnboardCardViewYesterday: View {
     var sign: String
-    @StateObject var viewModel = OnboardCardModelViewYesterday()
+    @StateObject var viewModel = OnboardCardViewModelYesterday()
 
     var body: some View {
         VStack(alignment: .leading, spacing: 60) {

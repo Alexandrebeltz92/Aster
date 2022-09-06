@@ -9,13 +9,13 @@ import SwiftUI
 
 struct ProfilView: View {
 
-    let modelView = ProfilModelView()
+    let viewModel = ProfilViewModel()
 
     var body: some View {
         VStack {
             Spacer(minLength: 20)
 
-            Image(modelView.signImage)
+            Image(viewModel.signImage)
                 .resizable()
                 .frame(width: 150, height: 150, alignment: .top)
                 .clipShape(Circle())
@@ -24,23 +24,23 @@ struct ProfilView: View {
 
             Spacer()
 
-            Text(modelView.pseudo)
+            Text(viewModel.pseudo)
                 .font(.largeTitle)
                 .bold()
 
-            Text(modelView.sign)
+            Text(viewModel.sign)
                 .font(.title2)
 
             Spacer()
 
-            Text(modelView.savedCardsText)
+            Text(viewModel.savedCardsText)
                 .font(.subheadline)
                 .foregroundColor(.black)
                 .bold()
 
             ScrollView(.horizontal, showsIndicators: true) {
                 HStack(alignment: .center, spacing: 20) {
-                    ForEach(modelView.cards, id: \.name) {card in
+                    ForEach(viewModel.cards, id: \.name) {card in
                         SavedCardView(card: card)
                     }
                 }

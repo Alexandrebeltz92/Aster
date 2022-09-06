@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CardFront: View {
-    @StateObject var viewModel = CardFrontModelView()
+    @StateObject var viewModel = CardFrontViewModel()
 
     let width: CGFloat
     let height: CGFloat

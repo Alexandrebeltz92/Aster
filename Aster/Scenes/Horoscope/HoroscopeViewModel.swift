@@ -1,5 +1,5 @@
 //
-//  HoroscopeModelView.swift
+//  HoroscopeViewModel.swift
 //  Aster
 //
 //  Created by Alexandre Graverol on 19/08/2022.
@@ -11,7 +11,7 @@ import Foundation
 extension HoroscopeView {
 
     // MARK: - HoroscopeModelView
-    class HoroscopeModelView: ObservableObject {
+    class HoroscopeViewModel: ObservableObject {
     }
 }
 
@@ -19,7 +19,7 @@ extension HoroscopeView {
 extension OnboardCardViewToday {
 
     // MARK: - Class OnboardCardModelViewToday
-    class OnboardCardModelViewToday: ObservableObject {
+    class OnboardCardViewModelToday: ObservableObject {
 
         // MARK: - Properties
         @Published var horoscopeLabelToday = "Today"
@@ -58,7 +58,7 @@ extension OnboardCardViewToday {
 extension OnboardCardViewYesterday {
 
     // MARK: - Class OnboardCardModelViewYesterday
-    class OnboardCardModelViewYesterday: ObservableObject {
+    class OnboardCardViewModelYesterday: ObservableObject {
 
         // MARK: - Properties
         @Published var horoscopeLabelYesterday = "Yesterday"

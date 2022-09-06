@@ -27,7 +27,13 @@ struct HomeView: View {
                         Image(systemName: "moon.stars")
                             .foregroundColor(.red)
                     }
-            }
+
+                ProfilView()
+                    .tabItem {
+                        Image(systemName: "person")
+                            .foregroundColor(.red)
+                    }
+            }.navigationBarHidden(true)
         }.navigationBarHidden(true)
     }
 }

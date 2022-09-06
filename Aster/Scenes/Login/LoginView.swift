@@ -11,7 +11,7 @@ let lighGreyColor = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.
 
 struct LoginView: View {
 
-    let modelView = LoginModelView()
+    let viewModel = LoginViewModel()
 
     @State var username: String = ""
     @State var birthday: String = ""
@@ -20,7 +20,7 @@ struct LoginView: View {
         NavigationView {
             VStack {
                 Spacer()
-                Text(modelView.catchPhrase)
+                Text(viewModel.catchPhrase)
                     .font(.largeTitle)
                     .fontWeight(.medium)
                     .padding(.bottom, 20)
@@ -33,13 +33,13 @@ struct LoginView: View {
                     .overlay(Circle().stroke(Color.black, lineWidth: 1))
 
                 Spacer()
-                TextField(modelView.pseudo, text: $username)
+                TextField(viewModel.pseudo, text: $username)
                     .padding()
                     .background(lighGreyColor)
                     .cornerRadius(15)
                     .padding(15)
 
-                TextField(modelView.dateOfBirth, text: $birthday)
+                TextField(viewModel.dateOfBirth, text: $birthday)
                     .keyboardType(.numberPad)
                     .padding()
                     .background(lighGreyColor)

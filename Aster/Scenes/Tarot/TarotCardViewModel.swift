@@ -1,5 +1,5 @@
 //
-//  TarotCardModelView.swift
+//  TarotCardViewModel.swift
 //  Aster
 //
 //  Created by Alexandre Graverol on 19/08/2022.
@@ -8,13 +8,13 @@
 import Foundation
 
 extension TarotCardView {
-    class TarotCardModelView: ObservableObject {
+    class TarotCardViewModel: ObservableObject {
 
     }
 }
 
 extension CardFront  {
-    class CardFrontModelView: ObservableObject {
+    class CardFrontViewModel: ObservableObject {
         @Published var tarotCard = "0 The Fool"
 
         let firstDeck = ["0 The Fool", "1 The Magician", "2 The High Priestess", "3 The Empress", "5 The Hierophant", "7 The Chariot", "9 The Hermit", "19 The Sun", "21 The World"]

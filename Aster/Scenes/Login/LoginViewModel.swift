@@ -1,5 +1,5 @@
 //
-//  LoginModelView.swift
+//  LoginViewModel.swift
 //  Aster
 //
 //  Created by Alexandre Graverol on 30/08/2022.
@@ -7,11 +7,9 @@
 
 import Foundation
 
-// MARK: - LoginView
 extension LoginView {
 
-    // MARK: - Class LoginModelView
-    class LoginModelView: ObservableObject {
+    class LoginViewModel: ObservableObject {
 
         // MARK: - Properties
         @Published var catchPhrase = "The Stars greets you!"
