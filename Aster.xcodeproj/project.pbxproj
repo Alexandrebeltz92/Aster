@@ -329,11 +329,9 @@
 			buildPhases = (
 				258147EF4FA6A5025CB49458 /* [CP] Check Pods Manifest.lock */,
 				AC2827B928C76DB4006703D4 /* Run SwiftLint */,
-				AC2827BA28C76E5A006703D4 /* R.Swift */,
 				AC2ED91F28AD8A8B007981C3 /* Sources */,
 				AC2ED92028AD8A8B007981C3 /* Frameworks */,
 				AC2ED92128AD8A8B007981C3 /* Resources */,
-				F44EDA944FF71D34E5191C04 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -429,43 +427,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
-		};
-		AC2827BA28C76E5A006703D4 /* R.Swift */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = R.Swift;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$SRCROOT/R.generated.swift",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
-		};
-		F44EDA944FF71D34E5191C04 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Aster/Pods-Aster-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Aster/Pods-Aster-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Aster/Pods-Aster-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
