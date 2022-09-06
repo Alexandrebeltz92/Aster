@@ -29,12 +29,6 @@ struct HomeView: View {
                     }
             }
         }.navigationBarHidden(true)
-       
-        //        .toolbar {
-        //            ToolbarItemGroup(placement: .navigationBarTrailing) {
-        //                Image(systemName: "person")
-        //            }
-        //        }
     }
 }
 

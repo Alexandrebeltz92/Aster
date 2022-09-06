@@ -8,7 +8,7 @@
 import Foundation
 
 extension TarotCardView {
-    class TarotCardModelView {
+    class TarotCardModelView: ObservableObject {
 
     }
 }

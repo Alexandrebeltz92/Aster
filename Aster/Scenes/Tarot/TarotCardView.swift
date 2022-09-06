@@ -9,6 +9,8 @@ import SwiftUI
 
 struct TarotCardView: View {
     // MARK: - Properties
+    @StateObject var viewModel = TarotCardModelView()
+
     let width: CGFloat = 250
     let height: CGFloat = 350
     let durationAndDelay: CGFloat = 0.3

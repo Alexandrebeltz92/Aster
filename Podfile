@@ -3,4 +3,5 @@ use_frameworks!
 
 target 'Aster' do
     pod 'SwiftLint'
+    pod 'R.swift'
 end
