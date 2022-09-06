@@ -15,7 +15,7 @@ struct HoroscopeView: View {
             Image("background")
                 .ignoresSafeArea()
                 .scaledToFill()
-            
+
             TabView {
                 OnboardCardViewToday(sign: "Leo")
                 OnboardCardViewYesterday(sign: "Leo")
@@ -50,7 +50,7 @@ struct OnboardCardViewToday: View {
         .background(Color.white)
         .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
         .padding(20)
-        .onAppear() {
+        .onAppear {
             viewModel.getHoroscope(for: sign)
         }
     }
@@ -76,7 +76,7 @@ struct OnboardCardViewYesterday: View {
         .background(Color.white)
         .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
         .padding(20)
-        .onAppear() {
+        .onAppear {
             viewModel.getHorosocpe(for: sign)
         }
     }

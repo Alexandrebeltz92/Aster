@@ -21,4 +21,3 @@ extension CardEntity {
 extension CardEntity: Identifiable {
 
 }
-

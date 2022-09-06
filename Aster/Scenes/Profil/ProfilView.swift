@@ -10,43 +10,50 @@ import SwiftUI
 struct ProfilView: View {
 
     let viewModel = ProfilViewModel()
+    @State private var navigateToLearnMore = false
 
     var body: some View {
-        VStack {
-            Spacer(minLength: 20)
+        ZStack {
+            VStack {
+                Spacer(minLength: 20)
 
-            Image(viewModel.signImage)
-                .resizable()
-                .frame(width: 150, height: 150, alignment: .top)
-                .clipShape(Circle())
-                .shadow(radius: 15)
-                .overlay(Circle().stroke(Color.black, lineWidth: 1))
+                Image(viewModel.signImage)
+                    .resizable()
+                    .frame(width: 150, height: 150, alignment: .top)
+                    .clipShape(Circle())
+                    .shadow(radius: 15)
+                    .overlay(Circle().stroke(Color.blue, lineWidth: 0.5))
 
-            Spacer()
+                Spacer()
 
-            Text(viewModel.pseudo)
-                .font(.largeTitle)
-                .bold()
+                Text(viewModel.pseudo)
+                    .font(.largeTitle)
+                    .bold()
 
-            Text(viewModel.sign)
-                .font(.title2)
+                Text(viewModel.sign)
+                    .font(.title2)
 
-            Spacer()
+                Spacer()
 
-            Text(viewModel.savedCardsText)
-                .font(.subheadline)
-                .foregroundColor(.black)
-                .bold()
+                Text(viewModel.savedCardsText)
+                    .font(.subheadline)
+                    .foregroundColor(.black)
+                    .bold()
 
-            ScrollView(.horizontal, showsIndicators: true) {
-                HStack(alignment: .center, spacing: 20) {
-                    ForEach(viewModel.cards, id: \.name) {card in
-                        SavedCardView(card: card)
+                ScrollView(.horizontal, showsIndicators: true) {
+                    HStack(alignment: .center, spacing: 20) {
+                        ForEach(viewModel.cards, id: \.name) {card in
+                            SavedCardView(card: card).onTapGesture {
+                                self.navigateToLearnMore = true
+                            }.sheet(isPresented: $navigateToLearnMore) {
+                                TarotCardDetailView()
+                            }
+                        }
                     }
                 }
-            }
 
-            Spacer()
+                Spacer(minLength: 20)
+            }
         }
     }
 }

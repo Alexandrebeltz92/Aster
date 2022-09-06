@@ -9,28 +9,27 @@ import Foundation
 
 struct AstrologicalSigns {
     // March 21 - April 19
-    let Aries: String
+    let aries: String
     // April 20 – May 20
-    let Taurus: String
+    let taurus: String
     // May 21 – June 21
-    let Gemini: String
+    let gemini: String
     // June 22 – July 22
-    let Cancer: String
+    let cancer: String
     // July 23 – August 22
-    let Leo: String
+    let leo: String
     // August 23 – September 22
-    let Virgo: String
+    let virgo: String
     // September 23 – October 22
-    let Libra: String
+    let libra: String
     // October 23 – November 22
-    let Scorpio: String
+    let scorpio: String
     // November 23 – December 21
-    let Sagittarius: String
+    let sagittarius: String
     // December 22 – January 19
-    let Capricorn: String
+    let capricorn: String
     // January 20 – February 18
-    let Aquarius: String
+    let aquarius: String
     // February 19 – March 20
-    let Pisces: String
+    let pisces: String
 }
-

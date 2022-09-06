@@ -34,7 +34,7 @@ class HoroscopeService {
     }
 
     // MARK: - Functions
-    func getHoroscope(for sign: String,for day: String, completionHandler: @escaping (Result<HoroscopeResponse?, ServiceError>) -> Void) {
+    func getHoroscope(for sign: String, for day: String, completionHandler: @escaping (Result<HoroscopeResponse?, ServiceError>) -> Void) {
         let serviceURL = "\(Self.apiURL)sign=\(sign)&type=daily&day=\(day)&lang=en"
 
         guard let url = URL(string: serviceURL) else {

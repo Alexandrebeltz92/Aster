@@ -16,7 +16,7 @@ extension TarotCardDetailView {
         var descriptions = [""]
         @Published var name = "The Fool"
         @Published var description = "The Water flows in you"
-        
+
         // MARK: - Initialization
         init(card: Card) {
             self.card = card

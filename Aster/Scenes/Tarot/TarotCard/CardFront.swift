@@ -13,7 +13,7 @@ struct CardFront: View {
     let width: CGFloat
     let height: CGFloat
     @Binding var degree: Double
-    
+
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 20)
@@ -25,7 +25,7 @@ struct CardFront: View {
                 .resizable()
                 .frame(width: 250, height: 350, alignment: .center)
                 .cornerRadius(20)
-                .onAppear() {
+                .onAppear {
                     viewModel.getRandomCard()
                 }
         }

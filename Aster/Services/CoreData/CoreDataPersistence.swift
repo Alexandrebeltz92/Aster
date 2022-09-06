@@ -29,7 +29,7 @@ class CoreDataPersistence: UserService {
             return []
         }
     }
-    
+
     func persist(user: User) {
         guard !users.contains(user) else {
             return
@@ -45,7 +45,7 @@ class CoreDataPersistence: UserService {
             print("We were unable to save \(user.pseudo)")
         }
     }
-    
+
     func delete(user: User) {
         let request: NSFetchRequest<UserEntity> = UserEntity.fetchRequest()
         request.predicate = NSPredicate(format: "pseudo == %@", user.pseudo)

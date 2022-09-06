@@ -46,7 +46,7 @@ extension OnboardCardViewToday {
                         self.horoscopeOfTheDay = newHoroscope
                     }
 
-                case .failure(_):
+                case .failure:
                     print("something went wrong")
                 }
             }
@@ -86,7 +86,7 @@ extension OnboardCardViewYesterday {
                         self.horoscopeOfYesterday = newHoroscope
                     }
 
-                case .failure(_):
+                case .failure:
                     print("something went wrong")
                 }
             }

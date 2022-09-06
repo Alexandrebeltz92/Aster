@@ -9,6 +9,6 @@ import Foundation
 
 extension HomeView {
     class HomeViewModel: ObservableObject {
-        
+
     }
 }

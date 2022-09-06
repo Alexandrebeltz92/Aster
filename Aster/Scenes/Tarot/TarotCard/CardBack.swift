@@ -11,7 +11,7 @@ struct CardBack: View {
     let width: CGFloat
     let height: CGFloat
     @Binding var degree: Double
-    
+
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 20)

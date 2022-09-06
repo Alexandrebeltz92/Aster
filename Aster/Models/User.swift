@@ -8,18 +8,18 @@
 import Foundation
 
 struct User {
-    
+
     let pseudo: String
     let dateOfBirth: String
     let astrologicalSign: String
     let cards: [Card]
-    
-    func getSign() -> String {
+
+    func getAstroSign() -> String {
         let birthday = dateOfBirth.replacingOccurrences(of: "/", with: "")
         guard let newBirthday = Int(birthday) else {
             return  pseudo
         }
-        
+
         if newBirthday >= 2103 && newBirthday <= 1904 {
             return "Aries"
         } else if newBirthday >= 2004 && newBirthday <= 2005 {
@@ -59,6 +59,7 @@ extension User: Equatable {
     }
 
     static func == (lhs: Self, rhs: Self) -> Bool {
-        (lhs.pseudo, lhs.dateOfBirth, lhs.astrologicalSign, lhs.cards) == (rhs.pseudo, rhs.dateOfBirth, rhs.astrologicalSign, rhs.cards)
+        (lhs.pseudo, lhs.dateOfBirth,
+         lhs.astrologicalSign, lhs.cards) == (rhs.pseudo, rhs.dateOfBirth, rhs.astrologicalSign, rhs.cards)
     }
 }

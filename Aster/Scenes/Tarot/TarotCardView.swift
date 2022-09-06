@@ -14,12 +14,12 @@ struct TarotCardView: View {
     let width: CGFloat = 250
     let height: CGFloat = 350
     let durationAndDelay: CGFloat = 0.3
-    
+
     @State var backDegree = 0.0
     @State var frontDegree = -90.0
     @State var isFlipped = false
     @State private var navigateToLearnMore = false
-    
+
     // MARK: - Functions
     func flipCard() {
         isFlipped = !isFlipped
@@ -39,7 +39,7 @@ struct TarotCardView: View {
             }
         }
     }
-    
+
     var body: some View {
         VStack(alignment: .center, spacing: 15) {
             ZStack {
@@ -49,16 +49,16 @@ struct TarotCardView: View {
 
                 CardFront(width: width, height: height, degree: $frontDegree)
                 CardBack(width: width, height: height, degree: $backDegree)
-                
+
                 Button("Seek the truth") {
                     self.navigateToLearnMore = true
                 }.sheet(isPresented: $navigateToLearnMore) {
                     TarotCardDetailView()
                 }
             }
-            
+
             // TODO: cant figure how to place it
-           
+
         }.onTapGesture {
             flipCard()
         }
