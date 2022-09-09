@@ -14,19 +14,19 @@ class LoginViewModel: ObservableObject {
 
     @Published var catchPhrase = "The Stars greets you!"
     @Published var pseudo = "Pseudo"
-    @Published var dateOfBirth = "Birthday: Day/Month"
+    @Published var dayOfBirth = "Birthday"
+    @Published var monthOfBirth = "Birth Month"
 
-    let service: UserService()
+//    let service: CoreDataPersistence
 
     // MARK: - Initialization
-    init(service: UserService) {
-        self.service = service
-    }
+//    init(service: CoreDataPersistence) {
+//        self.service = service
+//    }
 
     // MARK: - Functions
 
-    func save(user: User) {
-        service.persist(user: user)
-    }
+//    func save(user: User) {
+//        service.persist(user: user)
+//    }
 }
-

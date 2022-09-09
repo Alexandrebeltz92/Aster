@@ -14,39 +14,40 @@ public struct User {
     public let astrologicalSign: String
     public let cards: [Card]
 
-    func getAstroSign() -> String {
-
-        let birthday = dateOfBirth.replacingOccurrences(of: "/", with: "")
-        guard let newBirthday = Int(birthday) else {
-            return  pseudo
-        }
-
-        switch sign {
-        case .aries:
-            return "Aries"
-        case .taurus:
-            return "Taurus"
-        case .gemini:
-            return "Gemini"
-        case .cancer:
-            return "Cancer"
-        case .leo:
-            return "Leo"
-        case .virgo:
-            return "Virgo"
-        case .libra:
-            return "Libra"
-        case .scorpio:
-            return "Scorpio"
-        case .sagittarius:
-            return "Sagittarius"
-        case .capricorn:
-            return "Capricorn"
-        case .aquarius:
-            return "Aquarius"
-        case .pisces:
-            return "Pisces"
-        }
+//    func getAstroSign() -> String {
+//
+//        let sign: AstrologicalSigns
+//        let birthday = dayOfBirth.replacingOccurrences(of: "/", with: "")
+//        guard let newBirthday = Int(birthday) else {
+//            return  pseudo
+//        }
+//
+//        switch sign {
+//        case .aries:
+//            return "Aries"
+//        case .taurus:
+//            return "Taurus"
+//        case .gemini:
+//            return "Gemini"
+//        case .cancer:
+//            return "Cancer"
+//        case .leo:
+//            return "Leo"
+//        case .virgo:
+//            return "Virgo"
+//        case .libra:
+//            return "Libra"
+//        case .scorpio:
+//            return "Scorpio"
+//        case .sagittarius:
+//            return "Sagittarius"
+//        case .capricorn:
+//            return "Capricorn"
+//        case .aquarius:
+//            return "Aquarius"
+//        case .pisces:
+//            return "Pisces"
+//        }
 
 //        if newBirthday >= 2103 && newBirthday <= 1904 {
 //            return "Aries"
@@ -75,7 +76,7 @@ public struct User {
 //        } else {
 //            return pseudo
 //        }
-    }
+//    }
 }
 
 extension User: Equatable {

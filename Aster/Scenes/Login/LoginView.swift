@@ -6,15 +6,16 @@
 //
 
 import SwiftUI
+import AsterCore
 
 let lighGreyColor = Color("LightGrey")
 
 struct LoginView: View {
-
     let viewModel = LoginViewModel()
 
     @State var username: String = ""
     @State var birthday: String = ""
+    @State var birthMonth: String = ""
 
     var body: some View {
         NavigationView {
@@ -39,12 +40,19 @@ struct LoginView: View {
                     .cornerRadius(15)
                     .padding(15)
 
-                TextField(viewModel.dateOfBirth, text: $birthday)
-                    .keyboardType(.numberPad)
-                    .padding()
-                    .background(lighGreyColor)
-                    .cornerRadius(15)
-                    .padding(15)
+                HStack {
+                    TextField(viewModel.dayOfBirth, text: $birthday)
+                        .keyboardType(.numberPad)
+                        .padding()
+                        .background(lighGreyColor)
+                        .cornerRadius(15)
+
+                    TextField(viewModel.monthOfBirth, text: $birthMonth)
+                        .keyboardType(.numberPad)
+                        .padding()
+                        .background(lighGreyColor)
+                        .cornerRadius(15)
+                }.padding(15)
 
                 Spacer()
                 VStack {
@@ -58,7 +66,8 @@ struct LoginView: View {
                             .cornerRadius(35)
                     })
                 }.simultaneousGesture(TapGesture().onEnded({
-                    viewModel.save(user: $username)
+                    print("button taped")
+//                    viewModel.save(user: $username)
                 }))
                 Spacer()
             }.navigationBarHidden(true)

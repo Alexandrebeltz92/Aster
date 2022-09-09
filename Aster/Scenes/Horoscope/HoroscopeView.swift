@@ -17,8 +17,8 @@ struct HoroscopeView: View {
                 .scaledToFill()
 
             TabView {
-                OnboardCardViewToday(sign: "Leo")
-                OnboardCardViewYesterday(sign: "Leo")
+                OnboardCardViewYesterday(sign: "Aries")
+                OnboardCardViewToday(sign: "Aries")
             }.tabViewStyle(PageTabViewStyle())
         }
     }
