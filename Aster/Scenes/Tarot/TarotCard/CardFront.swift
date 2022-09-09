@@ -20,7 +20,7 @@ struct CardFront: View {
                 .fill(.white)
                 .frame(width: width, height: height)
                 .shadow(color: .gray, radius: 2, x: 0, y: 0)
-            
+
             Image("\(viewModel.tarotCard)")
                 .resizable()
                 .frame(width: 250, height: 350, alignment: .center)

@@ -7,29 +7,29 @@
 
 import Foundation
 
-struct AstrologicalSigns {
+enum AstrologicalSigns {
     // March 21 - April 19
-    let aries: String
+    case aries
     // April 20 – May 20
-    let taurus: String
+    case taurus
     // May 21 – June 21
-    let gemini: String
+    case gemini
     // June 22 – July 22
-    let cancer: String
+    case cancer
     // July 23 – August 22
-    let leo: String
+    case leo
     // August 23 – September 22
-    let virgo: String
+    case virgo
     // September 23 – October 22
-    let libra: String
+    case libra
     // October 23 – November 22
-    let scorpio: String
+    case scorpio
     // November 23 – December 21
-    let sagittarius: String
+    case sagittarius
     // December 22 – January 19
-    let capricorn: String
+    case capricorn
     // January 20 – February 18
-    let aquarius: String
+    case aquarius
     // February 19 – March 20
-    let pisces: String
+    case pisces
 }

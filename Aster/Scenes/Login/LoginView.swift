@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-let lighGreyColor = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0)
+let lighGreyColor = Color("LightGrey")
 
 struct LoginView: View {
 
@@ -47,15 +47,19 @@ struct LoginView: View {
                     .padding(15)
 
                 Spacer()
-                NavigationLink(destination: HomeView(), label: {
-                    Text("Login")
-                        .font(.headline)
-                        .foregroundColor(.white)
-                        .padding()
-                        .frame(width: 220, height: 60, alignment: .center)
-                        .background(Color.black)
-                        .cornerRadius(35)
-                })
+                VStack {
+                    NavigationLink(destination: HomeView(), label: {
+                        Text("Login")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(width: 220, height: 60, alignment: .center)
+                            .background(Color.black)
+                            .cornerRadius(35)
+                    })
+                }.simultaneousGesture(TapGesture().onEnded({
+                    viewModel.save(user: $username)
+                }))
                 Spacer()
             }.navigationBarHidden(true)
         }

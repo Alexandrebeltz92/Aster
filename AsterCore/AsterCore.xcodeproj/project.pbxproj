@@ -80,10 +80,10 @@
 		AC6BF58728CB7E34007BF723 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				AC6BF5C228CB83A5007BF723 /* Store */,
 				AC6BF5B328CB8219007BF723 /* Entities */,
 				AC6BF5A828CB8175007BF723 /* Models */,
 				AC6BF5A028CB80F8007BF723 /* Services */,
+				AC6BF5C228CB83A5007BF723 /* Store */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
