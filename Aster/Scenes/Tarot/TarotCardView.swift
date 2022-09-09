@@ -57,7 +57,7 @@ struct TarotCardView: View {
                 }
             }
 
-            // TODO: cant figure how to place it
+            // TODO: cant figure how to place it - Button
 
         }.onTapGesture {
             flipCard()

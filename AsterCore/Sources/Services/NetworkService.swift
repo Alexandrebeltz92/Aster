@@ -1,38 +1,38 @@
 //
 //  NetworkService.swift
-//  Aster
+//  AsterCore
 //
-//  Created by Alexandre Graverol on 17/08/2022.
+//  Created by Alexandre Graverol on 09/09/2022.
 //
 
 import Foundation
 
-protocol NetworkServiceProtocol {
+public protocol NetworkServiceProtocol {
     func post<T>(url: URL, completionHandler: @escaping (Result<T, ServiceError>) -> Void) where T: Decodable
     func get<T>(url: URL, completionHandler: @escaping (Result<T, ServiceError>) -> Void) where T: Decodable
     func call<T>(request: URLRequest, completionHandler: @escaping (Result<T, ServiceError>) -> Void) where T: Decodable
 }
 
-struct NetworkService: NetworkServiceProtocol {
+public struct NetworkService: NetworkServiceProtocol {
 
     private let urlSession: URLSession
 
-    init(urlSession: URLSession = .shared) {
+    public init(urlSession: URLSession = .shared) {
         self.urlSession = urlSession
     }
 
-    func get<T>(url: URL, completionHandler: @escaping (Result<T, ServiceError>) -> Void) where T: Decodable {
+    public func get<T>(url: URL, completionHandler: @escaping (Result<T, ServiceError>) -> Void) where T: Decodable {
         call(request: URLRequest(url: url), completionHandler: completionHandler)
     }
 
-    func post<T>(url: URL, completionHandler: @escaping (Result<T, ServiceError>) -> Void) where T: Decodable {
+    public func post<T>(url: URL, completionHandler: @escaping (Result<T, ServiceError>) -> Void) where T: Decodable {
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
 
         call(request: request, completionHandler: completionHandler)
     }
 
-    func call<T>(request: URLRequest, completionHandler: @escaping (Result<T, ServiceError>) -> Void) where T: Decodable {
+    public func call<T>(request: URLRequest, completionHandler: @escaping (Result<T, ServiceError>) -> Void) where T: Decodable {
         urlSession
             .dataTask(with: request) { data, response, error in
                 if error != nil {

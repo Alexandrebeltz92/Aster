@@ -1,15 +1,15 @@
 //
 //  HoroscopeService.swift
-//  Aster
+//  AsterCore
 //
-//  Created by Alexandre Graverol on 17/08/2022.
+//  Created by Alexandre Graverol on 09/09/2022.
 //
 
 import Foundation
 
 // MARK: - Protocol
 
-protocol Transferable {
+public protocol Transferable {
 
     associatedtype GenericType
 
@@ -18,7 +18,7 @@ protocol Transferable {
 
 // MARK: - Class
 
-class HoroscopeService {
+public class HoroscopeService {
 
     // MARK: - Constants
 
@@ -29,12 +29,12 @@ class HoroscopeService {
 
     private let networkService: NetworkServiceProtocol
 
-    init(networkService: NetworkServiceProtocol = NetworkService()) {
+    public init(networkService: NetworkServiceProtocol = NetworkService()) {
         self.networkService = networkService
     }
 
     // MARK: - Functions
-    func getHoroscope(for sign: String, for day: String, completionHandler: @escaping (Result<HoroscopeResponse?, ServiceError>) -> Void) {
+    public func getHoroscope(for sign: String, for day: String, completionHandler: @escaping (Result<HoroscopeResponse?, ServiceError>) -> Void) {
         let serviceURL = "\(Self.apiURL)sign=\(sign)&type=daily&day=\(day)&lang=en"
 
         guard let url = URL(string: serviceURL) else {

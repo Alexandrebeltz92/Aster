@@ -1,19 +1,19 @@
 //
 //  UserStore.swift
-//  Aster
+//  AsterCore
 //
-//  Created by Alexandre Graverol on 31/08/2022.
+//  Created by Alexandre Graverol on 09/09/2022.
 //
 
 import Foundation
 
-protocol UserStoreDelegate: AnyObject {
+public protocol UserStoreDelegate: AnyObject {
     func didUpdate(users: [User])
 }
 
-final class UserStore {
+final public class UserStore {
 
-    static let instance = UserStore()
+    static public let instance = UserStore()
 
     var users: [User] = []
     weak var delegate: UserStoreDelegate?
@@ -30,15 +30,15 @@ final class UserStore {
         ]
     }
 
-    func getPersistedUsers() {
+    public func getPersistedUsers() {
         users = services.flatMap { $0.getUsers() }
     }
 
-    func persist(user: User) {
+    public func persist(user: User) {
         services.forEach { $0.persist(user: user) }
     }
 
-    func delete(user: User) {
+    public func delete(user: User) {
         services.forEach { $0.delete(user: user) }
     }
 }

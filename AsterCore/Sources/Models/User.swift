@@ -1,18 +1,18 @@
 //
 //  User.swift
-//  Aster
+//  AsterCore
 //
-//  Created by Alexandre Graverol on 17/08/2022.
+//  Created by Alexandre Graverol on 09/09/2022.
 //
 
 import Foundation
 
-struct User {
+public struct User {
 
-    let pseudo: String
-    let dateOfBirth: String
-    let astrologicalSign: String
-    let cards: [Card]
+    public let pseudo: String
+    public let dateOfBirth: String
+    public let astrologicalSign: String
+    public let cards: [Card]
 
     func getAstroSign() -> String {
         let birthday = dateOfBirth.replacingOccurrences(of: "/", with: "")
@@ -58,7 +58,7 @@ extension User: Equatable {
         hasher.combine(astrologicalSign)
     }
 
-    static func == (lhs: Self, rhs: Self) -> Bool {
+    static public func == (lhs: Self, rhs: Self) -> Bool {
         (lhs.pseudo, lhs.dateOfBirth,
          lhs.astrologicalSign, lhs.cards) == (rhs.pseudo, rhs.dateOfBirth, rhs.astrologicalSign, rhs.cards)
     }

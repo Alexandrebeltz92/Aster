@@ -1,8 +1,8 @@
 //
 //  CoreDataStack.swift
-//  Aster
+//  AsterCore
 //
-//  Created by Alexandre Graverol on 30/08/2022.
+//  Created by Alexandre Graverol on 09/09/2022.
 //
 
 import Foundation

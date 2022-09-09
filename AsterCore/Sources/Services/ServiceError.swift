@@ -1,13 +1,13 @@
 //
-//  Error.swift
-//  Aster
+//  ServiceError.swift
+//  AsterCore
 //
-//  Created by Alexandre Graverol on 17/08/2022.
+//  Created by Alexandre Graverol on 09/09/2022.
 //
 
 import Foundation
 
-enum ServiceError: Error {
+public enum ServiceError: Error {
     case unknown
     case invalidURL
     case emptyData

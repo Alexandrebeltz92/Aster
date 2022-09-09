@@ -13,28 +13,12 @@
 		AC2ED92928AD8A8B007981C3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2ED92828AD8A8B007981C3 /* HomeView.swift */; };
 		AC2ED92B28AD8A8D007981C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC2ED92A28AD8A8D007981C3 /* Assets.xcassets */; };
 		AC2ED92E28AD8A8D007981C3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC2ED92D28AD8A8D007981C3 /* Preview Assets.xcassets */; };
-		AC2ED93A28AD8CD0007981C3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2ED93928AD8CD0007981C3 /* User.swift */; };
-		AC2ED93D28AD8D4F007981C3 /* AstrologicalSigns.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2ED93C28AD8D4F007981C3 /* AstrologicalSigns.swift */; };
-		AC2ED94128AD90E2007981C3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2ED94028AD90E2007981C3 /* NetworkService.swift */; };
-		AC2ED94428AD9108007981C3 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2ED94328AD9108007981C3 /* Error.swift */; };
-		AC2ED94728AD913B007981C3 /* HoroscopeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2ED94628AD913B007981C3 /* HoroscopeService.swift */; };
-		AC2ED94928AD91C1007981C3 /* HoroscopeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2ED94828AD91C1007981C3 /* HoroscopeResponse.swift */; };
 		AC2ED94D28AE2156007981C3 /* HoroscopeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2ED94C28AE2156007981C3 /* HoroscopeView.swift */; };
 		AC2ED94F28AE2163007981C3 /* TarotCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2ED94E28AE2163007981C3 /* TarotCardView.swift */; };
+		AC6BF58C28CB801B007BF723 /* AsterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6BF58B28CB801B007BF723 /* AsterCore.framework */; };
+		AC6BF58D28CB801B007BF723 /* AsterCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AC6BF58B28CB801B007BF723 /* AsterCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ACBE539928B7672200DFC604 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE539828B7672200DFC604 /* LoginView.swift */; };
 		ACBE53B028BEAD7600DFC604 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE53AF28BEAD7600DFC604 /* LoginViewModel.swift */; };
-		ACBE53B228BEB3AD00DFC604 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE53B128BEB3AD00DFC604 /* CoreDataStack.swift */; };
-		ACBE53B528BEB43C00DFC604 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE53B428BEB43C00DFC604 /* UserService.swift */; };
-		ACBE53B728BEB48E00DFC604 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE53B628BEB48E00DFC604 /* Card.swift */; };
-		ACBE53B928BEB51A00DFC604 /* CoreDataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE53B828BEB51A00DFC604 /* CoreDataPersistence.swift */; };
-		ACBE53BC28BEB64E00DFC604 /* Aster.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ACBE53BA28BEB64E00DFC604 /* Aster.xcdatamodeld */; };
-		ACBE53C528BF4F9D00DFC604 /* UserEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE53C428BF4F9D00DFC604 /* UserEntity+CoreDataClass.swift */; };
-		ACBE53C728BF4FBE00DFC604 /* UserEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE53C628BF4FBE00DFC604 /* UserEntity+CoreDataProperties.swift */; };
-		ACBE53CA28BF509700DFC604 /* CardEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE53C928BF509700DFC604 /* CardEntity+CoreDataClass.swift */; };
-		ACBE53CC28BF50C900DFC604 /* CardEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE53CB28BF50C900DFC604 /* CardEntity+CoreDataProperties.swift */; };
-		ACBE53CE28BF534700DFC604 /* UserEntity+Transformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE53CD28BF534700DFC604 /* UserEntity+Transformation.swift */; };
-		ACBE53D028BF546200DFC604 /* CardEntity+Transformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE53CF28BF546200DFC604 /* CardEntity+Transformation.swift */; };
-		ACBE53D328BF947F00DFC604 /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE53D228BF947F00DFC604 /* UserStore.swift */; };
 		ACBE53D528BFAA5100DFC604 /* ProfilViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE53D428BFAA5100DFC604 /* ProfilViewModel.swift */; };
 		ACC6AB7228B6706500096209 /* ProfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC6AB7128B6706500096209 /* ProfilView.swift */; };
 		ACE3603528AEE445002E5897 /* CardFront.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE3603428AEE445002E5897 /* CardFront.swift */; };
@@ -44,6 +28,20 @@
 		ACE3603D28B02C48002E5897 /* TarotCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE3603C28B02C48002E5897 /* TarotCardViewModel.swift */; };
 		AEE0807E1BF42795405CA705 /* Pods_Aster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D65EC6174C97B474420CEBE /* Pods_Aster.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AC6BF58E28CB801B007BF723 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AC6BF58D28CB801B007BF723 /* AsterCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0D65EC6174C97B474420CEBE /* Pods_Aster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,28 +54,11 @@
 		AC2ED92828AD8A8B007981C3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		AC2ED92A28AD8A8D007981C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC2ED92D28AD8A8D007981C3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		AC2ED93928AD8CD0007981C3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		AC2ED93C28AD8D4F007981C3 /* AstrologicalSigns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstrologicalSigns.swift; sourceTree = "<group>"; };
-		AC2ED94028AD90E2007981C3 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		AC2ED94328AD9108007981C3 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
-		AC2ED94628AD913B007981C3 /* HoroscopeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeService.swift; sourceTree = "<group>"; };
-		AC2ED94828AD91C1007981C3 /* HoroscopeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeResponse.swift; sourceTree = "<group>"; };
 		AC2ED94C28AE2156007981C3 /* HoroscopeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeView.swift; sourceTree = "<group>"; };
 		AC2ED94E28AE2163007981C3 /* TarotCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotCardView.swift; sourceTree = "<group>"; };
+		AC6BF58B28CB801B007BF723 /* AsterCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AsterCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACBE539828B7672200DFC604 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		ACBE53AF28BEAD7600DFC604 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		ACBE53B128BEB3AD00DFC604 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
-		ACBE53B428BEB43C00DFC604 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
-		ACBE53B628BEB48E00DFC604 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		ACBE53B828BEB51A00DFC604 /* CoreDataPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPersistence.swift; sourceTree = "<group>"; };
-		ACBE53BB28BEB64E00DFC604 /* Aster.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Aster.xcdatamodel; sourceTree = "<group>"; };
-		ACBE53C428BF4F9D00DFC604 /* UserEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		ACBE53C628BF4FBE00DFC604 /* UserEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		ACBE53C928BF509700DFC604 /* CardEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		ACBE53CB28BF50C900DFC604 /* CardEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		ACBE53CD28BF534700DFC604 /* UserEntity+Transformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserEntity+Transformation.swift"; sourceTree = "<group>"; };
-		ACBE53CF28BF546200DFC604 /* CardEntity+Transformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardEntity+Transformation.swift"; sourceTree = "<group>"; };
-		ACBE53D228BF947F00DFC604 /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
 		ACBE53D428BFAA5100DFC604 /* ProfilViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilViewModel.swift; sourceTree = "<group>"; };
 		ACC6AB7128B6706500096209 /* ProfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilView.swift; sourceTree = "<group>"; };
 		ACE3603428AEE445002E5897 /* CardFront.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFront.swift; sourceTree = "<group>"; };
@@ -93,6 +74,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEE0807E1BF42795405CA705 /* Pods_Aster.framework in Frameworks */,
+				AC6BF58C28CB801B007BF723 /* AsterCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +84,7 @@
 		16D84ECE10322E31E90F0589 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AC6BF58B28CB801B007BF723 /* AsterCore.framework */,
 				0D65EC6174C97B474420CEBE /* Pods_Aster.framework */,
 			);
 			name = Frameworks;
@@ -147,13 +130,9 @@
 			isa = PBXGroup;
 			children = (
 				AC2ED92628AD8A8B007981C3 /* AsterApp.swift */,
-				ACBE53BE28BF4D5100DFC604 /* Entities */,
-				AC2ED93428AD8BF1007981C3 /* Models */,
 				AC2ED92C28AD8A8D007981C3 /* Preview Content */,
 				AC2ED93828AD8C15007981C3 /* Ressources */,
 				AC2ED93528AD8BF5007981C3 /* Scenes */,
-				AC2ED93E28AD8E93007981C3 /* Services */,
-				ACBE53D128BF947000DFC604 /* Store */,
 			);
 			path = Aster;
 			sourceTree = "<group>";
@@ -164,16 +143,6 @@
 				AC2ED92D28AD8A8D007981C3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		AC2ED93428AD8BF1007981C3 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				AC2ED93928AD8CD0007981C3 /* User.swift */,
-				AC2ED93C28AD8D4F007981C3 /* AstrologicalSigns.swift */,
-				ACBE53B628BEB48E00DFC604 /* Card.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		AC2ED93528AD8BF5007981C3 /* Scenes */ = {
@@ -197,26 +166,6 @@
 			path = Ressources;
 			sourceTree = "<group>";
 		};
-		AC2ED93E28AD8E93007981C3 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				ACBE53AE28BE8E9D00DFC604 /* CoreData */,
-				AC2ED93F28AD90C9007981C3 /* HoroscopeService */,
-				AC2ED94028AD90E2007981C3 /* NetworkService.swift */,
-				AC2ED94328AD9108007981C3 /* Error.swift */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		AC2ED93F28AD90C9007981C3 /* HoroscopeService */ = {
-			isa = PBXGroup;
-			children = (
-				AC2ED94628AD913B007981C3 /* HoroscopeService.swift */,
-				AC2ED94828AD91C1007981C3 /* HoroscopeResponse.swift */,
-			);
-			path = HoroscopeService;
-			sourceTree = "<group>";
-		};
 		ACBE539728B7671700DFC604 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,54 +173,6 @@
 				ACBE53AF28BEAD7600DFC604 /* LoginViewModel.swift */,
 			);
 			path = Login;
-			sourceTree = "<group>";
-		};
-		ACBE53AE28BE8E9D00DFC604 /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				ACBE53BA28BEB64E00DFC604 /* Aster.xcdatamodeld */,
-				ACBE53B828BEB51A00DFC604 /* CoreDataPersistence.swift */,
-				ACBE53B428BEB43C00DFC604 /* UserService.swift */,
-				ACBE53B128BEB3AD00DFC604 /* CoreDataStack.swift */,
-			);
-			path = CoreData;
-			sourceTree = "<group>";
-		};
-		ACBE53BE28BF4D5100DFC604 /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				ACBE53C828BF508300DFC604 /* CardEntity */,
-				ACBE53C328BF4F6A00DFC604 /* UserEntity */,
-			);
-			path = Entities;
-			sourceTree = "<group>";
-		};
-		ACBE53C328BF4F6A00DFC604 /* UserEntity */ = {
-			isa = PBXGroup;
-			children = (
-				ACBE53C428BF4F9D00DFC604 /* UserEntity+CoreDataClass.swift */,
-				ACBE53C628BF4FBE00DFC604 /* UserEntity+CoreDataProperties.swift */,
-				ACBE53CD28BF534700DFC604 /* UserEntity+Transformation.swift */,
-			);
-			path = UserEntity;
-			sourceTree = "<group>";
-		};
-		ACBE53C828BF508300DFC604 /* CardEntity */ = {
-			isa = PBXGroup;
-			children = (
-				ACBE53C928BF509700DFC604 /* CardEntity+CoreDataClass.swift */,
-				ACBE53CB28BF50C900DFC604 /* CardEntity+CoreDataProperties.swift */,
-				ACBE53CF28BF546200DFC604 /* CardEntity+Transformation.swift */,
-			);
-			path = CardEntity;
-			sourceTree = "<group>";
-		};
-		ACBE53D128BF947000DFC604 /* Store */ = {
-			isa = PBXGroup;
-			children = (
-				ACBE53D228BF947F00DFC604 /* UserStore.swift */,
-			);
-			path = Store;
 			sourceTree = "<group>";
 		};
 		ACC6AB7028B6705700096209 /* Profil */ = {
@@ -332,6 +233,7 @@
 				AC2ED91F28AD8A8B007981C3 /* Sources */,
 				AC2ED92028AD8A8B007981C3 /* Frameworks */,
 				AC2ED92128AD8A8B007981C3 /* Resources */,
+				AC6BF58E28CB801B007BF723 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -436,37 +338,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACE3603728AEE466002E5897 /* CardBack.swift in Sources */,
-				ACBE53C528BF4F9D00DFC604 /* UserEntity+CoreDataClass.swift in Sources */,
 				ACE3603928B029C9002E5897 /* HomeViewModel.swift in Sources */,
-				ACBE53D028BF546200DFC604 /* CardEntity+Transformation.swift in Sources */,
-				ACBE53C728BF4FBE00DFC604 /* UserEntity+CoreDataProperties.swift in Sources */,
 				ACC6AB7228B6706500096209 /* ProfilView.swift in Sources */,
-				ACBE53D328BF947F00DFC604 /* UserStore.swift in Sources */,
 				AC2827B528C73300006703D4 /* TarotCardDetailView.swift in Sources */,
-				ACBE53B728BEB48E00DFC604 /* Card.swift in Sources */,
-				AC2ED94128AD90E2007981C3 /* NetworkService.swift in Sources */,
 				ACBE53B028BEAD7600DFC604 /* LoginViewModel.swift in Sources */,
 				ACE3603528AEE445002E5897 /* CardFront.swift in Sources */,
-				ACBE53CC28BF50C900DFC604 /* CardEntity+CoreDataProperties.swift in Sources */,
 				AC2ED94D28AE2156007981C3 /* HoroscopeView.swift in Sources */,
 				ACE3603D28B02C48002E5897 /* TarotCardViewModel.swift in Sources */,
-				ACBE53CE28BF534700DFC604 /* UserEntity+Transformation.swift in Sources */,
-				ACBE53B228BEB3AD00DFC604 /* CoreDataStack.swift in Sources */,
-				AC2ED93A28AD8CD0007981C3 /* User.swift in Sources */,
 				AC2ED92928AD8A8B007981C3 /* HomeView.swift in Sources */,
-				ACBE53B928BEB51A00DFC604 /* CoreDataPersistence.swift in Sources */,
-				AC2ED94928AD91C1007981C3 /* HoroscopeResponse.swift in Sources */,
-				ACBE53B528BEB43C00DFC604 /* UserService.swift in Sources */,
 				ACBE539928B7672200DFC604 /* LoginView.swift in Sources */,
-				AC2ED93D28AD8D4F007981C3 /* AstrologicalSigns.swift in Sources */,
-				AC2ED94428AD9108007981C3 /* Error.swift in Sources */,
 				AC2ED94F28AE2163007981C3 /* TarotCardView.swift in Sources */,
 				ACE3603B28B02AE2002E5897 /* HoroscopeViewModel.swift in Sources */,
 				ACBE53D528BFAA5100DFC604 /* ProfilViewModel.swift in Sources */,
 				AC2827B828C736F8006703D4 /* TarotCardDetailViewModel.swift in Sources */,
-				ACBE53CA28BF509700DFC604 /* CardEntity+CoreDataClass.swift in Sources */,
-				ACBE53BC28BEB64E00DFC604 /* Aster.xcdatamodeld in Sources */,
-				AC2ED94728AD913B007981C3 /* HoroscopeService.swift in Sources */,
 				AC2ED92728AD8A8B007981C3 /* AsterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -670,19 +554,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		ACBE53BA28BEB64E00DFC604 /* Aster.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				ACBE53BB28BEB64E00DFC604 /* Aster.xcdatamodel */,
-			);
-			currentVersion = ACBE53BB28BEB64E00DFC604 /* Aster.xcdatamodel */;
-			path = Aster.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = AC2ED91B28AD8A8B007981C3 /* Project object */;
 }

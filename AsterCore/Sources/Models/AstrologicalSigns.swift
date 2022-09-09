@@ -1,8 +1,8 @@
 //
 //  AstrologicalSigns.swift
-//  Aster
+//  AsterCore
 //
-//  Created by Alexandre Graverol on 17/08/2022.
+//  Created by Alexandre Graverol on 09/09/2022.
 //
 
 import Foundation

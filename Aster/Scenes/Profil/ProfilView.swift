@@ -42,8 +42,8 @@ struct ProfilView: View {
 
                 ScrollView(.horizontal, showsIndicators: true) {
                     HStack(alignment: .center, spacing: 20) {
-                        ForEach(viewModel.cards, id: \.name) {card in
-                            SavedCardView(card: card).onTapGesture {
+                        ForEach(viewModel.cards, id: \.name) {_ in
+                            SavedCardView().onTapGesture {
                                 self.navigateToLearnMore = true
                             }.sheet(isPresented: $navigateToLearnMore) {
                                 TarotCardDetailView()
@@ -60,10 +60,8 @@ struct ProfilView: View {
 
 struct SavedCardView: View {
 
-    let card: Card
-
     var body: some View {
-        Image("\(card.name)")
+        Image("0_The_Fool")
             .resizable()
             .frame(width: 100, height: 200, alignment: .center)
             .cornerRadius(25)

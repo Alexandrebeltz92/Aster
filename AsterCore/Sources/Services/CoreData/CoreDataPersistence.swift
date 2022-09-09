@@ -1,14 +1,14 @@
 //
 //  CoreDataPersistence.swift
-//  Aster
+//  AsterCore
 //
-//  Created by Alexandre Graverol on 30/08/2022.
+//  Created by Alexandre Graverol on 09/09/2022.
 //
 
 import Foundation
 import CoreData
 
-class CoreDataPersistence: UserService {
+public class CoreDataPersistence: UserService {
 
     // MARK: - Properties
     private var users: [User] = []
@@ -20,7 +20,7 @@ class CoreDataPersistence: UserService {
     }
 
     // MARK: - Functions
-    func getUsers() -> [User] {
+    public func getUsers() -> [User] {
         let request: NSFetchRequest<UserEntity> = UserEntity.fetchRequest()
         do {
             return try coreDataStack.viewContext.fetch(request).map { $0.toUser() }
@@ -30,7 +30,7 @@ class CoreDataPersistence: UserService {
         }
     }
 
-    func persist(user: User) {
+    public func persist(user: User) {
         guard !users.contains(user) else {
             return
         }
@@ -46,7 +46,7 @@ class CoreDataPersistence: UserService {
         }
     }
 
-    func delete(user: User) {
+    public func delete(user: User) {
         let request: NSFetchRequest<UserEntity> = UserEntity.fetchRequest()
         request.predicate = NSPredicate(format: "pseudo == %@", user.pseudo)
 

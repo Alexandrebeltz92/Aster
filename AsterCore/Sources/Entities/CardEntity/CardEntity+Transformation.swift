@@ -1,8 +1,8 @@
 //
 //  CardEntity+Transformation.swift
-//  Aster
+//  AsterCore
 //
-//  Created by Alexandre Graverol on 31/08/2022.
+//  Created by Alexandre Graverol on 09/09/2022.
 //
 
 import CoreData
@@ -28,3 +28,4 @@ extension Card {
         return cardEntity
     }
 }
+

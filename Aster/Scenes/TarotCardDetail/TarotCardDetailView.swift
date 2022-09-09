@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TarotCardDetailView: View {
-    @StateObject var viewModel = TarotCardDetailViewModel(card: Card(name: "0_The_Fool"))
+//    @StateObject var viewModel = TarotCardDetailViewModel(card: card)
 
     var body: some View {
         ZStack {
@@ -23,12 +23,12 @@ struct TarotCardDetailView: View {
                 .shadow(color: .gray, radius: 2, x: 0, y: 0)
 
             VStack(alignment: .center, spacing: 60) {
-                Text(viewModel.name)
+                Text("viewModel.name")
                     .bold()
                     .font(.largeTitle)
                     .foregroundColor(.blue)
 
-                Text(viewModel.description)
+                Text("viewModel.description")
                     .minimumScaleFactor(0.2)
                     .font(.subheadline)
                     .foregroundColor(.black)
