@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC5DEA8828CF767C00A41259 /* AsterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6BF57D28CB7DD5007BF723 /* AsterCore.framework */; platformFilter = ios; };
+		AC5DEA8F28CF76A600A41259 /* TestCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DEA8E28CF76A600A41259 /* TestCoreDataStack.swift */; };
+		AC5DEA9128CF76E000A41259 /* CoreDataPersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DEA9028CF76E000A41259 /* CoreDataPersistenceTests.swift */; };
 		AC6BF5A328CB810D007BF723 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5A228CB810D007BF723 /* UserService.swift */; };
 		AC6BF5A528CB813E007BF723 /* CoreDataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5A428CB813E007BF723 /* CoreDataPersistence.swift */; };
 		AC6BF5A728CB8162007BF723 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5A628CB8162007BF723 /* CoreDataStack.swift */; };
@@ -27,7 +30,20 @@
 		AC6BF5CF28CB84B6007BF723 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5CE28CB84B6007BF723 /* ServiceError.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		AC5DEA8928CF767C00A41259 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC6BF57428CB7DD5007BF723 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC6BF57C28CB7DD5007BF723;
+			remoteInfo = AsterCore;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		AC5DEA8428CF767C00A41259 /* AsterCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AsterCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC5DEA8E28CF76A600A41259 /* TestCoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoreDataStack.swift; sourceTree = "<group>"; };
+		AC5DEA9028CF76E000A41259 /* CoreDataPersistenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPersistenceTests.swift; sourceTree = "<group>"; };
 		AC6BF57D28CB7DD5007BF723 /* AsterCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AsterCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC6BF5A228CB810D007BF723 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		AC6BF5A428CB813E007BF723 /* CoreDataPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPersistence.swift; sourceTree = "<group>"; };
@@ -50,6 +66,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AC5DEA8128CF767C00A41259 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC5DEA8828CF767C00A41259 /* AsterCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AC6BF57A28CB7DD5007BF723 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -60,11 +84,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC5DEA7B28CF75D300A41259 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AC5DEA7D28CF75F300A41259 /* CoreData */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AC5DEA7D28CF75F300A41259 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				AC5DEA8E28CF76A600A41259 /* TestCoreDataStack.swift */,
+				AC5DEA9028CF76E000A41259 /* CoreDataPersistenceTests.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		AC5DEA8528CF767C00A41259 /* AsterCoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				AC5DEA7B28CF75D300A41259 /* Services */,
+			);
+			path = AsterCoreTests;
+			sourceTree = "<group>";
+		};
 		AC6BF57328CB7DD5007BF723 = {
 			isa = PBXGroup;
 			children = (
 				AC6BF58728CB7E34007BF723 /* Sources */,
-				AC6BF58A28CB7FE6007BF723 /* Tests */,
+				AC5DEA8528CF767C00A41259 /* AsterCoreTests */,
 				AC6BF57E28CB7DD5007BF723 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				AC6BF57D28CB7DD5007BF723 /* AsterCore.framework */,
+				AC5DEA8428CF767C00A41259 /* AsterCoreTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,13 +136,6 @@
 				AC6BF5C228CB83A5007BF723 /* Store */,
 			);
 			path = Sources;
-			sourceTree = "<group>";
-		};
-		AC6BF58A28CB7FE6007BF723 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tests;
 			sourceTree = "<group>";
 		};
 		AC6BF5A028CB80F8007BF723 /* Services */ = {
@@ -186,6 +229,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		AC5DEA8328CF767C00A41259 /* AsterCoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC5DEA8B28CF767C00A41259 /* Build configuration list for PBXNativeTarget "AsterCoreTests" */;
+			buildPhases = (
+				AC5DEA8028CF767C00A41259 /* Sources */,
+				AC5DEA8128CF767C00A41259 /* Frameworks */,
+				AC5DEA8228CF767C00A41259 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC5DEA8A28CF767C00A41259 /* PBXTargetDependency */,
+			);
+			name = AsterCoreTests;
+			productName = AsterCoreTests;
+			productReference = AC5DEA8428CF767C00A41259 /* AsterCoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		AC6BF57C28CB7DD5007BF723 /* AsterCore */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC6BF58428CB7DD5007BF723 /* Build configuration list for PBXNativeTarget "AsterCore" */;
@@ -211,8 +272,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
+					AC5DEA8328CF767C00A41259 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
 					AC6BF57C28CB7DD5007BF723 = {
 						CreatedOnToolsVersion = 13.4.1;
 						LastSwiftMigration = 1340;
@@ -233,11 +298,19 @@
 			projectRoot = "";
 			targets = (
 				AC6BF57C28CB7DD5007BF723 /* AsterCore */,
+				AC5DEA8328CF767C00A41259 /* AsterCoreTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		AC5DEA8228CF767C00A41259 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AC6BF57B28CB7DD5007BF723 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -248,6 +321,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		AC5DEA8028CF767C00A41259 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC5DEA9128CF76E000A41259 /* CoreDataPersistenceTests.swift in Sources */,
+				AC5DEA8F28CF76A600A41259 /* TestCoreDataStack.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AC6BF57928CB7DD5007BF723 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -275,7 +357,50 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		AC5DEA8A28CF767C00A41259 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = AC6BF57C28CB7DD5007BF723 /* AsterCore */;
+			targetProxy = AC5DEA8928CF767C00A41259 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		AC5DEA8C28CF767C00A41259 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PUYAVM797H;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AlexandreBeltzung.AsterCoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		AC5DEA8D28CF767C00A41259 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PUYAVM797H;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AlexandreBeltzung.AsterCoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 		AC6BF58228CB7DD5007BF723 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -466,6 +591,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AC5DEA8B28CF767C00A41259 /* Build configuration list for PBXNativeTarget "AsterCoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC5DEA8C28CF767C00A41259 /* Debug */,
+				AC5DEA8D28CF767C00A41259 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		AC6BF57728CB7DD5007BF723 /* Build configuration list for PBXProject "AsterCore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

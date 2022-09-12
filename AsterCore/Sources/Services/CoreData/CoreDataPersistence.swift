@@ -62,4 +62,20 @@ public class CoreDataPersistence: UserService {
             print("Sorry a problem occured")
         }
     }
+
+    func deleteAllUsers() {
+        let request: NSFetchRequest<UserEntity> = UserEntity.fetchRequest()
+
+        do {
+            let usersToDelete = try coreDataStack.viewContext.fetch(request)
+
+            usersToDelete.forEach {  coreDataStack.viewContext.delete($0) }
+
+            try coreDataStack.viewContext.save()
+
+            users.removeAll()
+        } catch {
+            print("Something went wrong")
+        }
+    }
 }

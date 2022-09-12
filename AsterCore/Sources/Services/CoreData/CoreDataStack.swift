@@ -8,10 +8,10 @@
 import Foundation
 import CoreData
 
-final class CoreDataStack {
+public class CoreDataStack {
 
     // MARK: - Properties
-    private let persistentContainerName = "Aster"
+     public let persistentContainerName = "Aster"
 
      // MARK: - Singleton
      static let sharedInstance = CoreDataStack()
@@ -22,11 +22,11 @@ final class CoreDataStack {
      }
 
      // MARK: - Private
-     private init() {
+     public init() {
 
      }
 
-     private lazy var persistentContainer: NSPersistentContainer = {
+     public lazy var persistentContainer: NSPersistentContainer = {
          let container = NSPersistentContainer(name: persistentContainerName)
          container.loadPersistentStores(completionHandler: { storeDescription, error in
              if let error = error as NSError? {
