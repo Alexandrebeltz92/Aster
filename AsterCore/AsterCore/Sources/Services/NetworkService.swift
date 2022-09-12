@@ -8,7 +8,6 @@
 import Foundation
 
 public protocol NetworkServiceProtocol {
-    func post<T>(url: URL, completionHandler: @escaping (Result<T, ServiceError>) -> Void) where T: Decodable
     func get<T>(url: URL, completionHandler: @escaping (Result<T, ServiceError>) -> Void) where T: Decodable
     func call<T>(request: URLRequest, completionHandler: @escaping (Result<T, ServiceError>) -> Void) where T: Decodable
 }
@@ -23,13 +22,6 @@ public struct NetworkService: NetworkServiceProtocol {
 
     public func get<T>(url: URL, completionHandler: @escaping (Result<T, ServiceError>) -> Void) where T: Decodable {
         call(request: URLRequest(url: url), completionHandler: completionHandler)
-    }
-
-    public func post<T>(url: URL, completionHandler: @escaping (Result<T, ServiceError>) -> Void) where T: Decodable {
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-
-        call(request: request, completionHandler: completionHandler)
     }
 
     public func call<T>(request: URLRequest, completionHandler: @escaping (Result<T, ServiceError>) -> Void) where T: Decodable {

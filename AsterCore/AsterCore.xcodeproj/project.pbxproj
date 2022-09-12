@@ -10,6 +10,11 @@
 		AC5DEA8828CF767C00A41259 /* AsterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6BF57D28CB7DD5007BF723 /* AsterCore.framework */; platformFilter = ios; };
 		AC5DEA8F28CF76A600A41259 /* TestCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DEA8E28CF76A600A41259 /* TestCoreDataStack.swift */; };
 		AC5DEA9128CF76E000A41259 /* CoreDataPersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DEA9028CF76E000A41259 /* CoreDataPersistenceTests.swift */; };
+		AC5DEA9428CF7EDA00A41259 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DEA9328CF7EDA00A41259 /* NetworkServiceTests.swift */; };
+		AC5DEA9628CF7F0E00A41259 /* StubNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DEA9528CF7F0E00A41259 /* StubNetworkService.swift */; };
+		AC5DEA9828CF7F2E00A41259 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DEA9728CF7F2E00A41259 /* MockURLProtocol.swift */; };
+		AC5DEA9B28CF7F5C00A41259 /* Mock.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AC5DEA9A28CF7F5C00A41259 /* Mock.bundle */; };
+		AC5DEA9E28CF803000A41259 /* XCTestCaseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DEA9D28CF803000A41259 /* XCTestCaseExtension.swift */; };
 		AC6BF5A328CB810D007BF723 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5A228CB810D007BF723 /* UserService.swift */; };
 		AC6BF5A528CB813E007BF723 /* CoreDataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5A428CB813E007BF723 /* CoreDataPersistence.swift */; };
 		AC6BF5A728CB8162007BF723 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5A628CB8162007BF723 /* CoreDataStack.swift */; };
@@ -44,6 +49,11 @@
 		AC5DEA8428CF767C00A41259 /* AsterCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AsterCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC5DEA8E28CF76A600A41259 /* TestCoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoreDataStack.swift; sourceTree = "<group>"; };
 		AC5DEA9028CF76E000A41259 /* CoreDataPersistenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPersistenceTests.swift; sourceTree = "<group>"; };
+		AC5DEA9328CF7EDA00A41259 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
+		AC5DEA9528CF7F0E00A41259 /* StubNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubNetworkService.swift; sourceTree = "<group>"; };
+		AC5DEA9728CF7F2E00A41259 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		AC5DEA9A28CF7F5C00A41259 /* Mock.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Mock.bundle; sourceTree = "<group>"; };
+		AC5DEA9D28CF803000A41259 /* XCTestCaseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCaseExtension.swift; sourceTree = "<group>"; };
 		AC6BF57D28CB7DD5007BF723 /* AsterCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AsterCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC6BF5A228CB810D007BF723 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		AC6BF5A428CB813E007BF723 /* CoreDataPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPersistence.swift; sourceTree = "<group>"; };
@@ -88,6 +98,9 @@
 			isa = PBXGroup;
 			children = (
 				AC5DEA7D28CF75F300A41259 /* CoreData */,
+				AC5DEA9328CF7EDA00A41259 /* NetworkServiceTests.swift */,
+				AC5DEA9528CF7F0E00A41259 /* StubNetworkService.swift */,
+				AC5DEA9728CF7F2E00A41259 /* MockURLProtocol.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -104,15 +117,41 @@
 		AC5DEA8528CF767C00A41259 /* AsterCoreTests */ = {
 			isa = PBXGroup;
 			children = (
+				AC5DEA9C28CF802200A41259 /* Extension */,
+				AC5DEA9928CF7F4900A41259 /* Ressources */,
 				AC5DEA7B28CF75D300A41259 /* Services */,
 			);
 			path = AsterCoreTests;
 			sourceTree = "<group>";
 		};
-		AC6BF57328CB7DD5007BF723 = {
+		AC5DEA9928CF7F4900A41259 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				AC5DEA9A28CF7F5C00A41259 /* Mock.bundle */,
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
+		AC5DEA9C28CF802200A41259 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				AC5DEA9D28CF803000A41259 /* XCTestCaseExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		AC5DEA9F28CF833700A41259 /* AsterCore */ = {
 			isa = PBXGroup;
 			children = (
 				AC6BF58728CB7E34007BF723 /* Sources */,
+			);
+			path = AsterCore;
+			sourceTree = "<group>";
+		};
+		AC6BF57328CB7DD5007BF723 = {
+			isa = PBXGroup;
+			children = (
+				AC5DEA9F28CF833700A41259 /* AsterCore */,
 				AC5DEA8528CF767C00A41259 /* AsterCoreTests */,
 				AC6BF57E28CB7DD5007BF723 /* Products */,
 			);
@@ -308,6 +347,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC5DEA9B28CF7F5C00A41259 /* Mock.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,7 +365,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC5DEA9628CF7F0E00A41259 /* StubNetworkService.swift in Sources */,
+				AC5DEA9E28CF803000A41259 /* XCTestCaseExtension.swift in Sources */,
+				AC5DEA9828CF7F2E00A41259 /* MockURLProtocol.swift in Sources */,
 				AC5DEA9128CF76E000A41259 /* CoreDataPersistenceTests.swift in Sources */,
+				AC5DEA9428CF7EDA00A41259 /* NetworkServiceTests.swift in Sources */,
 				AC5DEA8F28CF76A600A41259 /* TestCoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

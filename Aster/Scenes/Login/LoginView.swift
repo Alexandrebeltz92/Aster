@@ -175,4 +175,4 @@ struct BirthdayLoginView: View {
 //        }))
 //        Spacer()
 //    }.navigationBarHidden(true)
-//}.navigationBarHidden(true)
+// }.navigationBarHidden(true)
