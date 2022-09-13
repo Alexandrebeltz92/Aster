@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-
 extension UserEntity {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<UserEntity> {
@@ -23,7 +22,7 @@ extension UserEntity {
 
 }
 
-extension UserEntity : Identifiable {
+extension UserEntity: Identifiable {
 
 }
 
