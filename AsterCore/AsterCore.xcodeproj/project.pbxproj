@@ -15,12 +15,14 @@
 		AC5DEA9828CF7F2E00A41259 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DEA9728CF7F2E00A41259 /* MockURLProtocol.swift */; };
 		AC5DEA9B28CF7F5C00A41259 /* Mock.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AC5DEA9A28CF7F5C00A41259 /* Mock.bundle */; };
 		AC5DEA9E28CF803000A41259 /* XCTestCaseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DEA9D28CF803000A41259 /* XCTestCaseExtension.swift */; };
+		AC5DEAA228CF86F200A41259 /* HoroscopeServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DEAA128CF86F200A41259 /* HoroscopeServiceTests.swift */; };
+		AC5DEAA428CF882000A41259 /* HoroscopeResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DEAA328CF882000A41259 /* HoroscopeResponseTests.swift */; };
+		AC5DEAA728D07F4800A41259 /* Aster.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC5DEAA528D07F4800A41259 /* Aster.xcdatamodeld */; };
 		AC6BF5A328CB810D007BF723 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5A228CB810D007BF723 /* UserService.swift */; };
 		AC6BF5A528CB813E007BF723 /* CoreDataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5A428CB813E007BF723 /* CoreDataPersistence.swift */; };
 		AC6BF5A728CB8162007BF723 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5A628CB8162007BF723 /* CoreDataStack.swift */; };
 		AC6BF5AC28CB8190007BF723 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5AB28CB8190007BF723 /* User.swift */; };
 		AC6BF5AF28CB81A7007BF723 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5AE28CB81A7007BF723 /* Card.swift */; };
-		AC6BF5B228CB81EE007BF723 /* Aster.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5B028CB81EE007BF723 /* Aster.xcdatamodeld */; };
 		AC6BF5B628CB825C007BF723 /* CardEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5B528CB825C007BF723 /* CardEntity+CoreDataClass.swift */; };
 		AC6BF5B828CB826D007BF723 /* CardEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5B728CB826D007BF723 /* CardEntity+CoreDataProperties.swift */; };
 		AC6BF5BA28CB8285007BF723 /* CardEntity+Transformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5B928CB8285007BF723 /* CardEntity+Transformation.swift */; };
@@ -54,13 +56,15 @@
 		AC5DEA9728CF7F2E00A41259 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		AC5DEA9A28CF7F5C00A41259 /* Mock.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Mock.bundle; sourceTree = "<group>"; };
 		AC5DEA9D28CF803000A41259 /* XCTestCaseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCaseExtension.swift; sourceTree = "<group>"; };
+		AC5DEAA128CF86F200A41259 /* HoroscopeServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeServiceTests.swift; sourceTree = "<group>"; };
+		AC5DEAA328CF882000A41259 /* HoroscopeResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeResponseTests.swift; sourceTree = "<group>"; };
+		AC5DEAA628D07F4800A41259 /* Aster.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Aster.xcdatamodel; sourceTree = "<group>"; };
 		AC6BF57D28CB7DD5007BF723 /* AsterCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AsterCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC6BF5A228CB810D007BF723 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		AC6BF5A428CB813E007BF723 /* CoreDataPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPersistence.swift; sourceTree = "<group>"; };
 		AC6BF5A628CB8162007BF723 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		AC6BF5AB28CB8190007BF723 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AC6BF5AE28CB81A7007BF723 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		AC6BF5B128CB81EE007BF723 /* Aster.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Aster.xcdatamodel; sourceTree = "<group>"; };
 		AC6BF5B528CB825C007BF723 /* CardEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		AC6BF5B728CB826D007BF723 /* CardEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		AC6BF5B928CB8285007BF723 /* CardEntity+Transformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardEntity+Transformation.swift"; sourceTree = "<group>"; };
@@ -97,6 +101,7 @@
 		AC5DEA7B28CF75D300A41259 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				AC5DEAA028CF86D800A41259 /* Horoscope */,
 				AC5DEA7D28CF75F300A41259 /* CoreData */,
 				AC5DEA9328CF7EDA00A41259 /* NetworkServiceTests.swift */,
 				AC5DEA9528CF7F0E00A41259 /* StubNetworkService.swift */,
@@ -148,6 +153,15 @@
 			path = AsterCore;
 			sourceTree = "<group>";
 		};
+		AC5DEAA028CF86D800A41259 /* Horoscope */ = {
+			isa = PBXGroup;
+			children = (
+				AC5DEAA128CF86F200A41259 /* HoroscopeServiceTests.swift */,
+				AC5DEAA328CF882000A41259 /* HoroscopeResponseTests.swift */,
+			);
+			path = Horoscope;
+			sourceTree = "<group>";
+		};
 		AC6BF57328CB7DD5007BF723 = {
 			isa = PBXGroup;
 			children = (
@@ -194,7 +208,7 @@
 				AC6BF5A228CB810D007BF723 /* UserService.swift */,
 				AC6BF5A428CB813E007BF723 /* CoreDataPersistence.swift */,
 				AC6BF5A628CB8162007BF723 /* CoreDataStack.swift */,
-				AC6BF5B028CB81EE007BF723 /* Aster.xcdatamodeld */,
+				AC5DEAA528D07F4800A41259 /* Aster.xcdatamodeld */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -368,9 +382,11 @@
 				AC5DEA9628CF7F0E00A41259 /* StubNetworkService.swift in Sources */,
 				AC5DEA9E28CF803000A41259 /* XCTestCaseExtension.swift in Sources */,
 				AC5DEA9828CF7F2E00A41259 /* MockURLProtocol.swift in Sources */,
+				AC5DEAA428CF882000A41259 /* HoroscopeResponseTests.swift in Sources */,
 				AC5DEA9128CF76E000A41259 /* CoreDataPersistenceTests.swift in Sources */,
 				AC5DEA9428CF7EDA00A41259 /* NetworkServiceTests.swift in Sources */,
 				AC5DEA8F28CF76A600A41259 /* TestCoreDataStack.swift in Sources */,
+				AC5DEAA228CF86F200A41259 /* HoroscopeServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,10 +401,10 @@
 				AC6BF5BD28CB8307007BF723 /* UserEntity+CoreDataClass.swift in Sources */,
 				AC6BF5CD28CB84A4007BF723 /* NetworkService.swift in Sources */,
 				AC6BF5CF28CB84B6007BF723 /* ServiceError.swift in Sources */,
+				AC5DEAA728D07F4800A41259 /* Aster.xcdatamodeld in Sources */,
 				AC6BF5AC28CB8190007BF723 /* User.swift in Sources */,
 				AC6BF5BA28CB8285007BF723 /* CardEntity+Transformation.swift in Sources */,
 				AC6BF5C928CB8477007BF723 /* HoroscopeService.swift in Sources */,
-				AC6BF5B228CB81EE007BF723 /* Aster.xcdatamodeld in Sources */,
 				AC6BF5A728CB8162007BF723 /* CoreDataStack.swift in Sources */,
 				AC6BF5AF28CB81A7007BF723 /* Card.swift in Sources */,
 				AC6BF5C128CB831D007BF723 /* UserEntity+Transformation.swift in Sources */,
@@ -665,12 +681,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		AC6BF5B028CB81EE007BF723 /* Aster.xcdatamodeld */ = {
+		AC5DEAA528D07F4800A41259 /* Aster.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				AC6BF5B128CB81EE007BF723 /* Aster.xcdatamodel */,
+				AC5DEAA628D07F4800A41259 /* Aster.xcdatamodel */,
 			);
-			currentVersion = AC6BF5B128CB81EE007BF723 /* Aster.xcdatamodel */;
+			currentVersion = AC5DEAA628D07F4800A41259 /* Aster.xcdatamodel */;
 			path = Aster.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
