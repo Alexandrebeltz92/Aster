@@ -11,7 +11,7 @@
         <relationship name="cards" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CardEntity" inverseName="user" inverseEntity="CardEntity"/>
     </entity>
     <elements>
-        <element name="UserEntity" positionX="-1331.125732421875" positionY="604.5802612304688" width="95.40850830078125" height="88"/>
         <element name="CardEntity" positionX="-1125.063720703125" positionY="620.1090087890625" width="128" height="73"/>
+        <element name="UserEntity" positionX="-1331.125732421875" positionY="604.5802612304688" width="95.40850830078125" height="89"/>
     </elements>
 </model>

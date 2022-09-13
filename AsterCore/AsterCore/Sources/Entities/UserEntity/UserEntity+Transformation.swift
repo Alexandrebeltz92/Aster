@@ -10,13 +10,13 @@ import CoreData
 extension UserEntity {
 
     func toUser() -> User {
-        guard let cardsEntities = cards.allObjects as? [CardEntity] else {
+        guard let cardsEntities = cards?.allObjects as? [CardEntity] else {
             fatalError()
         }
 
-        return User(pseudo: pseudo,
-                    dateOfBirth: dateOfBirth,
-                    astrologicalSign: sign,
+        return User(pseudo: pseudo!,
+                    dateOfBirth: dateOfBirth!,
+                    astrologicalSign: sign!,
                     cards: cardsEntities.map { $0.toCard() })
     }
 }

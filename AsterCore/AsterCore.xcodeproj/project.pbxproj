@@ -18,16 +18,16 @@
 		AC5DEAA228CF86F200A41259 /* HoroscopeServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DEAA128CF86F200A41259 /* HoroscopeServiceTests.swift */; };
 		AC5DEAA428CF882000A41259 /* HoroscopeResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DEAA328CF882000A41259 /* HoroscopeResponseTests.swift */; };
 		AC5DEAA728D07F4800A41259 /* Aster.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC5DEAA528D07F4800A41259 /* Aster.xcdatamodeld */; };
+		AC5DEAAC28D0836000A41259 /* UserEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DEAA828D0836000A41259 /* UserEntity+CoreDataClass.swift */; };
+		AC5DEAAD28D0836000A41259 /* UserEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DEAA928D0836000A41259 /* UserEntity+CoreDataProperties.swift */; };
+		AC5DEAAE28D0836000A41259 /* CardEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DEAAA28D0836000A41259 /* CardEntity+CoreDataClass.swift */; };
+		AC5DEAAF28D0836000A41259 /* CardEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DEAAB28D0836000A41259 /* CardEntity+CoreDataProperties.swift */; };
 		AC6BF5A328CB810D007BF723 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5A228CB810D007BF723 /* UserService.swift */; };
 		AC6BF5A528CB813E007BF723 /* CoreDataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5A428CB813E007BF723 /* CoreDataPersistence.swift */; };
 		AC6BF5A728CB8162007BF723 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5A628CB8162007BF723 /* CoreDataStack.swift */; };
 		AC6BF5AC28CB8190007BF723 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5AB28CB8190007BF723 /* User.swift */; };
 		AC6BF5AF28CB81A7007BF723 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5AE28CB81A7007BF723 /* Card.swift */; };
-		AC6BF5B628CB825C007BF723 /* CardEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5B528CB825C007BF723 /* CardEntity+CoreDataClass.swift */; };
-		AC6BF5B828CB826D007BF723 /* CardEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5B728CB826D007BF723 /* CardEntity+CoreDataProperties.swift */; };
 		AC6BF5BA28CB8285007BF723 /* CardEntity+Transformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5B928CB8285007BF723 /* CardEntity+Transformation.swift */; };
-		AC6BF5BD28CB8307007BF723 /* UserEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5BC28CB8307007BF723 /* UserEntity+CoreDataClass.swift */; };
-		AC6BF5BF28CB8313007BF723 /* UserEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5BE28CB8313007BF723 /* UserEntity+CoreDataProperties.swift */; };
 		AC6BF5C128CB831D007BF723 /* UserEntity+Transformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5C028CB831D007BF723 /* UserEntity+Transformation.swift */; };
 		AC6BF5C428CB83AE007BF723 /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5C328CB83AE007BF723 /* UserStore.swift */; };
 		AC6BF5C628CB841F007BF723 /* AstrologicalSigns.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5C528CB841F007BF723 /* AstrologicalSigns.swift */; };
@@ -59,17 +59,17 @@
 		AC5DEAA128CF86F200A41259 /* HoroscopeServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeServiceTests.swift; sourceTree = "<group>"; };
 		AC5DEAA328CF882000A41259 /* HoroscopeResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeResponseTests.swift; sourceTree = "<group>"; };
 		AC5DEAA628D07F4800A41259 /* Aster.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Aster.xcdatamodel; sourceTree = "<group>"; };
+		AC5DEAA828D0836000A41259 /* UserEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AC5DEAA928D0836000A41259 /* UserEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AC5DEAAA28D0836000A41259 /* CardEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AC5DEAAB28D0836000A41259 /* CardEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		AC6BF57D28CB7DD5007BF723 /* AsterCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AsterCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC6BF5A228CB810D007BF723 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		AC6BF5A428CB813E007BF723 /* CoreDataPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPersistence.swift; sourceTree = "<group>"; };
 		AC6BF5A628CB8162007BF723 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		AC6BF5AB28CB8190007BF723 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AC6BF5AE28CB81A7007BF723 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		AC6BF5B528CB825C007BF723 /* CardEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		AC6BF5B728CB826D007BF723 /* CardEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		AC6BF5B928CB8285007BF723 /* CardEntity+Transformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardEntity+Transformation.swift"; sourceTree = "<group>"; };
-		AC6BF5BC28CB8307007BF723 /* UserEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		AC6BF5BE28CB8313007BF723 /* UserEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		AC6BF5C028CB831D007BF723 /* UserEntity+Transformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserEntity+Transformation.swift"; sourceTree = "<group>"; };
 		AC6BF5C328CB83AE007BF723 /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
 		AC6BF5C528CB841F007BF723 /* AstrologicalSigns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstrologicalSigns.swift; sourceTree = "<group>"; };
@@ -235,8 +235,8 @@
 		AC6BF5B428CB8248007BF723 /* CardEntity */ = {
 			isa = PBXGroup;
 			children = (
-				AC6BF5B528CB825C007BF723 /* CardEntity+CoreDataClass.swift */,
-				AC6BF5B728CB826D007BF723 /* CardEntity+CoreDataProperties.swift */,
+				AC5DEAAA28D0836000A41259 /* CardEntity+CoreDataClass.swift */,
+				AC5DEAAB28D0836000A41259 /* CardEntity+CoreDataProperties.swift */,
 				AC6BF5B928CB8285007BF723 /* CardEntity+Transformation.swift */,
 			);
 			path = CardEntity;
@@ -245,8 +245,8 @@
 		AC6BF5BB28CB82BE007BF723 /* UserEntity */ = {
 			isa = PBXGroup;
 			children = (
-				AC6BF5BC28CB8307007BF723 /* UserEntity+CoreDataClass.swift */,
-				AC6BF5BE28CB8313007BF723 /* UserEntity+CoreDataProperties.swift */,
+				AC5DEAA828D0836000A41259 /* UserEntity+CoreDataClass.swift */,
+				AC5DEAA928D0836000A41259 /* UserEntity+CoreDataProperties.swift */,
 				AC6BF5C028CB831D007BF723 /* UserEntity+Transformation.swift */,
 			);
 			path = UserEntity;
@@ -395,22 +395,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC6BF5C628CB841F007BF723 /* AstrologicalSigns.swift in Sources */,
-				AC6BF5B828CB826D007BF723 /* CardEntity+CoreDataProperties.swift in Sources */,
-				AC6BF5BF28CB8313007BF723 /* UserEntity+CoreDataProperties.swift in Sources */,
 				AC6BF5CB28CB8489007BF723 /* HoroscopeResponse.swift in Sources */,
-				AC6BF5BD28CB8307007BF723 /* UserEntity+CoreDataClass.swift in Sources */,
 				AC6BF5CD28CB84A4007BF723 /* NetworkService.swift in Sources */,
+				AC5DEAAE28D0836000A41259 /* CardEntity+CoreDataClass.swift in Sources */,
+				AC5DEAAC28D0836000A41259 /* UserEntity+CoreDataClass.swift in Sources */,
 				AC6BF5CF28CB84B6007BF723 /* ServiceError.swift in Sources */,
 				AC5DEAA728D07F4800A41259 /* Aster.xcdatamodeld in Sources */,
 				AC6BF5AC28CB8190007BF723 /* User.swift in Sources */,
 				AC6BF5BA28CB8285007BF723 /* CardEntity+Transformation.swift in Sources */,
 				AC6BF5C928CB8477007BF723 /* HoroscopeService.swift in Sources */,
 				AC6BF5A728CB8162007BF723 /* CoreDataStack.swift in Sources */,
+				AC5DEAAD28D0836000A41259 /* UserEntity+CoreDataProperties.swift in Sources */,
 				AC6BF5AF28CB81A7007BF723 /* Card.swift in Sources */,
 				AC6BF5C128CB831D007BF723 /* UserEntity+Transformation.swift in Sources */,
 				AC6BF5A528CB813E007BF723 /* CoreDataPersistence.swift in Sources */,
 				AC6BF5A328CB810D007BF723 /* UserService.swift in Sources */,
-				AC6BF5B628CB825C007BF723 /* CardEntity+CoreDataClass.swift in Sources */,
+				AC5DEAAF28D0836000A41259 /* CardEntity+CoreDataProperties.swift in Sources */,
 				AC6BF5C428CB83AE007BF723 /* UserStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -2,11 +2,13 @@
 //  UserEntity+CoreDataProperties.swift
 //  AsterCore
 //
-//  Created by Alexandre Graverol on 09/09/2022.
+//  Created by Alexandre Graverol on 13/09/2022.
+//
 //
 
 import Foundation
 import CoreData
+
 
 extension UserEntity {
 
@@ -14,10 +16,14 @@ extension UserEntity {
         return NSFetchRequest<UserEntity>(entityName: "UserEntity")
     }
 
-    @NSManaged public var pseudo: String
-    @NSManaged public var dateOfBirth: String
-    @NSManaged public var sign: String
-    @NSManaged public var cards: NSSet
+    @NSManaged public var dateOfBirth: String?
+    @NSManaged public var pseudo: String?
+    @NSManaged public var sign: String?
+    @NSManaged public var cards: NSSet?
+
+}
+
+extension UserEntity : Identifiable {
 
 }
 
@@ -35,8 +41,4 @@ extension UserEntity {
 
     @objc(removeCards:)
     @NSManaged public func removeFromCards(_ values: NSSet)
-}
-
-extension UserEntity: Identifiable {
-
 }

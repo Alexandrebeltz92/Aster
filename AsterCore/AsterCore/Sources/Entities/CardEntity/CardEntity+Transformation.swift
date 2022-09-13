@@ -10,7 +10,7 @@ import CoreData
 extension CardEntity {
 
     func toCard() -> Card {
-        return Card(name: name)
+        return Card(name: name!)
     }
 }
 
