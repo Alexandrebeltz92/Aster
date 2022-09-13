@@ -11,6 +11,7 @@ import AsterCore
 struct ProfilView: View {
 
     var user: User
+    var card: Card
 
     let viewModel = ProfilViewModel()
     @State private var navigateToLearnMore = false
@@ -49,7 +50,7 @@ struct ProfilView: View {
                             SavedCardView().onTapGesture {
                                 self.navigateToLearnMore = true
                             }.sheet(isPresented: $navigateToLearnMore) {
-                                TarotCardDetailView()
+                                TarotCardDetailView(card: card)
                             }
                         }
                     }
@@ -78,6 +79,6 @@ struct ProfilView_Previews: PreviewProvider {
     static let userPreview = User(pseudo: "James", dateOfBirth: "24/04", astrologicalSign: "Aries", cards: [cardsPreview, cardsPreview, cardsPreview])
 
     static var previews: some View {
-        ProfilView(user: userPreview)
+        ProfilView(user: userPreview, card: cardsPreview)
     }
 }

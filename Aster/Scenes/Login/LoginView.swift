@@ -94,6 +94,7 @@ struct BirthdayLoginView: View {
                 Text("Please enter your birthday")
                     .font(.body)
                     .fontWeight(.semibold)
+                    .foregroundColor(.white)
                     .padding(.bottom, 20)
 
                 HStack {

@@ -11,6 +11,7 @@ import AsterCore
 struct HomeView: View {
 
     var user = User(pseudo: "James", dateOfBirth: "", astrologicalSign: "", cards: [Card(name: "", description: "")])
+    var card = Card(name: "0_The_Fool", description: "")
 
     init() {
         UITabBar.appearance().backgroundColor = UIColor.white
@@ -25,13 +26,13 @@ struct HomeView: View {
                         Image(systemName: "wand.and.stars")
                             .foregroundColor(.red)
                     }
-                TarotCardView()
+                TarotCardView(card: card)
                     .tabItem {
                         Image(systemName: "moon.stars")
                             .foregroundColor(.red)
                     }
 
-                ProfilView(user: user)
+                ProfilView(user: user, card: card)
                     .tabItem {
                         Image(systemName: "person")
                             .foregroundColor(.red)

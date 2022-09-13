@@ -9,6 +9,9 @@ import SwiftUI
 import AsterCore
 
 struct TarotCardDetailView: View {
+
+    var card: Card
+
     var body: some View {
         ZStack {
             Image("background")
@@ -22,12 +25,12 @@ struct TarotCardDetailView: View {
                 .shadow(color: .gray, radius: 2, x: 0, y: 0)
 
             VStack(alignment: .center, spacing: 60) {
-                Text("viewModel.name")
+                Text(card.name)
                     .bold()
                     .font(.largeTitle)
                     .foregroundColor(.blue)
 
-                Text("viewModel.description")
+                Text(card.description)
                     .minimumScaleFactor(0.2)
                     .font(.subheadline)
                     .foregroundColor(.black)
@@ -37,7 +40,10 @@ struct TarotCardDetailView: View {
 }
 
 struct TarotCardDetailView_Previews: PreviewProvider {
+
+    static var cardPreview = Card(name: "0_The_Fool", description: "Follow the wind")
+
     static var previews: some View {
-        TarotCardDetailView()
+        TarotCardDetailView(card: cardPreview)
     }
 }
