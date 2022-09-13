@@ -23,5 +23,6 @@ class TarotCardDetailViewModel: ObservableObject {
 
     func getInformation() {
         name = card.name
+        description = card.description
     }
 }

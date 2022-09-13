@@ -8,8 +8,8 @@
 import Foundation
 
 public struct Card {
-   public let name: String
-   public let description: String
+    public let name: String
+    public let description: String
 }
 
 extension Card: Equatable {

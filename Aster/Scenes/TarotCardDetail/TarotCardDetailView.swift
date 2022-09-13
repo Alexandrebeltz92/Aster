@@ -6,10 +6,9 @@
 //
 
 import SwiftUI
+import AsterCore
 
 struct TarotCardDetailView: View {
-//    @StateObject var viewModel = TarotCardDetailViewModel(card: card)
-
     var body: some View {
         ZStack {
             Image("background")

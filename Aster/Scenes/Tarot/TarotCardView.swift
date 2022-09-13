@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AsterCore
 
 struct TarotCardView: View {
     // MARK: - Properties
@@ -57,9 +58,7 @@ struct TarotCardView: View {
                     TarotCardDetailView()
                 }
             }
-
             // TODO: cant figure how to place it - Button
-
         }.onTapGesture {
             flipCard()
         }
