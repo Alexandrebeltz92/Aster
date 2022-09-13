@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import AsterCore
 
 struct ProfilView: View {
+
+    var user: User
 
     let viewModel = ProfilViewModel()
     @State private var navigateToLearnMore = false
@@ -26,11 +29,11 @@ struct ProfilView: View {
 
                 Spacer()
 
-                Text(viewModel.pseudo)
+                Text(user.pseudo)
                     .font(.largeTitle)
                     .bold()
 
-                Text(viewModel.sign)
+                Text(user.astrologicalSign)
                     .font(.title2)
 
                 Spacer()
@@ -42,7 +45,7 @@ struct ProfilView: View {
 
                 ScrollView(.horizontal, showsIndicators: true) {
                     HStack(alignment: .center, spacing: 20) {
-                        ForEach(viewModel.cards, id: \.name) {_ in
+                        ForEach(user.cards, id: \.name) {_ in
                             SavedCardView().onTapGesture {
                                 self.navigateToLearnMore = true
                             }.sheet(isPresented: $navigateToLearnMore) {
@@ -69,7 +72,12 @@ struct SavedCardView: View {
 }
 
 struct ProfilView_Previews: PreviewProvider {
+
+    static let cardsPreview = Card(name: "0_The_Fool", description: "")
+
+    static let userPreview = User(pseudo: "James", dateOfBirth: "24/04", astrologicalSign: "Aries", cards: [cardsPreview, cardsPreview, cardsPreview])
+
     static var previews: some View {
-        ProfilView()
+        ProfilView(user: userPreview)
     }
 }

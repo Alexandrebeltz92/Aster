@@ -7,12 +7,35 @@
 
 import Foundation
 
-public struct User {
+public class User {
 
     public let pseudo: String
     public let dateOfBirth: String
     public let astrologicalSign: String
     public let cards: [Card]
+
+    public init(pseudo: String, dateOfBirth: String, astrologicalSign: String, cards: [Card]) {
+        self.pseudo = pseudo
+        self.dateOfBirth = dateOfBirth
+        self.astrologicalSign = astrologicalSign
+        self.cards = cards
+    }
+
+}
+
+extension User: Equatable {
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(pseudo)
+        hasher.combine(dateOfBirth)
+        hasher.combine(astrologicalSign)
+    }
+
+    static public func == (lhs: User, rhs: User) -> Bool {
+        (lhs.pseudo, lhs.dateOfBirth,
+         lhs.astrologicalSign, lhs.cards) == (rhs.pseudo, rhs.dateOfBirth, rhs.astrologicalSign, rhs.cards)
+    }
+}
 
 //    func getAstroSign() -> String {
 //
@@ -77,18 +100,3 @@ public struct User {
 //            return pseudo
 //        }
 //    }
-}
-
-extension User: Equatable {
-
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(pseudo)
-        hasher.combine(dateOfBirth)
-        hasher.combine(astrologicalSign)
-    }
-
-    static public func == (lhs: Self, rhs: Self) -> Bool {
-        (lhs.pseudo, lhs.dateOfBirth,
-         lhs.astrologicalSign, lhs.cards) == (rhs.pseudo, rhs.dateOfBirth, rhs.astrologicalSign, rhs.cards)
-    }
-}

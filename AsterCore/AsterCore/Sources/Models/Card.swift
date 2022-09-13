@@ -7,9 +7,14 @@
 
 import Foundation
 
-public struct Card {
+public class Card {
     public let name: String
     public let description: String
+
+    public init(name: String, description: String) {
+        self.name = name
+        self.description = description
+    }
 }
 
 extension Card: Equatable {
@@ -18,7 +23,7 @@ extension Card: Equatable {
         hasher.combine(name)
     }
 
-    static public func == (lhs: Self, rhs: Self) -> Bool {
+    static public func == (lhs: Card, rhs: Card) -> Bool {
         (lhs.name) == (rhs.name)
     }
 }

@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import AsterCore
 
 struct HomeView: View {
+
+    var user = User(pseudo: "James", dateOfBirth: "", astrologicalSign: "", cards: [Card(name: "", description: "")])
 
     init() {
         UITabBar.appearance().backgroundColor = UIColor.white
@@ -28,7 +31,7 @@ struct HomeView: View {
                             .foregroundColor(.red)
                     }
 
-                ProfilView()
+                ProfilView(user: user)
                     .tabItem {
                         Image(systemName: "person")
                             .foregroundColor(.red)
