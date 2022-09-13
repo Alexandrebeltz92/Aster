@@ -15,6 +15,4 @@ class TarotCardViewModel: ObservableObject {
                     "13_The_Death", "14_The_Temperance", "15_The_Devil", "16_The_Lightning",
                     "17_The_Star", "18_The_Moon", "19_The_Sun", "20_The_Judgement", "21_The_World"]
 
-
 }
-

@@ -23,7 +23,5 @@ class TarotCardDetailViewModel: ObservableObject {
 
     func getInformation() {
         name = card.name
-        //            descriptions.append(card.description)
-        //            description = descriptions.randomElement() ?? card.description
     }
 }

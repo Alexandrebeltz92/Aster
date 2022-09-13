@@ -15,7 +15,8 @@ extension CardEntity {
         return NSFetchRequest<CardEntity>(entityName: "CardEntity")
     }
 
-    @NSManaged public var name: String?
+    @NSManaged public var name: String
+    @NSManaged public var context: String
     @NSManaged public var user: UserEntity?
 
 }

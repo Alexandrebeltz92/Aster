@@ -9,7 +9,7 @@ import Foundation
 
 public struct Card {
    public let name: String
-//    let description: String
+   public let description: String
 }
 
 extension Card: Equatable {

@@ -15,10 +15,10 @@ extension UserEntity {
         return NSFetchRequest<UserEntity>(entityName: "UserEntity")
     }
 
-    @NSManaged public var dateOfBirth: String?
-    @NSManaged public var pseudo: String?
-    @NSManaged public var sign: String?
-    @NSManaged public var cards: NSSet?
+    @NSManaged public var dateOfBirth: String
+    @NSManaged public var pseudo: String
+    @NSManaged public var sign: String
+    @NSManaged public var cards: NSSet
 
 }
 
