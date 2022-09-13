@@ -109,7 +109,7 @@ struct BirthdayLoginView: View {
                         .cornerRadius(15)
                 }.padding(15)
 
-                Button(action: nextPage) {
+                NavigationLink(destination: HomeView(), label: {
                     Text("Lets start")
                         .font(.headline)
                         .foregroundColor(.white)
@@ -117,7 +117,7 @@ struct BirthdayLoginView: View {
                         .frame(width: 220, height: 60, alignment: .center)
                         .background(Color.black)
                         .cornerRadius(35)
-                }
+                })
             }
         }
     }

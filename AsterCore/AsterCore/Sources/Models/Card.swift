@@ -13,11 +13,10 @@ public struct Card {
 }
 
 extension Card: Equatable {
-//
-//    func hash(into hasher: inout Hasher) {
-//        hasher.combine(name)
-//        hasher.combine(description)
-//    }
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(name)
+    }
 
     static public func == (lhs: Self, rhs: Self) -> Bool {
         (lhs.name) == (rhs.name)

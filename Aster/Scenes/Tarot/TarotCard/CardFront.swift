@@ -9,9 +9,9 @@ import SwiftUI
 
 struct CardFront: View {
     @StateObject var viewModel = CardFrontViewModel()
-
     let width: CGFloat
     let height: CGFloat
+
     @Binding var degree: Double
 
     var body: some View {

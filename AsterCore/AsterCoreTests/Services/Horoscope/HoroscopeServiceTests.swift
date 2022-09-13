@@ -22,10 +22,10 @@ class HoroscopeServiceTests: XCTestCase {
     }
 
     func test_GivenAResponse_WhenGetRecipe_ShouldReturnSameResponse() {
-        let response = HoroscopeResponse(sign: "Aries", text: "Hello", date: "25", type: "OK")
+        let response = HoroscopeResponse(sign: "aries", text: "Hello", date: "today", type: "daily")
         stubNetworkService.stubData = response
 
-        service.getHoroscope(for: "Aries", for: "Today") { (result: Result<HoroscopeResponse?, ServiceError>) in
+        service.getHoroscope(for: "aries", for: "today") { (result: Result<HoroscopeResponse?, ServiceError>) in
             switch result {
             case .success(let value):
                 XCTAssertEqual(value?.sign, "Aries")
@@ -38,7 +38,7 @@ class HoroscopeServiceTests: XCTestCase {
     func test_GivenABrokenResponse_WhenGetRecipe_ShouldReturnError() {
         stubNetworkService.stubError = .unknown
 
-        service.getHoroscope(for: "Aries", for: "Today") { (result: Result<HoroscopeResponse?, ServiceError>) in
+        service.getHoroscope(for: "aries", for: "today") { (result: Result<HoroscopeResponse?, ServiceError>) in
             switch result {
             case .success:
                 NSLog("Should have succeed")

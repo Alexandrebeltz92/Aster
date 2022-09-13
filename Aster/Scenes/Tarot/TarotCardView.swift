@@ -40,6 +40,7 @@ struct TarotCardView: View {
         }
     }
 
+    // MARK: - View
     var body: some View {
         VStack(alignment: .center, spacing: 15) {
             ZStack {
