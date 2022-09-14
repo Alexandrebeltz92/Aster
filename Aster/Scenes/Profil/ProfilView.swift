@@ -18,6 +18,10 @@ struct ProfilView: View {
 
     var body: some View {
         ZStack {
+            Image("background")
+                .resizable()
+                .ignoresSafeArea()
+    
             VStack {
                 Spacer(minLength: 20)
 
@@ -32,22 +36,24 @@ struct ProfilView: View {
 
                 Text(user.pseudo)
                     .font(.largeTitle)
+                    .foregroundColor(.white)
                     .bold()
 
                 Text(user.astrologicalSign)
+                    .foregroundColor(.white)
                     .font(.title2)
 
                 Spacer()
 
                 Text(viewModel.savedCardsText)
                     .font(.subheadline)
-                    .foregroundColor(.black)
+                    .foregroundColor(.white)
                     .bold()
 
                 ScrollView(.horizontal, showsIndicators: true) {
                     HStack(alignment: .center, spacing: 20) {
                         ForEach(user.cards, id: \.name) {_ in
-                            SavedCardView().onTapGesture {
+                            SavedCardView(card: card).onTapGesture {
                                 self.navigateToLearnMore = true
                             }.sheet(isPresented: $navigateToLearnMore) {
                                 TarotCardDetailView(card: card)
@@ -64,8 +70,10 @@ struct ProfilView: View {
 
 struct SavedCardView: View {
 
+    var card: Card
+
     var body: some View {
-        Image("0_The_Fool")
+        Image(card.name)
             .resizable()
             .frame(width: 100, height: 200, alignment: .center)
             .cornerRadius(25)

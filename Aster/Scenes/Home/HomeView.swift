@@ -26,7 +26,7 @@ struct HomeView: View {
                         Image(systemName: "wand.and.stars")
                             .foregroundColor(.red)
                     }
-                TarotCardView(card: card)
+                TarotCardView()
                     .tabItem {
                         Image(systemName: "moon.stars")
                             .foregroundColor(.red)

@@ -21,7 +21,7 @@ struct TarotCardView: View {
     @State var isFlipped = false
     @State private var navigateToLearnMore = false
 
-    var card: Card
+    var cardToShow = Card(name: "0 The Fool", description: "Hello World.")
 
     // MARK: - Functions
     func flipCard() {
@@ -57,7 +57,7 @@ struct TarotCardView: View {
                 Button("Seek the truth") {
                     self.navigateToLearnMore = true
                 }.sheet(isPresented: $navigateToLearnMore) {
-                    TarotCardDetailView(card: card)
+                    TarotCardDetailView(card: cardToShow)
                 }
             }
             // TODO: cant figure how to place it - Button
@@ -69,9 +69,7 @@ struct TarotCardView: View {
 
 struct TarotCardView_Previews: PreviewProvider {
 
-    static var cardPreview = Card(name: "0_The_Fool", description: "")
-
     static var previews: some View {
-        TarotCardView(card: cardPreview)
+        TarotCardView()
     }
 }
