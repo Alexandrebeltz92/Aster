@@ -9,6 +9,7 @@ import Foundation
 import AsterCore
 
 class HoroscopeViewModel: ObservableObject {
+    @Published var background = "background"
 }
 
 // MARK: - Class OnboardCardModelViewToday

@@ -21,7 +21,7 @@ struct ProfilView: View {
             Image("background")
                 .resizable()
                 .ignoresSafeArea()
-    
+
             VStack {
                 Spacer(minLength: 20)
 

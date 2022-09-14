@@ -15,6 +15,7 @@
 		AC2ED92E28AD8A8D007981C3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC2ED92D28AD8A8D007981C3 /* Preview Assets.xcassets */; };
 		AC2ED94D28AE2156007981C3 /* HoroscopeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2ED94C28AE2156007981C3 /* HoroscopeView.swift */; };
 		AC2ED94F28AE2163007981C3 /* TarotCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2ED94E28AE2163007981C3 /* TarotCardView.swift */; };
+		AC3622DD28D206B800D82620 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3622DC28D206B800D82620 /* WelcomeViewModel.swift */; };
 		AC5DEAB128D0AC4400A41259 /* CardFrontViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DEAB028D0AC4400A41259 /* CardFrontViewModel.swift */; };
 		AC6BF58C28CB801B007BF723 /* AsterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6BF58B28CB801B007BF723 /* AsterCore.framework */; };
 		AC6BF58D28CB801B007BF723 /* AsterCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AC6BF58B28CB801B007BF723 /* AsterCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -58,6 +59,7 @@
 		AC2ED92D28AD8A8D007981C3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AC2ED94C28AE2156007981C3 /* HoroscopeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeView.swift; sourceTree = "<group>"; };
 		AC2ED94E28AE2163007981C3 /* TarotCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotCardView.swift; sourceTree = "<group>"; };
+		AC3622DC28D206B800D82620 /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
 		AC5DEAB028D0AC4400A41259 /* CardFrontViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFrontViewModel.swift; sourceTree = "<group>"; };
 		AC6BF58B28CB801B007BF723 /* AsterCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AsterCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACBE539828B7672200DFC604 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				ACF5CA1928CF1FAF0011CE3B /* WelcomeView.swift */,
+				AC3622DC28D206B800D82620 /* WelcomeViewModel.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACE3603728AEE466002E5897 /* CardBack.swift in Sources */,
+				AC3622DD28D206B800D82620 /* WelcomeViewModel.swift in Sources */,
 				ACE3603928B029C9002E5897 /* HomeViewModel.swift in Sources */,
 				ACC6AB7228B6706500096209 /* ProfilView.swift in Sources */,
 				ACF5CA1A28CF1FAF0011CE3B /* WelcomeView.swift in Sources */,

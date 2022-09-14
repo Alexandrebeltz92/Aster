@@ -24,9 +24,12 @@ class LoginViewModel: ObservableObject {
 //        self.service = service
 //    }
 
-    // MARK: - Functions
+     // MARK: - Functions
 
-//    func save(user: User) {
+    func save(user: User) {
+        let birthday = dayOfBirth + monthOfBirth
+        var userToPersist = User(pseudo: pseudo, dateOfBirth: birthday, astrologicalSign: "aries", cards: [])
+
 //        service.persist(user: user)
-//    }
+    }
 }

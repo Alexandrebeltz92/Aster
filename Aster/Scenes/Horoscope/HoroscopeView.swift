@@ -7,12 +7,13 @@
 
 import SwiftUI
 
+// MARK: - struct HoroscopeView
 struct HoroscopeView: View {
-    @StateObject var viewModel = HoroscopeViewModel()
+    let viewModel = HoroscopeViewModel()
 
     var body: some View {
         ZStack {
-            Image("background")
+            Image(viewModel.background)
                 .ignoresSafeArea()
                 .scaledToFill()
 
@@ -30,6 +31,7 @@ struct HoroscopeView_Previews: PreviewProvider {
     }
 }
 
+// MARK: - Struct OnboardCardViewToday
 struct OnboardCardViewToday: View {
     var sign: String
     @StateObject var viewModel = OnboardCardViewModelToday()
@@ -56,6 +58,7 @@ struct OnboardCardViewToday: View {
     }
 }
 
+// MARK: - Struct OnboardCardViewYesterday
 struct OnboardCardViewYesterday: View {
     var sign: String
     @StateObject var viewModel = OnboardCardViewModelYesterday()

@@ -14,22 +14,17 @@ struct TarotCardDetailView: View {
 
     var body: some View {
         ZStack {
-            Image("background")
+            Image(card.name)
                 .resizable()
                 .ignoresSafeArea()
                 .scaledToFill()
 
             RoundedRectangle(cornerRadius: 20)
-                .fill(.white)
+                .foregroundColor(.white.opacity(0.5))
                 .frame(width: 300, height: 450)
                 .shadow(color: .gray, radius: 2, x: 0, y: 0)
 
-            VStack(alignment: .center, spacing: 60) {
-                Text(card.name)
-                    .bold()
-                    .font(.largeTitle)
-                    .foregroundColor(.blue)
-
+            VStack(alignment: .center) {
                 Text(card.description)
                     .minimumScaleFactor(0.2)
                     .font(.subheadline)
@@ -41,7 +36,7 @@ struct TarotCardDetailView: View {
 
 struct TarotCardDetailView_Previews: PreviewProvider {
 
-    static var cardPreview = Card(name: "0_The_Fool", description: "Follow the wind")
+    static var cardPreview = Card(name: "0 The Fool", description: "Follow the wind")
 
     static var previews: some View {
         TarotCardDetailView(card: cardPreview)

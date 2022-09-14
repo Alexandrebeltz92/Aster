@@ -8,28 +8,31 @@
 import SwiftUI
 
 struct WelcomeView: View {
+
+    let viewModel = WelcomeViewModel()
+
     var body: some View {
         NavigationView {
             ZStack {
-                Image("background")
+                Image(viewModel.background)
                     .scaledToFill()
                     .ignoresSafeArea()
 
                 VStack(alignment: .center, spacing: 200) {
                     VStack {
-                        Text("Welcome to Aster!")
+                        Text(viewModel.welcomeText)
                             .font(.largeTitle)
                             .bold()
                         .foregroundColor(.white)
 
-                        Text("Let the stars guide you...")
+                        Text(viewModel.catchText)
                             .font(.callout)
                             .bold()
                             .foregroundColor(.white)
                     }
 
                     NavigationLink(destination: LoginView(), label: {
-                        Text("Start now !")
+                        Text(viewModel.textButton)
                             .font(.headline)
                             .foregroundColor(.black)
                             .padding()
