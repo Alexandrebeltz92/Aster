@@ -18,6 +18,7 @@ class LoginViewModel: ObservableObject {
     @Published var monthOfBirth = "Birth Month"
 
 //    let service: CoreDataPersistence
+    let store = UserStore.instance
 
     // MARK: - Initialization
 //    init(service: CoreDataPersistence) {
@@ -28,8 +29,9 @@ class LoginViewModel: ObservableObject {
 
     func save(user: User) {
         let birthday = dayOfBirth + monthOfBirth
-        var userToPersist = User(pseudo: pseudo, dateOfBirth: birthday, astrologicalSign: "aries", cards: [])
+        let userToPersist = User(pseudo: pseudo, dateOfBirth: birthday, astrologicalSign: "aries", cards: [])
 
+        store.persist(user: userToPersist)
 //        service.persist(user: user)
     }
 }

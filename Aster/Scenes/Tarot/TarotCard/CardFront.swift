@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct CardFront: View {
-    @StateObject var viewModel = CardFrontViewModel()
+
     let width: CGFloat
     let height: CGFloat
 
+    @StateObject var viewModel = CardFrontViewModel()
     @Binding var degree: Double
 
     var body: some View {
@@ -25,6 +26,8 @@ struct CardFront: View {
                 .resizable()
                 .frame(width: 250, height: 350, alignment: .center)
                 .cornerRadius(20)
+        }.onAppear {
+            viewModel.getRandomCard()
         }
         .rotation3DEffect(Angle(degrees: degree), axis: (x: 0, y: 1, z: 0))
     }

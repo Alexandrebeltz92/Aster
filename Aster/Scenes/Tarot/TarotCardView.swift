@@ -23,7 +23,7 @@ struct TarotCardView: View {
     @State var isFlipped = false
     @State private var navigateToLearnMore = false
 
-    var cardToShow = Card(name: "0 The Fool", description: "Hello World.")
+    var cardToShow = Card(name: CardFrontViewModel().tarotCard, description: "Hello World.")
 
     // MARK: - Functions
     func flipCard() {

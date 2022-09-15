@@ -20,9 +20,12 @@ class ProfilViewModel: ObservableObject {
 
     let store = UserStore.instance
 
-    // MARK: - Functions
-    func getPseudo() {
+    func display(user: User) {
         store.getPersistedUsers()
 
+        pseudo = user.pseudo
+        sign = user.astrologicalSign
+        signImage = user.astrologicalSign
+        cards = user.cards
     }
 }
