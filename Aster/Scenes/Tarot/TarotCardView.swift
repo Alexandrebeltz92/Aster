@@ -11,6 +11,7 @@ import AsterCore
 struct TarotCardView: View {
     // MARK: - Properties
     // TODO: Should use environment for the card?
+    @EnvironmentObject var cards: Cards
     @StateObject var viewModel = TarotCardViewModel()
 
     let width: CGFloat = 250

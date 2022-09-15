@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 public class Card {
     public let name: String
@@ -25,5 +26,14 @@ extension Card: Equatable {
 
     static public func == (lhs: Card, rhs: Card) -> Bool {
         (lhs.name) == (rhs.name)
+    }
+}
+
+// TODO: observableObject.
+@MainActor public class Cards: ObservableObject {
+    @Published var cards: [Card]
+
+    init() {
+        cards = []
     }
 }
