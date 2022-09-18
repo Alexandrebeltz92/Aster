@@ -6,14 +6,18 @@
 //
 
 import SwiftUI
+import AsterCore
 
 struct CardFront: View {
 
     let width: CGFloat
     let height: CGFloat
 
-    @StateObject var viewModel = CardFrontViewModel()
-    @Binding var degree: Double
+    @Binding
+    var card: Card
+
+    @Binding
+    var degree: Double
 
     var body: some View {
         ZStack {
@@ -22,12 +26,10 @@ struct CardFront: View {
                 .frame(width: width, height: height)
                 .shadow(color: .gray, radius: 2, x: 0, y: 0)
 
-            Image(viewModel.tarotCard)
+            Image(card.imageName)
                 .resizable()
                 .frame(width: 250, height: 350, alignment: .center)
                 .cornerRadius(20)
-        }.onAppear {
-            viewModel.getRandomCard()
         }
         .rotation3DEffect(Angle(degrees: degree), axis: (x: 0, y: 1, z: 0))
     }

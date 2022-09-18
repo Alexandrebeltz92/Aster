@@ -16,7 +16,8 @@ extension CardEntity {
     }
 
     @NSManaged public var name: String
-    @NSManaged public var context: String
+    @NSManaged public var descriptionCard: String
+    @NSManaged public var imageName: String
     @NSManaged public var user: UserEntity?
 
 }

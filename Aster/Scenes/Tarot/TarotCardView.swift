@@ -9,26 +9,33 @@ import SwiftUI
 import AsterCore
 
 struct TarotCardView: View {
+
     // MARK: - Properties
-    // TODO: Should use environment for the card?
-    @EnvironmentObject var cards: Cards
-    @StateObject var viewModel = TarotCardViewModel()
+
+    @StateObject
+    var viewModel = TarotCardViewModel()
 
     let width: CGFloat = 250
     let height: CGFloat = 350
     let durationAndDelay: CGFloat = 0.3
 
-    @State var backDegree = 0.0
-    @State var frontDegree = -90.0
-    @State var isFlipped = false
-    @State private var navigateToLearnMore = false
+    @State
+    var backDegree = 0.0
+    @State
+    var frontDegree = -90.0
+    @State
+    var isFlipped = false
+    @State
+    private var navigateToLearnMore = false
 
-    var cardToShow = Card(name: CardFrontViewModel().tarotCard, description: "Hello World.")
 
     // MARK: - Functions
     func flipCard() {
         isFlipped = !isFlipped
+
         if isFlipped {
+            viewModel.refreshCard()
+
             withAnimation(.linear(duration: durationAndDelay)) {
                 backDegree = 90
             }
@@ -53,13 +60,13 @@ struct TarotCardView: View {
                     .ignoresSafeArea()
                     .scaledToFill()
 
-                CardFront(width: width, height: height, degree: $frontDegree)
+                CardFront(width: width, height: height, card: $viewModel.cardToShow, degree: $frontDegree)
                 CardBack(width: width, height: height, degree: $backDegree)
 
                 Button("Seek the truth") {
                     self.navigateToLearnMore = true
                 }.sheet(isPresented: $navigateToLearnMore) {
-                    TarotCardDetailView(card: cardToShow)
+                    TarotCardDetailView(card: viewModel.cardToShow)
                 }
             }
             // TODO: cant figure how to place it - Button

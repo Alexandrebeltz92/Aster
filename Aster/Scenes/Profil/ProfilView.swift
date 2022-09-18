@@ -82,7 +82,7 @@ struct SavedCardView: View {
 
 struct ProfilView_Previews: PreviewProvider {
 
-    static let cardsPreview = Card(name: "0_The_Fool", description: "")
+    static let cardsPreview = Card(name: "0 The Fool", imageName: "0_The_Fool", description: "")
 
     static let userPreview = User(pseudo: "James", dateOfBirth: "24/04", astrologicalSign: "Aries", cards: [cardsPreview, cardsPreview, cardsPreview])
 

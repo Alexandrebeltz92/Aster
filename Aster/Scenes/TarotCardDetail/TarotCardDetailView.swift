@@ -36,7 +36,7 @@ struct TarotCardDetailView: View {
 
 struct TarotCardDetailView_Previews: PreviewProvider {
 
-    static var cardPreview = Card(name: "0 The Fool", description: "Follow the wind")
+    static var cardPreview = Card(name: "0 The Fool", imageName: "0_The_Fool", description: "Follow the wind")
 
     static var previews: some View {
         TarotCardDetailView(card: cardPreview)

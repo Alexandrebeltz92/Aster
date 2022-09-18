@@ -8,14 +8,11 @@
 import Foundation
 import AsterCore
 
-class CardFrontViewModel: ObservableObject {
-    @Published var tarotCard = "10_The_Fates"
+struct CardFrontViewModel {
 
-    let deck = ["0_The_Fool", "1_The_Magicien", "10_The_Fates"]
+    var tarotCard: Card
 
-    func getRandomCard() -> String {
-        tarotCard = deck.randomElement() ?? "10_The_Fates"
-
-        return tarotCard
+    init(tarotCard: Card) {
+        self.tarotCard = tarotCard
     }
 }

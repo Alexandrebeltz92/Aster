@@ -10,7 +10,7 @@ import CoreData
 extension CardEntity {
 
     func toCard() -> Card {
-        return Card(name: name, description: description)
+        return Card(name: name, imageName: imageName, description: description)
     }
 }
 
@@ -24,6 +24,8 @@ extension Card {
 
         let cardEntity = CardEntity(entity: entity, insertInto: context)
         cardEntity.name = name
+        cardEntity.imageName = imageName
+        cardEntity.descriptionCard = description
 
         return cardEntity
     }

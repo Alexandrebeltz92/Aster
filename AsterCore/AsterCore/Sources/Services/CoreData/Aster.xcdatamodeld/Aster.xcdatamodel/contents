@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21G72" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21279" systemVersion="21G72" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="CardEntity" representedClassName=".CardEntity" syncable="YES">
-        <attribute name="context" attributeType="String"/>
+        <attribute name="descriptionCard" attributeType="String"/>
+        <attribute name="imageName" attributeType="String"/>
         <attribute name="name" attributeType="String"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserEntity" inverseName="cards" inverseEntity="UserEntity"/>
     </entity>
@@ -11,8 +12,4 @@
         <attribute name="sign" attributeType="String"/>
         <relationship name="cards" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CardEntity" inverseName="user" inverseEntity="CardEntity"/>
     </entity>
-    <elements>
-        <element name="CardEntity" positionX="-1125.063720703125" positionY="620.1090087890625" width="128" height="74"/>
-        <element name="UserEntity" positionX="-1331.125732421875" positionY="604.5802612304688" width="95.40850830078125" height="89"/>
-    </elements>
 </model>
