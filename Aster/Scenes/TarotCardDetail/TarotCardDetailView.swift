@@ -14,22 +14,23 @@ struct TarotCardDetailView: View {
 
     var body: some View {
         ZStack {
-            Image(card.name)
+            Image(card.imageName)
                 .resizable()
                 .ignoresSafeArea()
                 .scaledToFill()
-
-            RoundedRectangle(cornerRadius: 20)
-                .foregroundColor(.white.opacity(0.5))
-                .frame(width: 300, height: 450)
-                .shadow(color: .gray, radius: 2, x: 0, y: 0)
 
             VStack(alignment: .center) {
                 Text(card.description)
                     .minimumScaleFactor(0.2)
                     .font(.subheadline)
                     .foregroundColor(.black)
-            }
+
+            }.frame(width: 250, height: 350, alignment: .center)
+                .padding(30)
+                .background(Color.white)
+                .opacity(0.9)
+                .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
+                .padding(20)
         }
     }
 }
