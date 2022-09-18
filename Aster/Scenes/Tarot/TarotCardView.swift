@@ -28,7 +28,6 @@ struct TarotCardView: View {
     @State
     private var navigateToLearnMore = false
 
-
     // MARK: - Functions
     func flipCard() {
         isFlipped = !isFlipped

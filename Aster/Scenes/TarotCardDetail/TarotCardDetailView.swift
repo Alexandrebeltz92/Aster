@@ -10,10 +10,13 @@ import AsterCore
 
 struct TarotCardDetailView: View {
 
+    @State
+    private var isSaved = false
     var card: Card
 
     var body: some View {
         ZStack {
+
             Image(card.imageName)
                 .resizable()
                 .ignoresSafeArea()
@@ -24,6 +27,22 @@ struct TarotCardDetailView: View {
                     .minimumScaleFactor(0.2)
                     .font(.subheadline)
                     .foregroundColor(.black)
+
+                Button("Save your card") {
+                    withAnimation {
+                        self.isSaved = true
+                    }
+
+                    print("Saved")
+                }.padding(30)
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .padding()
+                    .frame(width: 220, height: 60, alignment: .center)
+                    .background(Color.blue)
+                    .cornerRadius(35)
+                    .opacity(isSaved ? 0 : 1)
+                    .disabled(isSaved)
 
             }.frame(width: 250, height: 350, alignment: .center)
                 .padding(30)
@@ -37,7 +56,7 @@ struct TarotCardDetailView: View {
 
 struct TarotCardDetailView_Previews: PreviewProvider {
 
-    static var cardPreview = Card(name: "0 The Fool", imageName: "0_The_Fool", description: "Follow the wind")
+    static var cardPreview = Card(name: "0 The Fool", imageName: "0_The_Fool", description: "Follow the wind", saved: false)
 
     static var previews: some View {
         TarotCardDetailView(card: cardPreview)

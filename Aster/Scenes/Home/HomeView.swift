@@ -10,8 +10,8 @@ import AsterCore
 
 struct HomeView: View {
 
-    var user = User(pseudo: "James", dateOfBirth: "", astrologicalSign: "", cards: [Card(name: "", imageName: "", description: "")])
-    var card = Card(name: "The Fool", imageName: "0_The_Fool", description: "")
+    var user = User(pseudo: "James", dateOfBirth: "", astrologicalSign: "", cards: [Card(name: "", imageName: "", description: "", saved: false)])
+    var card = Card(name: "The Fool", imageName: "0_The_Fool", description: "", saved: false)
 
     init() {
         UITabBar.appearance().backgroundColor = UIColor.white
