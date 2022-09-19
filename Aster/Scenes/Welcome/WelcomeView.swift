@@ -9,6 +9,7 @@ import SwiftUI
 
 struct WelcomeView: View {
 
+    let loginViewModel = LoginViewModel()
     let viewModel = WelcomeViewModel()
 
     var body: some View {
@@ -31,7 +32,7 @@ struct WelcomeView: View {
                             .foregroundColor(.white)
                     }
 
-                    NavigationLink(destination: LoginView(), label: {
+                    NavigationLink(destination: LoginView(viewModel: loginViewModel), label: {
                         Text(viewModel.textButton)
                             .font(.headline)
                             .foregroundColor(.black)

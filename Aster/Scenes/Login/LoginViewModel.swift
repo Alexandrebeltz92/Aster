@@ -12,10 +12,10 @@ class LoginViewModel: ObservableObject {
 
     // MARK: - Properties
 
-    @Published var catchPhrase = "The Stars greets you!"
-    @Published var pseudo = "Pseudo"
-    @Published var dayOfBirth = "Birthday"
-    @Published var monthOfBirth = "Birth Month"
+    var catchPhrase = "The Stars greets you!"
+    var pseudo = "Pseudo"
+    var dayOfBirth = "Birthday"
+    var monthOfBirth = "Birth Month"
 
 //    let service: CoreDataPersistence
     let store = UserStore.instance

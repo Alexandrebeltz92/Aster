@@ -28,6 +28,8 @@
 		ACE3603928B029C9002E5897 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE3603828B029C9002E5897 /* HomeViewModel.swift */; };
 		ACE3603B28B02AE2002E5897 /* HoroscopeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE3603A28B02AE2002E5897 /* HoroscopeViewModel.swift */; };
 		ACE3603D28B02C48002E5897 /* TarotCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE3603C28B02C48002E5897 /* TarotCardViewModel.swift */; };
+		ACE77D3028D900E700E08F2B /* BirthdayLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE77D2F28D900E700E08F2B /* BirthdayLoginView.swift */; };
+		ACE77D3428D906A800E08F2B /* LabelLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE77D3328D906A800E08F2B /* LabelLoginView.swift */; };
 		ACF5CA1A28CF1FAF0011CE3B /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5CA1928CF1FAF0011CE3B /* WelcomeView.swift */; };
 		AEE0807E1BF42795405CA705 /* Pods_Aster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D65EC6174C97B474420CEBE /* Pods_Aster.framework */; };
 /* End PBXBuildFile section */
@@ -71,6 +73,8 @@
 		ACE3603828B029C9002E5897 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		ACE3603A28B02AE2002E5897 /* HoroscopeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeViewModel.swift; sourceTree = "<group>"; };
 		ACE3603C28B02C48002E5897 /* TarotCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotCardViewModel.swift; sourceTree = "<group>"; };
+		ACE77D2F28D900E700E08F2B /* BirthdayLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayLoginView.swift; sourceTree = "<group>"; };
+		ACE77D3328D906A800E08F2B /* LabelLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelLoginView.swift; sourceTree = "<group>"; };
 		ACF5CA1928CF1FAF0011CE3B /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -176,6 +180,7 @@
 		ACBE539728B7671700DFC604 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				ACE77D2C28D9009000E08F2B /* Sub Login View */,
 				ACBE539828B7672200DFC604 /* LoginView.swift */,
 				ACBE53AF28BEAD7600DFC604 /* LoginViewModel.swift */,
 			);
@@ -227,6 +232,15 @@
 				ACE3603C28B02C48002E5897 /* TarotCardViewModel.swift */,
 			);
 			path = Tarot;
+			sourceTree = "<group>";
+		};
+		ACE77D2C28D9009000E08F2B /* Sub Login View */ = {
+			isa = PBXGroup;
+			children = (
+				ACE77D2F28D900E700E08F2B /* BirthdayLoginView.swift */,
+				ACE77D3328D906A800E08F2B /* LabelLoginView.swift */,
+			);
+			path = "Sub Login View";
 			sourceTree = "<group>";
 		};
 		ACF5CA1828CF1F990011CE3B /* Welcome */ = {
@@ -361,7 +375,9 @@
 				ACF5CA1A28CF1FAF0011CE3B /* WelcomeView.swift in Sources */,
 				AC2827B528C73300006703D4 /* TarotCardDetailView.swift in Sources */,
 				ACBE53B028BEAD7600DFC604 /* LoginViewModel.swift in Sources */,
+				ACE77D3428D906A800E08F2B /* LabelLoginView.swift in Sources */,
 				ACE3603528AEE445002E5897 /* CardFront.swift in Sources */,
+				ACE77D3028D900E700E08F2B /* BirthdayLoginView.swift in Sources */,
 				AC2ED94D28AE2156007981C3 /* HoroscopeView.swift in Sources */,
 				ACE3603D28B02C48002E5897 /* TarotCardViewModel.swift in Sources */,
 				AC2ED92928AD8A8B007981C3 /* HomeView.swift in Sources */,
