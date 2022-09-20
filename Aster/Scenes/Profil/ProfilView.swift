@@ -68,18 +68,6 @@ struct ProfilView: View {
     }
 }
 
-struct SavedCardView: View {
-
-    var card: Card
-
-    var body: some View {
-        Image(card.imageName)
-            .resizable()
-            .frame(width: 100, height: 200, alignment: .center)
-            .cornerRadius(25)
-    }
-}
-
 struct ProfilView_Previews: PreviewProvider {
 
     static let cardsPreview = Card(name: "0 The Fool", imageName: "0_The_Fool", description: "Have fun sugar", saved: true)
