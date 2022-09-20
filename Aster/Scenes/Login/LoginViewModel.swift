@@ -27,7 +27,7 @@ class LoginViewModel: ObservableObject {
 
      // MARK: - Functions
 
-    func save(user: User) {
+    func save() {
         let birthday = dayOfBirth + monthOfBirth
         let userToPersist = User(pseudo: pseudo, dateOfBirth: birthday, astrologicalSign: "aries", cards: [])
 

@@ -16,11 +16,11 @@ struct LoginView: View {
     var viewModel: LoginViewModel
 
     @State
-    var username: String = ""
+    var username = ""
     @State
-    var birthday: String = ""
+    var birthday = ""
     @State
-    var birthMonth: String = ""
+    var birthMonth = ""
 
     var body: some View {
         NavigationView {

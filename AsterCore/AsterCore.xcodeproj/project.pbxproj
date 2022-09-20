@@ -35,6 +35,7 @@
 		AC6BF5CB28CB8489007BF723 /* HoroscopeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5CA28CB8489007BF723 /* HoroscopeResponse.swift */; };
 		AC6BF5CD28CB84A4007BF723 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5CC28CB84A4007BF723 /* NetworkService.swift */; };
 		AC6BF5CF28CB84B6007BF723 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5CE28CB84B6007BF723 /* ServiceError.swift */; };
+		ACE77D3728D9B60000E08F2B /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE77D3628D9B60000E08F2B /* Cards.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		AC6BF5CA28CB8489007BF723 /* HoroscopeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeResponse.swift; sourceTree = "<group>"; };
 		AC6BF5CC28CB84A4007BF723 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		AC6BF5CE28CB84B6007BF723 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		ACE77D3628D9B60000E08F2B /* Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 				AC6BF5AB28CB8190007BF723 /* User.swift */,
 				AC6BF5AE28CB81A7007BF723 /* Card.swift */,
 				AC6BF5C528CB841F007BF723 /* AstrologicalSigns.swift */,
+				ACE77D3628D9B60000E08F2B /* Cards.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				AC6BF5C128CB831D007BF723 /* UserEntity+Transformation.swift in Sources */,
 				AC6BF5A528CB813E007BF723 /* CoreDataPersistence.swift in Sources */,
 				AC6BF5A328CB810D007BF723 /* UserService.swift in Sources */,
+				ACE77D3728D9B60000E08F2B /* Cards.swift in Sources */,
 				AC5DEAAF28D0836000A41259 /* CardEntity+CoreDataProperties.swift in Sources */,
 				AC6BF5C428CB83AE007BF723 /* UserStore.swift in Sources */,
 			);
