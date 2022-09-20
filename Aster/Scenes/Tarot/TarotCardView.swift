@@ -53,24 +53,36 @@ struct TarotCardView: View {
 
     // MARK: - View
     var body: some View {
-        VStack(alignment: .center, spacing: 15) {
-            ZStack {
-                Image("background")
-                    .ignoresSafeArea()
-                    .scaledToFill()
+        ZStack {
+            Image("background")
+                .ignoresSafeArea()
+                .scaledToFill()
 
-                CardFront(width: width, height: height, card: $viewModel.cardToShow, degree: $frontDegree)
-                CardBack(width: width, height: height, degree: $backDegree)
-
-                Button("Seek the truth") {
-                    self.navigateToLearnMore = true
-                }.sheet(isPresented: $navigateToLearnMore) {
-                    TarotCardDetailView(card: viewModel.cardToShow)
+            VStack(alignment: .center, spacing: 15) {
+                ZStack {
+                    CardFront(width: width, height: height, card: $viewModel.cardToShow, degree: $frontDegree)
+                    CardBack(width: width, height: height, degree: $backDegree)
                 }
-            }
-            // TODO: cant figure how to place it - Button
-        }.onTapGesture {
-            flipCard()
+                if isFlipped {
+                    withAnimation {
+                        Button("Seek the truth") {
+                            self.navigateToLearnMore = true
+                        }
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .padding()
+                        .frame(width: 220, height: 60, alignment: .center)
+                        .background(Color.blue)
+                        .cornerRadius(35)
+
+                        .sheet(isPresented: $navigateToLearnMore) {
+                            TarotCardDetailView(card: viewModel.cardToShow)
+                        }
+                    }
+                }
+            }.onTapGesture {
+                flipCard()
+        }
         }
     }
 }
