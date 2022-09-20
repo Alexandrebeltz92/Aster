@@ -12,11 +12,11 @@ import AsterCore
 class ProfilViewModel: ObservableObject {
 
     // MARK: - Properties
-    @Published var pseudo = "Mozart"
-    @Published var sign = "Aries"
-    @Published var signImage = "Aries"
-    @Published var savedCardsText = "Saved cards:"
-    @Published var cards: [Card] = []
+    var pseudo = "Mozart"
+    var sign = "Aries"
+    var signImage = "Aries"
+    var savedCardsText = "Saved cards:"
+    var cards: [Card] = []
 
     let store = UserStore.instance
 

@@ -218,10 +218,10 @@
 		AC6BF5A828CB8175007BF723 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AC6BF5AB28CB8190007BF723 /* User.swift */,
-				AC6BF5AE28CB81A7007BF723 /* Card.swift */,
 				AC6BF5C528CB841F007BF723 /* AstrologicalSigns.swift */,
+				AC6BF5AE28CB81A7007BF723 /* Card.swift */,
 				ACE77D3628D9B60000E08F2B /* Cards.swift */,
+				AC6BF5AB28CB8190007BF723 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";

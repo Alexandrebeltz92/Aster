@@ -10,6 +10,8 @@ import AsterCore
 
 struct TarotCardDetailView: View {
 
+//    let viewModel = TarotCardDetailViewModel()
+
     @State
     private var isSaved = false
     var card: Card
@@ -28,22 +30,25 @@ struct TarotCardDetailView: View {
                     .font(.subheadline)
                     .foregroundColor(.black)
 
-                Button("Save your card") {
-                    withAnimation {
-                        self.isSaved = true
-                    }
+                if !card.saved {
+                    Button("Save your card") {
+                        withAnimation {
+                            self.isSaved = true
+                        }
 
-                    print("Saved")
-                }.padding(30)
-                    .font(.headline)
-                    .foregroundColor(.white)
-                    .padding()
-                    .frame(width: 220, height: 60, alignment: .center)
-                    .background(Color.blue)
-                    .cornerRadius(35)
-                    .opacity(isSaved ? 0 : 1)
-                    .disabled(isSaved)
+//                        viewModel.saveCard()
+                        print("Saved")
+                    }.padding(30)
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .padding()
+                        .frame(width: 220, height: 60, alignment: .center)
+                        .background(Color.blue)
+                        .cornerRadius(35)
+                        .opacity(isSaved ? 0 : 1)
+                        .disabled(isSaved)
 
+                }
             }.frame(width: 250, height: 350, alignment: .center)
                 .padding(30)
                 .background(Color.white)

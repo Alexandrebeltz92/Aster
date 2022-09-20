@@ -17,21 +17,26 @@ class LoginViewModel: ObservableObject {
     var dayOfBirth = "Birthday"
     var monthOfBirth = "Birth Month"
 
-//    let service: CoreDataPersistence
     let store = UserStore.instance
-
-    // MARK: - Initialization
-//    init(service: CoreDataPersistence) {
-//        self.service = service
-//    }
 
      // MARK: - Functions
 
     func save() {
         let birthday = dayOfBirth + monthOfBirth
-        let userToPersist = User(pseudo: pseudo, dateOfBirth: birthday, astrologicalSign: "aries", cards: [])
+        let sign = getSign()
+
+        let userToPersist = User(pseudo: pseudo, dateOfBirth: birthday, astrologicalSign: sign, cards: [])
 
         store.persist(user: userToPersist)
-//        service.persist(user: user)
+    }
+
+    func getSign() -> String {
+        let birthday = dayOfBirth + monthOfBirth
+
+        if (10...100).contains(50) {
+            print("Number is inside the range")
+        }
+
+        return "aries"
     }
 }

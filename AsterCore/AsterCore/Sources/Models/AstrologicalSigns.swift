@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum AstrologicalSigns {
+public enum AstrologicalSigns {
     // March 21 - April 19
     case aries
     // April 20 – May 20

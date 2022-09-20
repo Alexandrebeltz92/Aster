@@ -12,7 +12,7 @@ public class User {
     public let pseudo: String
     public let dateOfBirth: String
     public let astrologicalSign: String
-    public let cards: [Card]
+    public var cards: [Card]
 
     public init(pseudo: String, dateOfBirth: String, astrologicalSign: String, cards: [Card]) {
         self.pseudo = pseudo

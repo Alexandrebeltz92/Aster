@@ -15,7 +15,7 @@ final public class UserStore {
 
     static public let instance = UserStore()
 
-    var users: [User] = []
+    public var users: [User] = []
     weak var delegate: UserStoreDelegate?
 
     private var services: [UserService] {
@@ -40,5 +40,9 @@ final public class UserStore {
 
     public func delete(user: User) {
         services.forEach { $0.delete(user: user) }
+    }
+
+    public func update(user: User) {
+        services.forEach { $0.update(user: user) }
     }
 }

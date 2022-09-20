@@ -13,4 +13,6 @@ protocol UserService {
     func persist(user: User)
 
     func delete(user: User)
+
+    func update(user: User)
 }
