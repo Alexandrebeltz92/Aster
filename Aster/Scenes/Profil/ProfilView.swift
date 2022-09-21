@@ -10,10 +10,9 @@ import AsterCore
 
 struct ProfilView: View {
 
-    var user: User
-    var card: Card
+    @StateObject
+    var viewModel = ProfilViewModel()
 
-    let viewModel = ProfilViewModel()
     @State private var navigateToLearnMore = false
 
     var body: some View {
@@ -26,7 +25,7 @@ struct ProfilView: View {
                 Spacer(minLength: 20)
                     .padding()
 
-                Image(viewModel.signImage)
+                Image(viewModel.userToDisplay.astrologicalSign)
                     .resizable()
                     .frame(width: 150, height: 150, alignment: .top)
                     .clipShape(Circle())
@@ -35,12 +34,12 @@ struct ProfilView: View {
 
                 Spacer()
 
-                Text(user.pseudo)
+                Text(viewModel.userToDisplay.pseudo)
                     .font(.largeTitle)
                     .foregroundColor(.white)
                     .bold()
 
-                Text(user.astrologicalSign)
+                Text(viewModel.userToDisplay.astrologicalSign)
                     .foregroundColor(.white)
                     .font(.title2)
 
@@ -54,7 +53,7 @@ struct ProfilView: View {
 
                 ScrollView(.horizontal, showsIndicators: true) {
                     HStack(alignment: .center, spacing: 15) {
-                        ForEach(user.cards, id: \.name) {_ in
+                        ForEach(viewModel.userToDisplay.cards, id: \.name) {card in
                             SavedCardView(card: card).onTapGesture {
                                 self.navigateToLearnMore = true
                             }.sheet(isPresented: $navigateToLearnMore) {
@@ -73,11 +72,7 @@ struct ProfilView: View {
 
 struct ProfilView_Previews: PreviewProvider {
 
-    static let cardsPreview = Card(name: "0 The Fool", imageName: "0_The_Fool", description: "Have fun sugar", saved: true)
-
-    static let userPreview = User(pseudo: "James", astrologicalSign: "Aries", cards: [cardsPreview, cardsPreview, cardsPreview])
-
     static var previews: some View {
-        ProfilView(user: userPreview, card: cardsPreview)
+        ProfilView()
     }
 }

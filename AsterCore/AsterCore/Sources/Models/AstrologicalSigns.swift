@@ -94,10 +94,9 @@ public enum AstrologicalSigns: String, CaseIterable {
     }
 
     public static func sign(for month: Int, day: Int) -> AstrologicalSigns {
-        let date = DateComponents(year: Self.comparaisonYear, month: month, day: day).date!
-//        guard let date = DateComponents(year: Self.comparaisonYear, month: month, day: day).date else {
-//            fatalError("dateComponents isnt working correctly")
-//        }
+        guard let date = DateComponents(year: Self.comparaisonYear, month: month, day: day).date else {
+            fatalError("dateComponents isnt working correctly")
+        }
 
         var foundedSign = AstrologicalSigns.aries
 

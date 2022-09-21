@@ -12,20 +12,21 @@ import AsterCore
 class ProfilViewModel: ObservableObject {
 
     // MARK: - Properties
-    var pseudo = "Mozart"
-    var sign = "Aries"
-    var signImage = "Aries"
-    var savedCardsText = "Saved cards:"
-    var cards: [Card] = []
+    var userToDisplay: User
+    var savedCardsText = "Your cards saved:"
 
-    let store = UserStore.instance
+    // MARK: - Initialization
+    init() {
+        self.userToDisplay = Self.getUser()
+    }
 
-    func display(user: User) {
-        store.getPersistedUsers()
+    private static func getUser() -> User {
+        UserStore.instance.getPersistedUsers()
 
-        pseudo = user.pseudo
-        sign = user.astrologicalSign
-        signImage = user.astrologicalSign
-        cards = user.cards
+        guard let user = UserStore.instance.users.first else {
+            return User(pseudo: "Sorry something went wrong", astrologicalSign: "", cards: [])
+        }
+
+        return user
     }
 }

@@ -21,7 +21,6 @@ struct HoroscopeView: View {
                 OnboardCardViewYesterday(sign: "Aries")
                 OnboardCardViewToday(sign: "Aries")
             }.tabViewStyle(PageTabViewStyle())
-            // TODO: Why is the index not showing anymore?
         }
     }
 }
