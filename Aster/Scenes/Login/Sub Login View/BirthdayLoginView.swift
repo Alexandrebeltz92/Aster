@@ -33,11 +33,14 @@ struct BirthdayLoginView: View {
                     .padding()
                     .background(lighGreyColor)
                     .cornerRadius(15)
+                    .keyboardType(.numberPad)
+
                 TextField(viewModel.monthOfBirth, text: $viewModel.monthOfBirth)
                     .keyboardType(.numberPad)
                     .padding()
                     .background(lighGreyColor)
                     .cornerRadius(15)
+                    .keyboardType(.numberPad)
             }.padding(15)
 
             NavigationLink(destination: HomeView(), label: {

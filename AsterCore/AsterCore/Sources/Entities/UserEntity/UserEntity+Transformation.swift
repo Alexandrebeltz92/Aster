@@ -15,7 +15,6 @@ public extension UserEntity {
         }
 
         return User(pseudo: pseudo,
-                    dateOfBirth: dateOfBirth,
                     astrologicalSign: sign,
                     cards: cardsEntities.map { $0.toCard() })
     }
@@ -30,7 +29,6 @@ public extension User {
 
         let userEntity = UserEntity(entity: entity, insertInto: context)
         userEntity.pseudo = pseudo
-        userEntity.dateOfBirth = dateOfBirth
         userEntity.sign = astrologicalSign
 
         return userEntity

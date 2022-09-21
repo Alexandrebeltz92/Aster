@@ -27,11 +27,9 @@ class LoginViewModel: ObservableObject {
             return
         }
 
-        let birthday = String("\(DateComponents(year: 2024, month: month, day: day).date)")
         let sign = AstrologicalSigns.sign(for: month, day: day)
 
         let userToPersist = User(pseudo: pseudo,
-                                 dateOfBirth: birthday,
                                  astrologicalSign: sign.rawValue,
                                  cards: [])
 

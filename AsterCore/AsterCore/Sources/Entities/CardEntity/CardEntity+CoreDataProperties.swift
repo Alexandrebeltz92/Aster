@@ -11,7 +11,7 @@ import CoreData
 
 public extension CardEntity {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<CardEntity> {
+    @nonobjc class func fetchRequest() -> NSFetchRequest<CardEntity> {
         return NSFetchRequest<CardEntity>(entityName: "CardEntity")
     }
 

@@ -33,7 +33,7 @@ public enum AstrologicalSigns: String, CaseIterable {
     // February 19 – March 20
     case pisces
 
-    static var comparaisonYear = 2024
+    static var comparaisonYear = 2000
 
     func startDate() -> Date? {
         switch self {
@@ -94,9 +94,10 @@ public enum AstrologicalSigns: String, CaseIterable {
     }
 
     public static func sign(for month: Int, day: Int) -> AstrologicalSigns {
-        guard let date = DateComponents(year: 2024, month: month, day: day).date else {
-            fatalError("Should not happen")
-        }
+        let date = DateComponents(year: Self.comparaisonYear, month: month, day: day).date!
+//        guard let date = DateComponents(year: Self.comparaisonYear, month: month, day: day).date else {
+//            fatalError("dateComponents isnt working correctly")
+//        }
 
         var foundedSign = AstrologicalSigns.aries
 

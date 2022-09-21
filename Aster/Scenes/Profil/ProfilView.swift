@@ -75,7 +75,7 @@ struct ProfilView_Previews: PreviewProvider {
 
     static let cardsPreview = Card(name: "0 The Fool", imageName: "0_The_Fool", description: "Have fun sugar", saved: true)
 
-    static let userPreview = User(pseudo: "James", dateOfBirth: "24/04", astrologicalSign: "Aries", cards: [cardsPreview, cardsPreview, cardsPreview])
+    static let userPreview = User(pseudo: "James", astrologicalSign: "Aries", cards: [cardsPreview, cardsPreview, cardsPreview])
 
     static var previews: some View {
         ProfilView(user: userPreview, card: cardsPreview)

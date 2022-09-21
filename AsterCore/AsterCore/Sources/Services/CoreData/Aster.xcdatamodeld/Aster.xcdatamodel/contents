@@ -7,7 +7,6 @@
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserEntity" inverseName="cards" inverseEntity="UserEntity"/>
     </entity>
     <entity name="UserEntity" representedClassName=".UserEntity" syncable="YES">
-        <attribute name="dateOfBirth" attributeType="String"/>
         <attribute name="pseudo" attributeType="String"/>
         <attribute name="sign" attributeType="String"/>
         <relationship name="cards" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CardEntity" inverseName="user" inverseEntity="CardEntity"/>

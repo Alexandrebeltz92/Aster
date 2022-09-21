@@ -15,7 +15,6 @@ public extension UserEntity {
         return NSFetchRequest<UserEntity>(entityName: "UserEntity")
     }
 
-    @NSManaged var dateOfBirth: String
     @NSManaged var pseudo: String
     @NSManaged var sign: String
     @NSManaged var cards: NSSet
