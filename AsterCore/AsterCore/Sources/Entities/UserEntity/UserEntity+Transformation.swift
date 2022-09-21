@@ -7,7 +7,7 @@
 
 import CoreData
 
-extension UserEntity {
+public extension UserEntity {
 
     func toUser() -> User {
         guard let cardsEntities = cards.allObjects as? [CardEntity] else {
@@ -21,7 +21,7 @@ extension UserEntity {
     }
 }
 
-extension User {
+public extension User {
 
     func toEntity(context: NSManagedObjectContext) -> UserEntity {
         guard let entity = NSEntityDescription.entity(forEntityName: "UserEntity", in: context) else {

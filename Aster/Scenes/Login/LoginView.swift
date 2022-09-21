@@ -16,6 +16,9 @@ struct LoginView: View {
     var viewModel: LoginViewModel
 
     @State
+    var selectedTab = 0
+
+    @State
     var username = ""
     @State
     var birthday = ""
@@ -24,12 +27,24 @@ struct LoginView: View {
 
     var body: some View {
         NavigationView {
-            TabView {
-                LabelLoginView(viewModel: $viewModel)
-                BirthdayLoginView(viewModel: $viewModel)
-            }.tabViewStyle(.page)
-                .indexViewStyle(.page(backgroundDisplayMode: .always))
-                .navigationBarHidden(true)
+            ZStack {
+                Image("background")
+                    .resizable()
+                    .ignoresSafeArea()
+
+                VStack(alignment: .center, spacing: 200) {
+                    TabView(selection: $selectedTab) {
+                        LabelLoginView(viewModel: $viewModel) {
+                            withAnimation {
+                                selectedTab = 1
+                            }
+                        }.tag(0)
+                        BirthdayLoginView(viewModel: $viewModel)
+                            .tag(1)
+                    }.tabViewStyle(.page)
+                        .indexViewStyle(.page(backgroundDisplayMode: .always))
+                }
+            }
         }.navigationBarHidden(true)
     }
 }

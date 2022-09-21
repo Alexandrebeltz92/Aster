@@ -22,21 +22,19 @@ class LoginViewModel: ObservableObject {
      // MARK: - Functions
 
     func save() {
-        let birthday = dayOfBirth + monthOfBirth
-        let sign = getSign()
-
-        let userToPersist = User(pseudo: pseudo, dateOfBirth: birthday, astrologicalSign: sign, cards: [])
-
-        store.persist(user: userToPersist)
-    }
-
-    func getSign() -> String {
-        let birthday = dayOfBirth + monthOfBirth
-
-        if (10...100).contains(50) {
-            print("Number is inside the range")
+        guard let month = Int(monthOfBirth), let day = Int(dayOfBirth) else {
+            print("something went wrong")
+            return
         }
 
-        return "aries"
+        let birthday = String("\(DateComponents(year: 2024, month: month, day: day).date)")
+        let sign = AstrologicalSigns.sign(for: month, day: day)
+
+        let userToPersist = User(pseudo: pseudo,
+                                 dateOfBirth: birthday,
+                                 astrologicalSign: sign.rawValue,
+                                 cards: [])
+
+        store.persist(user: userToPersist)
     }
 }

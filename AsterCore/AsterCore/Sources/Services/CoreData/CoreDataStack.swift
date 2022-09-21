@@ -27,7 +27,15 @@ public class CoreDataStack {
      }
 
      public lazy var persistentContainer: NSPersistentContainer = {
-         let container = NSPersistentContainer(name: persistentContainerName)
+         let coreBundle = Bundle(for: Self.self)
+
+         guard
+            let modelURL = coreBundle.url(forResource: "Aster", withExtension: "momd"),
+            let managedObjectModel = NSManagedObjectModel(contentsOf: modelURL) else {
+             fatalError("Should not happen")
+         }
+
+         let container = NSPersistentContainer(name: persistentContainerName, managedObjectModel: managedObjectModel)
          container.loadPersistentStores(completionHandler: { storeDescription, error in
              if let error = error as NSError? {
                  fatalError("Unresolved error \(error), \(error.userInfo) for: \(storeDescription.description)")

@@ -32,15 +32,17 @@ struct WelcomeView: View {
                             .foregroundColor(.white)
                     }
 
-                    NavigationLink(destination: LoginView(viewModel: loginViewModel), label: {
-                        Text(viewModel.textButton)
-                            .font(.headline)
-                            .foregroundColor(.black)
-                            .padding()
-                            .frame(width: 220, height: 60, alignment: .center)
-                            .background(Color.white)
-                            .cornerRadius(35)
-                    })
+                    withAnimation {
+                        NavigationLink(destination: LoginView(viewModel: loginViewModel), label: {
+                            Text(viewModel.textButton)
+                                .font(.headline)
+                                .foregroundColor(.black)
+                                .padding()
+                                .frame(width: 220, height: 60, alignment: .center)
+                                .background(Color.white)
+                                .cornerRadius(35)
+                        })
+                    }
                 }
             }.navigationBarHidden(true)
         }.navigationBarHidden(true)

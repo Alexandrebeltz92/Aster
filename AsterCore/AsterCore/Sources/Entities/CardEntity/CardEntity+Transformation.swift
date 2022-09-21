@@ -7,14 +7,14 @@
 
 import CoreData
 
-extension CardEntity {
+public extension CardEntity {
 
     func toCard() -> Card {
         return Card(name: name, imageName: imageName, description: description, saved: true)
     }
 }
 
-extension Card {
+public extension Card {
 
     func toEntity(context: NSManagedObjectContext) -> CardEntity {
 

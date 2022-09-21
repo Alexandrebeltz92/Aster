@@ -19,11 +19,12 @@ struct ProfilView: View {
     var body: some View {
         ZStack {
             Image("background")
-                .resizable()
                 .ignoresSafeArea()
+                .scaledToFill()
 
             VStack {
                 Spacer(minLength: 20)
+                    .padding()
 
                 Image(viewModel.signImage)
                     .resizable()
@@ -44,6 +45,7 @@ struct ProfilView: View {
                     .font(.title2)
 
                 Spacer()
+                    .padding()
 
                 Text(viewModel.savedCardsText)
                     .font(.subheadline)
@@ -51,7 +53,7 @@ struct ProfilView: View {
                     .bold()
 
                 ScrollView(.horizontal, showsIndicators: true) {
-                    HStack(alignment: .center, spacing: 20) {
+                    HStack(alignment: .center, spacing: 15) {
                         ForEach(user.cards, id: \.name) {_ in
                             SavedCardView(card: card).onTapGesture {
                                 self.navigateToLearnMore = true
@@ -63,6 +65,7 @@ struct ProfilView: View {
                 }
 
                 Spacer(minLength: 20)
+                    .padding()
             }
         }
     }

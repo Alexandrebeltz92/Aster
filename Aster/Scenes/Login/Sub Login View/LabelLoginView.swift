@@ -10,40 +10,40 @@ import AsterCore
 
 struct LabelLoginView: View {
 
-    func nextPage() {
-        print("should go next page")
-    }
-
     @Binding
     var viewModel: LoginViewModel
 
-    var body: some View {
-        ZStack {
-            Image("background")
-                .resizable()
-                .ignoresSafeArea()
+    var tapOnNextButtonHandler: () -> Void
 
-            VStack {
+    var body: some View {
+        VStack {
+            ZStack {
+                RoundedRectangle(cornerRadius: 20)
+                    .opacity(0.9)
+                    .foregroundColor(.white)
+                    .frame(width: 200, height: 50, alignment: .center)
+
                 Text("Please enter a pseudo")
                     .font(.body)
                     .fontWeight(.semibold)
-                    .foregroundColor(.white)
-                    .padding(.bottom, 18)
-
-                TextField(viewModel.pseudo, text: $viewModel.pseudo)
-                    .padding()
-                    .background(lighGreyColor)
-                    .cornerRadius(15)
-                    .padding(15)
-
-                Text("Swipe left to continue")
-                    .font(.headline)
-                    .foregroundColor(.white)
-                    .padding()
-                    .frame(width: 220, height: 60, alignment: .center)
-                    .background(Color.black)
-                    .cornerRadius(35)
+                    .foregroundColor(.black)
             }
+
+            TextField(viewModel.pseudo, text: $viewModel.pseudo)
+                .padding()
+                .background(lighGreyColor)
+                .cornerRadius(15)
+                .padding(15)
+
+            Button("Next") {
+                tapOnNextButtonHandler()
+            }
+            .font(.headline)
+            .foregroundColor(.white)
+            .padding()
+            .frame(width: 220, height: 60, alignment: .center)
+            .background(Color.black)
+            .cornerRadius(35)
         }
     }
 }

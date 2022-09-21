@@ -9,16 +9,16 @@
 import Foundation
 import CoreData
 
-extension CardEntity {
+public extension CardEntity {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<CardEntity> {
         return NSFetchRequest<CardEntity>(entityName: "CardEntity")
     }
 
-    @NSManaged public var name: String
-    @NSManaged public var descriptionCard: String
-    @NSManaged public var imageName: String
-    @NSManaged public var user: UserEntity?
+    @NSManaged var name: String
+    @NSManaged var descriptionCard: String
+    @NSManaged var imageName: String
+    @NSManaged var user: UserEntity?
 
 }
 
