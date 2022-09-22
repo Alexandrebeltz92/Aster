@@ -29,18 +29,16 @@ struct BirthdayLoginView: View {
 
             HStack {
                 TextField(viewModel.dayOfBirth, text: $viewModel.dayOfBirth)
-                    .keyboardType(.numberPad)
                     .padding()
                     .background(lighGreyColor)
                     .cornerRadius(15)
-                    .keyboardType(.numberPad)
+                    .keyboardType(.decimalPad)
 
                 TextField(viewModel.monthOfBirth, text: $viewModel.monthOfBirth)
-                    .keyboardType(.numberPad)
                     .padding()
                     .background(lighGreyColor)
                     .cornerRadius(15)
-                    .keyboardType(.numberPad)
+                    .keyboardType(.decimalPad)
             }.padding(15)
 
             NavigationLink(destination: HomeView(), label: {
