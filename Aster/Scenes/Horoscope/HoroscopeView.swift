@@ -53,7 +53,7 @@ struct OnboardCardViewToday: View {
         .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
         .padding(20)
         .onAppear {
-            viewModel.getHoroscope(for: sign)
+            viewModel.getHoroscope()
         }
     }
 }
@@ -80,7 +80,7 @@ struct OnboardCardViewYesterday: View {
         .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
         .padding(20)
         .onAppear {
-            viewModel.getHorosocpe(for: sign)
+            viewModel.getHorosocpe()
         }
     }
 }

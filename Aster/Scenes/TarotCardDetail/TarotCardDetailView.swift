@@ -10,8 +10,6 @@ import AsterCore
 
 struct TarotCardDetailView: View {
 
-//    let viewModel = TarotCardDetailViewModel()
-
     @State
     private var isSaved = false
     var card: Card
@@ -36,7 +34,7 @@ struct TarotCardDetailView: View {
                             self.isSaved = true
                         }
 
-//                        viewModel.saveCard()
+                        TarotCardDetailViewModel(card: card).saveCard()
                         print("Saved")
                     }.padding(30)
                         .font(.headline)

@@ -9,7 +9,7 @@ import Foundation
 import AsterCore
 
 class HoroscopeViewModel: ObservableObject {
-    @Published var background = "background"
+    var background = "background"
 }
 
 // MARK: - Class OnboardCardModelViewToday
@@ -20,9 +20,16 @@ class OnboardCardViewModelToday: ObservableObject {
     @Published var horoscopeOfTheDay = "Follow the stars, they're never wrong."
 
     let service = HoroscopeService()
+    let store = UserStore.instance
 
     // MARK: - Functions
-    func getHoroscope(for sign: String) {
+    func getHoroscope() {
+        store.getPersistedUsers()
+
+        guard let sign = store.users.first?.astrologicalSign else {
+            fatalError("No sign founded")
+        }
+
         service.getHoroscope(for: sign, for: "today") { [weak self] (result: Result<HoroscopeResponse?, ServiceError>) in
             guard let self = self else {
                 return
@@ -55,9 +62,16 @@ class OnboardCardViewModelYesterday: ObservableObject {
     @Published var horoscopeOfYesterday = "The Sun is looking down on you."
 
     let service = HoroscopeService()
+    let store = UserStore.instance
 
     // MARK: - Functions
-    func getHorosocpe(for sign: String) {
+    func getHorosocpe() {
+        store.getPersistedUsers()
+
+        guard let sign = store.users.first?.astrologicalSign else {
+            fatalError("No sign founded")
+        }
+
         service.getHoroscope(for: sign, for: "yesterday") { [weak self] (result: Result<HoroscopeResponse?, ServiceError>) in
             guard let self = self else {
                 return

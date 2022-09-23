@@ -32,20 +32,34 @@ struct WelcomeView: View {
                             .foregroundColor(.white)
                     }
 
-                    withAnimation {
-                        NavigationLink(destination: LoginView(viewModel: loginViewModel), label: {
-                            Text(viewModel.textButton)
-                                .font(.headline)
-                                .foregroundColor(.black)
-                                .padding()
-                                .frame(width: 220, height: 60, alignment: .center)
-                                .background(Color.white)
-                                .cornerRadius(35)
-                        })
+                    if viewModel.haveUserSaved() {
+                        withAnimation {
+                            NavigationLink(destination: HomeView(), label: {
+                                Text(viewModel.textButtonUserSaved)
+                                    .font(.headline)
+                                    .foregroundColor(.black)
+                                    .padding()
+                                    .frame(width: 220, height: 60, alignment: .center)
+                                    .background(Color.white)
+                                    .cornerRadius(35)
+                            })
+                        }
+                    } else {
+                        withAnimation {
+                            NavigationLink(destination: LoginView(viewModel: loginViewModel), label: {
+                                Text(viewModel.textButton)
+                                    .font(.headline)
+                                    .foregroundColor(.black)
+                                    .padding()
+                                    .frame(width: 220, height: 60, alignment: .center)
+                                    .background(Color.white)
+                                    .cornerRadius(35)
+                            })
+                        }
                     }
                 }
             }.navigationBarHidden(true)
-        }.navigationBarHidden(true)
+        }
     }
 }
 

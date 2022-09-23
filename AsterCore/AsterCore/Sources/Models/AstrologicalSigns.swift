@@ -33,75 +33,79 @@ public enum AstrologicalSigns: String, CaseIterable {
     // February 19 – March 20
     case pisces
 
-    static var comparaisonYear = 2020
+    static let comparaisonYear = 2020
 
-    func startDate() -> Date? {
+    func startDate() -> DateComponents {
         switch self {
         case .aries:
-            return DateComponents(year: Self.comparaisonYear, month: 3, day: 21).date
+            return DateComponents(year: Self.comparaisonYear, month: 3, day: 21+1)
         case .taurus:
-            return DateComponents(year: Self.comparaisonYear, month: 4, day: 20).date
+            return DateComponents(year: Self.comparaisonYear, month: 4, day: 20+1)
         case .gemini:
-            return DateComponents(year: Self.comparaisonYear, month: 5, day: 21).date
+            return DateComponents(year: Self.comparaisonYear, month: 5, day: 21+1)
         case .cancer:
-            return DateComponents(year: Self.comparaisonYear, month: 6, day: 22).date
+            return DateComponents(year: Self.comparaisonYear, month: 6, day: 22+1)
         case .leo:
-            return DateComponents(year: Self.comparaisonYear, month: 7, day: 23).date
+            return DateComponents(year: Self.comparaisonYear, month: 7, day: 23+1)
         case .virgo:
-            return DateComponents(year: Self.comparaisonYear, month: 8, day: 23).date
+            return DateComponents(year: Self.comparaisonYear, month: 8, day: 23+1)
         case .libra:
-            return DateComponents(year: Self.comparaisonYear, month: 9, day: 23).date
+            return DateComponents(year: Self.comparaisonYear, month: 9, day: 23+1)
         case .scorpio:
-            return DateComponents(year: Self.comparaisonYear, month: 10, day: 23).date
+            return DateComponents(year: Self.comparaisonYear, month: 10, day: 23+1)
         case .sagittarius:
-            return DateComponents(year: Self.comparaisonYear, month: 11, day: 23).date
+            return DateComponents(year: Self.comparaisonYear, month: 11, day: 23+1)
         case .capricorn:
-            return DateComponents(year: Self.comparaisonYear, month: 12, day: 22).date
+            return DateComponents(year: Self.comparaisonYear, month: 12, day: 22+1)
         case .aquarius:
-            return DateComponents(year: Self.comparaisonYear, month: 1, day: 20).date
+            return DateComponents(year: Self.comparaisonYear, month: 1, day: 20+1)
         case .pisces:
-            return DateComponents(year: Self.comparaisonYear, month: 2, day: 19).date
+            return DateComponents(year: Self.comparaisonYear, month: 2, day: 19+1)
         }
     }
 
-    func endDate() -> Date? {
+    func endDate() -> DateComponents {
         switch self {
         case .aries:
-            return DateComponents(year: Self.comparaisonYear, month: 4, day: 19).date
+            return DateComponents(year: Self.comparaisonYear, month: 4, day: 19+1)
         case .taurus:
-            return DateComponents(year: Self.comparaisonYear, month: 5, day: 20).date
+            return DateComponents(year: Self.comparaisonYear, month: 5, day: 20+1)
         case .gemini:
-            return DateComponents(year: Self.comparaisonYear, month: 6, day: 21).date
+            return DateComponents(year: Self.comparaisonYear, month: 6, day: 21+1)
         case .cancer:
-            return DateComponents(year: Self.comparaisonYear, month: 7, day: 22).date
+            return DateComponents(year: Self.comparaisonYear, month: 7, day: 22+1)
         case .leo:
-            return DateComponents(year: Self.comparaisonYear, month: 8, day: 22).date
+            return DateComponents(year: Self.comparaisonYear, month: 8, day: 22+1)
         case .virgo:
-            return DateComponents(year: Self.comparaisonYear, month: 9, day: 22).date
+            return DateComponents(year: Self.comparaisonYear, month: 9, day: 22+1)
         case .libra:
-            return DateComponents(year: Self.comparaisonYear, month: 10, day: 22).date
+            return DateComponents(year: Self.comparaisonYear, month: 10, day: 22+1)
         case .scorpio:
-            return DateComponents(year: Self.comparaisonYear, month: 11, day: 22).date
+            return DateComponents(year: Self.comparaisonYear, month: 11, day: 22+1)
         case .sagittarius:
-            return DateComponents(year: Self.comparaisonYear, month: 12, day: 21).date
+            return DateComponents(year: Self.comparaisonYear, month: 12, day: 21+1)
         case .capricorn:
-            return DateComponents(year: Self.comparaisonYear, month: 1, day: 19).date
+            return DateComponents(year: Self.comparaisonYear+1, month: 1, day: 19+1)
         case .aquarius:
-            return DateComponents(year: Self.comparaisonYear, month: 2, day: 18).date
+            return DateComponents(year: Self.comparaisonYear, month: 2, day: 18+1)
         case .pisces:
-            return DateComponents(year: Self.comparaisonYear, month: 3, day: 20).date
+            return DateComponents(year: Self.comparaisonYear, month: 3, day: 20+1)
         }
     }
 
     public static func sign(for month: Int, day: Int) -> AstrologicalSigns {
-        guard let date = DateComponents(year: Self.comparaisonYear, month: month, day: day).date else {
-            fatalError("dateComponents isnt working correctly")
+        guard let date = Calendar.current.date(from: DateComponents(year: self.comparaisonYear, month: month, day: day+1)) else {
+            fatalError()
         }
 
         var foundedSign = AstrologicalSigns.aries
 
         AstrologicalSigns.allCases.forEach { sign in
-            let signRange = sign.startDate()!...sign.endDate()!
+            guard let start = Calendar.current.date(from: sign.startDate()), let end = Calendar.current.date(from: sign.endDate()) else {
+                fatalError()
+            }
+
+            let signRange = start...end
 
             if signRange.contains(date) {
                 foundedSign = sign

@@ -6,14 +6,27 @@
 //
 
 import Foundation
+import AsterCore
 
 // MARK: - WelcomeViewModel
 class WelcomeViewModel: ObservableObject {
 
     // MARK: - Properties
-    @Published var background = "background"
-    @Published var welcomeText = "Welcome to Aster!"
-    @Published var catchText = "Let the stars guide you..."
-    @Published var textButton = "Start now !"
+    var background = "background"
+    var welcomeText = "Welcome to Aster!"
+    var catchText = "Let the stars guide you..."
+    var textButton = "Start now !"
+    var textButtonUserSaved = "Look into the stars"
 
+    let store = UserStore.instance
+
+    func haveUserSaved() -> Bool {
+        store.getPersistedUsers()
+
+        if !store.users.isEmpty {
+            return true
+        } else {
+            return false
+        }
+    }
 }

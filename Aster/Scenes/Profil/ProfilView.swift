@@ -39,10 +39,6 @@ struct ProfilView: View {
                     .foregroundColor(.white)
                     .bold()
 
-                Text(viewModel.userToDisplay.astrologicalSign)
-                    .foregroundColor(.white)
-                    .font(.title2)
-
                 Spacer()
                     .padding()
 
@@ -66,7 +62,7 @@ struct ProfilView: View {
                 Spacer(minLength: 20)
                     .padding()
             }
-        }
+        }.onAppear(perform: viewModel.refreshUser)
     }
 }
 
