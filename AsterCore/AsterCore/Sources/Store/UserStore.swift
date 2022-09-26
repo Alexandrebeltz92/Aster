@@ -45,4 +45,8 @@ final public class UserStore {
     public func update(user: User) {
         services.forEach { $0.update(user: user) }
     }
+
+    public func deleteAllUsers() {
+        services.forEach { $0.deleteAllUsers() }
+    }
 }

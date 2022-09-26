@@ -13,7 +13,7 @@ class ProfilViewModel: ObservableObject {
 
     // MARK: - Properties
     var userToDisplay: User
-    var savedCardsText = "Your cards saved:"
+    var savedCardsText = "Your saved cards:"
 
     let store = UserStore.instance
 
@@ -26,7 +26,7 @@ class ProfilViewModel: ObservableObject {
         UserStore.instance.getPersistedUsers()
 
         guard let user = UserStore.instance.users.first else {
-            return User(pseudo: "Sorry something went wrong", astrologicalSign: "", cards: [])
+            return User(pseudo: "Aster", astrologicalSign: "", cards: [])
         }
 
         return user

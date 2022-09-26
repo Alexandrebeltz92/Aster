@@ -35,7 +35,6 @@ struct TarotCardDetailView: View {
                         }
 
                         TarotCardDetailViewModel(card: card).saveCard()
-                        print("Saved")
                     }.padding(30)
                         .font(.headline)
                         .foregroundColor(.white)
@@ -53,6 +52,10 @@ struct TarotCardDetailView: View {
                 .opacity(0.9)
                 .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
                 .padding(20)
+        }.onAppear {
+            if TarotCardDetailViewModel(card: card).checkIfSaved(for: card) {
+                isSaved = true
+            }
         }
     }
 }

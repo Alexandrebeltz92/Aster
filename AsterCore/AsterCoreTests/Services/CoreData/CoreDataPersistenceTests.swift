@@ -6,15 +6,20 @@
 //
 
 import XCTest
-@testable import AsterCore
 import CoreData
+@testable import AsterCore
 
 class CoreDataPersistenceTests: XCTestCase {
 
-    let testUser = User(pseudo: "James", dateOfBirth: "2503", astrologicalSign: "Aries", cards: [Card(name: "0_The_Fool")])
-    let testUser2 = User(pseudo: "Antoine", dateOfBirth: "1708", astrologicalSign: "Leo", cards: [Card(name: "0_The_Fool")])
+    let testUser = User(pseudo: "James",
+                        astrologicalSign: "Aries",
+                        cards: [Card(name: "0 The Fool", imageName: "0_The_Fool", description: "", saved: false)])
 
-    let testCard = Card(name: "0_The_Fool")
+    let testUser2 = User(pseudo: "Antoine",
+                         astrologicalSign: "Leo",
+                         cards: [Card(name: "0 The Fool", imageName: "0_The_Fool", description: "", saved: false)])
+
+    let testCard = Card(name: "0 The Fool", imageName: "0_The_Fool", description: "", saved: false)
 
     var coreDataPersistence: CoreDataPersistence!
     var coreDataStack: CoreDataStack!
@@ -50,8 +55,8 @@ class CoreDataPersistenceTests: XCTestCase {
         let getUsers = coreDataPersistence.getUsers()
 
         XCTAssertTrue(getUsers.count == 2)
-        XCTAssertTrue(getUsers.contains(testUser))
-        XCTAssertTrue(getUsers.contains(testUser2))
+        XCTAssertEqual(getUsers.contains(where: { $0.pseudo == "James"}), true)
+        XCTAssertEqual(getUsers.contains(where: { $0.pseudo == "Antoine"}), true)
     }
 
     func test_Delete_User() {
@@ -64,8 +69,8 @@ class CoreDataPersistenceTests: XCTestCase {
 
         getUsers = coreDataPersistence.getUsers()
 
-        XCTAssertFalse(getUsers.contains(testUser))
-        XCTAssertTrue(getUsers.contains(testUser2))
+        XCTAssertFalse(getUsers.contains(where: { $0.pseudo == "James"}))
+        XCTAssertTrue(getUsers.contains(where: { $0.pseudo == "Antoine"}))
         XCTAssertTrue(getUsers.count == 1)
     }
 
@@ -73,7 +78,7 @@ class CoreDataPersistenceTests: XCTestCase {
         coreDataPersistence.persist(user: testUser)
 
         let firstGetUsers = coreDataPersistence.getUsers()
-        XCTAssertTrue(firstGetUsers.contains(testUser))
+        XCTAssertTrue(firstGetUsers.contains(where: { $0.pseudo == "James"}))
         XCTAssertTrue(firstGetUsers.count == 1)
 
         coreDataPersistence.persist(user: testUser)

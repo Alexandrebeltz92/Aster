@@ -33,4 +33,18 @@ class TarotCardDetailViewModel: ObservableObject {
 
         store.update(user: currentUser)
     }
+
+    func checkIfSaved(for card: Card) -> Bool {
+        store.getPersistedUsers()
+
+        guard let user = store.users.first else {
+            fatalError()
+        }
+
+        if user.cards.contains(where: { $0 == card }) {
+            return true
+        } else {
+            return false
+        }
+    }
 }

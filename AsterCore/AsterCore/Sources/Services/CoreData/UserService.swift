@@ -15,4 +15,6 @@ protocol UserService {
     func delete(user: User)
 
     func update(user: User)
+
+    func deleteAllUsers()
 }

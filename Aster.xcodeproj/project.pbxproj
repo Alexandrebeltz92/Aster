@@ -15,6 +15,13 @@
 		AC2ED92E28AD8A8D007981C3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC2ED92D28AD8A8D007981C3 /* Preview Assets.xcassets */; };
 		AC2ED94D28AE2156007981C3 /* HoroscopeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2ED94C28AE2156007981C3 /* HoroscopeView.swift */; };
 		AC2ED94F28AE2163007981C3 /* TarotCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2ED94E28AE2163007981C3 /* TarotCardView.swift */; };
+		AC3366FE28E0DAA80085D52F /* TarotCardDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3366FD28E0DAA80085D52F /* TarotCardDetailViewModelTests.swift */; };
+		AC33670128E196DA0085D52F /* TarotCardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC33670028E196DA0085D52F /* TarotCardViewModelTests.swift */; };
+		AC33670428E1A16E0085D52F /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC33670328E1A16E0085D52F /* LoginViewModelTests.swift */; };
+		AC33670628E1ABCE0085D52F /* TarotCardFrontViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC33670528E1ABCE0085D52F /* TarotCardFrontViewModelTests.swift */; };
+		AC33670928E1AC910085D52F /* HoroscopeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC33670828E1AC910085D52F /* HoroscopeViewModelTests.swift */; };
+		AC33670C28E1AD800085D52F /* OnboardCardViewToday.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC33670B28E1AD800085D52F /* OnboardCardViewToday.swift */; };
+		AC33670E28E1ADA10085D52F /* OnboardCardViewYesterday.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC33670D28E1ADA10085D52F /* OnboardCardViewYesterday.swift */; };
 		AC3622DD28D206B800D82620 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3622DC28D206B800D82620 /* WelcomeViewModel.swift */; };
 		AC5DEAB128D0AC4400A41259 /* CardFrontViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DEAB028D0AC4400A41259 /* CardFrontViewModel.swift */; };
 		AC6BF58C28CB801B007BF723 /* AsterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6BF58B28CB801B007BF723 /* AsterCore.framework */; };
@@ -31,9 +38,20 @@
 		ACE77D3028D900E700E08F2B /* BirthdayLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE77D2F28D900E700E08F2B /* BirthdayLoginView.swift */; };
 		ACE77D3428D906A800E08F2B /* LabelLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE77D3328D906A800E08F2B /* LabelLoginView.swift */; };
 		ACE77D3A28D9DB9500E08F2B /* SavedCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE77D3928D9DB9500E08F2B /* SavedCardView.swift */; };
+		ACE77D4B28DDF0F800E08F2B /* WelcomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE77D4A28DDF0F800E08F2B /* WelcomeViewModelTests.swift */; };
 		ACF5CA1A28CF1FAF0011CE3B /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5CA1928CF1FAF0011CE3B /* WelcomeView.swift */; };
 		AEE0807E1BF42795405CA705 /* Pods_Aster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D65EC6174C97B474420CEBE /* Pods_Aster.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ACE77D4328DDEF2D00E08F2B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC2ED91B28AD8A8B007981C3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC2ED92228AD8A8B007981C3;
+			remoteInfo = Aster;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		AC6BF58E28CB801B007BF723 /* Embed Frameworks */ = {
@@ -62,6 +80,13 @@
 		AC2ED92D28AD8A8D007981C3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AC2ED94C28AE2156007981C3 /* HoroscopeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeView.swift; sourceTree = "<group>"; };
 		AC2ED94E28AE2163007981C3 /* TarotCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotCardView.swift; sourceTree = "<group>"; };
+		AC3366FD28E0DAA80085D52F /* TarotCardDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotCardDetailViewModelTests.swift; sourceTree = "<group>"; };
+		AC33670028E196DA0085D52F /* TarotCardViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotCardViewModelTests.swift; sourceTree = "<group>"; };
+		AC33670328E1A16E0085D52F /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
+		AC33670528E1ABCE0085D52F /* TarotCardFrontViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotCardFrontViewModelTests.swift; sourceTree = "<group>"; };
+		AC33670828E1AC910085D52F /* HoroscopeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeViewModelTests.swift; sourceTree = "<group>"; };
+		AC33670B28E1AD800085D52F /* OnboardCardViewToday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardCardViewToday.swift; sourceTree = "<group>"; };
+		AC33670D28E1ADA10085D52F /* OnboardCardViewYesterday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardCardViewYesterday.swift; sourceTree = "<group>"; };
 		AC3622DC28D206B800D82620 /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
 		AC5DEAB028D0AC4400A41259 /* CardFrontViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFrontViewModel.swift; sourceTree = "<group>"; };
 		AC6BF58B28CB801B007BF723 /* AsterCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AsterCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +102,8 @@
 		ACE77D2F28D900E700E08F2B /* BirthdayLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayLoginView.swift; sourceTree = "<group>"; };
 		ACE77D3328D906A800E08F2B /* LabelLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelLoginView.swift; sourceTree = "<group>"; };
 		ACE77D3928D9DB9500E08F2B /* SavedCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedCardView.swift; sourceTree = "<group>"; };
+		ACE77D3F28DDEF2C00E08F2B /* AsterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AsterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACE77D4A28DDF0F800E08F2B /* WelcomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModelTests.swift; sourceTree = "<group>"; };
 		ACF5CA1928CF1FAF0011CE3B /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +114,13 @@
 			files = (
 				AEE0807E1BF42795405CA705 /* Pods_Aster.framework in Frameworks */,
 				AC6BF58C28CB801B007BF723 /* AsterCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACE77D3C28DDEF2C00E08F2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				AC2ED92528AD8A8B007981C3 /* Aster */,
+				ACE77D4028DDEF2D00E08F2B /* AsterTests */,
 				AC2ED92428AD8A8B007981C3 /* Products */,
 				A55EC04FD2F312DEF318B86E /* Pods */,
 				16D84ECE10322E31E90F0589 /* Frameworks */,
@@ -134,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				AC2ED92328AD8A8B007981C3 /* Aster.app */,
+				ACE77D3F28DDEF2C00E08F2B /* AsterTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,13 +196,13 @@
 		AC2ED93528AD8BF5007981C3 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				ACF5CA1828CF1F990011CE3B /* Welcome */,
-				AC2827B628C736D9006703D4 /* TarotCardDetail */,
+				ACE3603E28B3714F002E5897 /* Home */,
+				ACE3603F28B3715A002E5897 /* Horoscope */,
 				ACBE539728B7671700DFC604 /* Login */,
 				ACC6AB7028B6705700096209 /* Profil */,
 				ACE3604028B37167002E5897 /* Tarot */,
-				ACE3603F28B3715A002E5897 /* Horoscope */,
-				ACE3603E28B3714F002E5897 /* Home */,
+				AC2827B628C736D9006703D4 /* TarotCardDetail */,
+				ACF5CA1828CF1F990011CE3B /* Welcome */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -177,6 +213,48 @@
 				AC2ED92A28AD8A8D007981C3 /* Assets.xcassets */,
 			);
 			path = Ressources;
+			sourceTree = "<group>";
+		};
+		AC3366FC28E0DA860085D52F /* TarotCardDetail */ = {
+			isa = PBXGroup;
+			children = (
+				AC3366FD28E0DAA80085D52F /* TarotCardDetailViewModelTests.swift */,
+			);
+			path = TarotCardDetail;
+			sourceTree = "<group>";
+		};
+		AC3366FF28E196C90085D52F /* Tarot */ = {
+			isa = PBXGroup;
+			children = (
+				AC33670028E196DA0085D52F /* TarotCardViewModelTests.swift */,
+				AC33670528E1ABCE0085D52F /* TarotCardFrontViewModelTests.swift */,
+			);
+			path = Tarot;
+			sourceTree = "<group>";
+		};
+		AC33670228E1A15C0085D52F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				AC33670328E1A16E0085D52F /* LoginViewModelTests.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		AC33670728E1AC820085D52F /* Horoscope */ = {
+			isa = PBXGroup;
+			children = (
+				AC33670828E1AC910085D52F /* HoroscopeViewModelTests.swift */,
+			);
+			path = Horoscope;
+			sourceTree = "<group>";
+		};
+		AC33670A28E1AD570085D52F /* Horoscope Sub View */ = {
+			isa = PBXGroup;
+			children = (
+				AC33670B28E1AD800085D52F /* OnboardCardViewToday.swift */,
+				AC33670D28E1ADA10085D52F /* OnboardCardViewYesterday.swift */,
+			);
+			path = "Horoscope Sub View";
 			sourceTree = "<group>";
 		};
 		ACBE539728B7671700DFC604 /* Login */ = {
@@ -221,6 +299,7 @@
 		ACE3603F28B3715A002E5897 /* Horoscope */ = {
 			isa = PBXGroup;
 			children = (
+				AC33670A28E1AD570085D52F /* Horoscope Sub View */,
 				AC2ED94C28AE2156007981C3 /* HoroscopeView.swift */,
 				ACE3603A28B02AE2002E5897 /* HoroscopeViewModel.swift */,
 			);
@@ -252,6 +331,34 @@
 				ACE77D3928D9DB9500E08F2B /* SavedCardView.swift */,
 			);
 			path = "Sub Profil View";
+			sourceTree = "<group>";
+		};
+		ACE77D4028DDEF2D00E08F2B /* AsterTests */ = {
+			isa = PBXGroup;
+			children = (
+				ACE77D4828DDEF3B00E08F2B /* Scenes */,
+			);
+			path = AsterTests;
+			sourceTree = "<group>";
+		};
+		ACE77D4828DDEF3B00E08F2B /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				AC33670728E1AC820085D52F /* Horoscope */,
+				AC33670228E1A15C0085D52F /* Login */,
+				AC3366FF28E196C90085D52F /* Tarot */,
+				AC3366FC28E0DA860085D52F /* TarotCardDetail */,
+				ACE77D4928DDEF4300E08F2B /* Welcome */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		ACE77D4928DDEF4300E08F2B /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				ACE77D4A28DDF0F800E08F2B /* WelcomeViewModelTests.swift */,
+			);
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 		ACF5CA1828CF1F990011CE3B /* Welcome */ = {
@@ -286,6 +393,24 @@
 			productReference = AC2ED92328AD8A8B007981C3 /* Aster.app */;
 			productType = "com.apple.product-type.application";
 		};
+		ACE77D3E28DDEF2C00E08F2B /* AsterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACE77D4728DDEF2D00E08F2B /* Build configuration list for PBXNativeTarget "AsterTests" */;
+			buildPhases = (
+				ACE77D3B28DDEF2C00E08F2B /* Sources */,
+				ACE77D3C28DDEF2C00E08F2B /* Frameworks */,
+				ACE77D3D28DDEF2C00E08F2B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ACE77D4428DDEF2D00E08F2B /* PBXTargetDependency */,
+			);
+			name = AsterTests;
+			productName = AsterTests;
+			productReference = ACE77D3F28DDEF2C00E08F2B /* AsterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -293,11 +418,16 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1340;
+				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
 					AC2ED92228AD8A8B007981C3 = {
 						CreatedOnToolsVersion = 13.4.1;
+					};
+					ACE77D3E28DDEF2C00E08F2B = {
+						CreatedOnToolsVersion = 14.0;
+						LastSwiftMigration = 1400;
+						TestTargetID = AC2ED92228AD8A8B007981C3;
 					};
 				};
 			};
@@ -315,6 +445,7 @@
 			projectRoot = "";
 			targets = (
 				AC2ED92228AD8A8B007981C3 /* Aster */,
+				ACE77D3E28DDEF2C00E08F2B /* AsterTests */,
 			);
 		};
 /* End PBXProject section */
@@ -326,6 +457,13 @@
 			files = (
 				AC2ED92E28AD8A8D007981C3 /* Preview Assets.xcassets in Resources */,
 				AC2ED92B28AD8A8D007981C3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACE77D3D28DDEF2C00E08F2B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +494,7 @@
 		};
 		AC2827B928C76DB4006703D4 /* Run SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -383,10 +522,12 @@
 				AC3622DD28D206B800D82620 /* WelcomeViewModel.swift in Sources */,
 				ACE3603928B029C9002E5897 /* HomeViewModel.swift in Sources */,
 				ACC6AB7228B6706500096209 /* ProfilView.swift in Sources */,
+				AC33670C28E1AD800085D52F /* OnboardCardViewToday.swift in Sources */,
 				ACE77D3A28D9DB9500E08F2B /* SavedCardView.swift in Sources */,
 				ACF5CA1A28CF1FAF0011CE3B /* WelcomeView.swift in Sources */,
 				AC2827B528C73300006703D4 /* TarotCardDetailView.swift in Sources */,
 				ACBE53B028BEAD7600DFC604 /* LoginViewModel.swift in Sources */,
+				AC33670E28E1ADA10085D52F /* OnboardCardViewYesterday.swift in Sources */,
 				ACE77D3428D906A800E08F2B /* LabelLoginView.swift in Sources */,
 				ACE3603528AEE445002E5897 /* CardFront.swift in Sources */,
 				ACE77D3028D900E700E08F2B /* BirthdayLoginView.swift in Sources */,
@@ -403,7 +544,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ACE77D3B28DDEF2C00E08F2B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC33670428E1A16E0085D52F /* LoginViewModelTests.swift in Sources */,
+				AC33670628E1ABCE0085D52F /* TarotCardFrontViewModelTests.swift in Sources */,
+				AC3366FE28E0DAA80085D52F /* TarotCardDetailViewModelTests.swift in Sources */,
+				AC33670128E196DA0085D52F /* TarotCardViewModelTests.swift in Sources */,
+				ACE77D4B28DDF0F800E08F2B /* WelcomeViewModelTests.swift in Sources */,
+				AC33670928E1AC910085D52F /* HoroscopeViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ACE77D4428DDEF2D00E08F2B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC2ED92228AD8A8B007981C3 /* Aster */;
+			targetProxy = ACE77D4328DDEF2D00E08F2B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		AC2ED92F28AD8A8D007981C3 /* Debug */ = {
@@ -580,6 +742,59 @@
 			};
 			name = Release;
 		};
+		ACE77D4528DDEF2D00E08F2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PUYAVM797H;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AlexandreBeltzung.AsterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aster.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Aster";
+			};
+			name = Debug;
+		};
+		ACE77D4628DDEF2D00E08F2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PUYAVM797H;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AlexandreBeltzung.AsterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aster.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Aster";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -597,6 +812,15 @@
 			buildConfigurations = (
 				AC2ED93228AD8A8D007981C3 /* Debug */,
 				AC2ED93328AD8A8D007981C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACE77D4728DDEF2D00E08F2B /* Build configuration list for PBXNativeTarget "AsterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACE77D4528DDEF2D00E08F2B /* Debug */,
+				ACE77D4628DDEF2D00E08F2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

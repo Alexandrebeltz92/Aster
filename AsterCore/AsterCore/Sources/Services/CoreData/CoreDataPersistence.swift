@@ -73,7 +73,7 @@ public class CoreDataPersistence: UserService {
             }
 
                 // TODO: How to add new card here
-            userToUpdate.cards += card
+//            userToUpdate.cards += card
 
             try coreDataStack.viewContext.save()
         } catch {

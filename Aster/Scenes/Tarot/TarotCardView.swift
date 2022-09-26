@@ -82,7 +82,7 @@ struct TarotCardView: View {
                 }
             }.onTapGesture {
                 flipCard()
-        }
+            }
         }
     }
 }
