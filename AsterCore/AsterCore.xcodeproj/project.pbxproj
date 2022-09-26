@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC33671428E22F7B0085D52F /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC33671328E22F7B0085D52F /* Service.swift */; };
 		AC5DEA8828CF767C00A41259 /* AsterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6BF57D28CB7DD5007BF723 /* AsterCore.framework */; platformFilter = ios; };
 		AC5DEA8F28CF76A600A41259 /* TestCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DEA8E28CF76A600A41259 /* TestCoreDataStack.swift */; };
 		AC5DEA9128CF76E000A41259 /* CoreDataPersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DEA9028CF76E000A41259 /* CoreDataPersistenceTests.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC33671328E22F7B0085D52F /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		AC5DEA8428CF767C00A41259 /* AsterCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AsterCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC5DEA8E28CF76A600A41259 /* TestCoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoreDataStack.swift; sourceTree = "<group>"; };
 		AC5DEA9028CF76E000A41259 /* CoreDataPersistenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPersistenceTests.swift; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 			children = (
 				AC6BF5C828CB8477007BF723 /* HoroscopeService.swift */,
 				AC6BF5CA28CB8489007BF723 /* HoroscopeResponse.swift */,
+				AC33671328E22F7B0085D52F /* Service.swift */,
 			);
 			path = HoroscopeService;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 				AC6BF5A528CB813E007BF723 /* CoreDataPersistence.swift in Sources */,
 				AC6BF5A328CB810D007BF723 /* UserService.swift in Sources */,
 				ACE77D3728D9B60000E08F2B /* Cards.swift in Sources */,
+				AC33671428E22F7B0085D52F /* Service.swift in Sources */,
 				AC5DEAAF28D0836000A41259 /* CardEntity+CoreDataProperties.swift in Sources */,
 				AC6BF5C428CB83AE007BF723 /* UserStore.swift in Sources */,
 			);

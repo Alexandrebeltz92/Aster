@@ -18,7 +18,7 @@ public protocol Transferable {
 
 // MARK: - Class
 
-public class HoroscopeService {
+public class HoroscopeService: Service {
 
     // MARK: - Constants
 
