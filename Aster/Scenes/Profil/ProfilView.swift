@@ -50,6 +50,7 @@ struct ProfilView: View {
                 ScrollView(.horizontal, showsIndicators: true) {
                     HStack(alignment: .center, spacing: 15) {
                         ForEach(viewModel.userToDisplay.cards, id: \.name) {card in
+                            // TODO: Maybe display only last 3..
                             SavedCardView(card: card).onTapGesture {
                                 self.navigateToLearnMore = true
                             }.sheet(isPresented: $navigateToLearnMore) {
