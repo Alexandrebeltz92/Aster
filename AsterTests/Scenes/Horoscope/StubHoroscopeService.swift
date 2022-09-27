@@ -15,6 +15,7 @@ class StubHoroscopeService: Service {
 
     func getHoroscope(for sign: String, for day: String, completionHandler: @escaping (Result<AsterCore.HoroscopeResponse?, AsterCore.ServiceError>) -> Void) {
         if let stubHoroscopeResponse = stubHoroscopeResponse {
+            // TODO: DOnt work dont know why
 //            completionHandler(.success(HoroscopeResponse?))
         } else if let stubError = stubError {
             completionHandler(.failure(stubError))
