@@ -40,7 +40,7 @@ class TarotCardDetailViewModelTests: XCTestCase {
 
         currentUser.cards.append(card)
         store.update(user: currentUser)
-
+        // TODO: donnt work because saving card not implementing yet
 //        XCTAssertEqual(currentUser?.cards.count, 1)
     }
 
@@ -51,6 +51,7 @@ class TarotCardDetailViewModelTests: XCTestCase {
 
         if let response = currentUserCards?.contains(where: { $0.name == card.name }) {
 //            XCTAssertTrue(response)
+            // TODO: donnt work because saving card not implementing yet
         }
     }
 }
