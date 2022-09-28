@@ -15,8 +15,14 @@ class OnboardCardViewModelYesterday: ObservableObject {
     @Published var horoscopeLabelYesterday = "Yesterday"
     @Published var horoscopeOfYesterday = "The Sun is looking down on you."
 
-    let service = HoroscopeService()
-    let store = UserStore.instance
+    let service: Service
+    let store: UserStore
+
+    // MARK: - Initialization
+    init(service: Service = HoroscopeService(), store: UserStore = .instance) {
+        self.service = service
+        self.store = store
+    }
 
     // MARK: - Functions
     func getHorosocpe() {
@@ -50,4 +56,3 @@ class OnboardCardViewModelYesterday: ObservableObject {
         }
     }
 }
-

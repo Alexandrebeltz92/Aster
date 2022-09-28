@@ -14,6 +14,17 @@ class ProfilViewModelTests: XCTestCase {
     let viewModel = ProfilViewModel()
     let store = UserStore.instance
 
+    override class func setUp() {
+        let user = User(pseudo: "James", astrologicalSign: "aries", cards: [])
+        UserStore.instance.persist(user: user)
+        UserStore.instance.getPersistedUsers()
+    }
+
+    override class func tearDown() {
+        UserStore.instance.getPersistedUsers()
+        UserStore.instance.deleteAllUsers()
+    }
+
     func test_initialization() {
         // Initialize Tarot Card Detail View Model
         let viewModel = ProfilViewModel()

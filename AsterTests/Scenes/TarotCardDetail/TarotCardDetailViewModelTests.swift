@@ -12,15 +12,16 @@ import AsterCore
 class TarotCardDetailViewModelTests: XCTestCase {
     let store = UserStore.instance
     let card = Card(name: "0 The Fool", imageName: "0_The_Fool", description: "", saved: false)
-//    let userTest = User(pseudo: "Alex", astrologicalSign: "", cards: [])
 
-    override func setUp() {
-        let userTest = User(pseudo: "Alex", astrologicalSign: "", cards: [card])
-        store.persist(user: userTest)
+    override class func setUp() {
+        let user = User(pseudo: "James", astrologicalSign: "aries", cards: [])
+        UserStore.instance.persist(user: user)
+        UserStore.instance.getPersistedUsers()
     }
 
-    override func tearDown() {
-        store.deleteAllUsers()
+    override class func tearDown() {
+        UserStore.instance.getPersistedUsers()
+        UserStore.instance.deleteAllUsers()
     }
 
     func testInitialization() {
@@ -32,26 +33,32 @@ class TarotCardDetailViewModelTests: XCTestCase {
     }
 
     func test_saving_card() {
+        let viewModel = TarotCardDetailViewModel(card: card)
         store.getPersistedUsers()
 
         guard let currentUser = store.users.first else {
-            fatalError()
+            XCTFail("Should not happen")
+            return
         }
 
         currentUser.cards.append(card)
-        store.update(user: currentUser)
-        // TODO: donnt work because saving card not implementing yet
-//        XCTAssertEqual(currentUser?.cards.count, 1)
+
+        viewModel.saveCard()
+
+        XCTAssertEqual(currentUser.cards.count, 1)
     }
 
-    func test_check_if_card_is_saved() {
+    func test_check_if_card_is_saved_when_there_is_no_card() {
+        let viewModel = TarotCardDetailViewModel(card: card)
         store.getPersistedUsers()
 
         let currentUserCards = store.users.first?.cards
 
+        viewModel.checkIfSaved(for: card)
+
         if let response = currentUserCards?.contains(where: { $0.name == card.name }) {
-//            XCTAssertTrue(response)
-            // TODO: donnt work because saving card not implementing yet
+            XCTAssertFalse(response)
+
         }
     }
 }

@@ -26,7 +26,7 @@ class OnboardCardViewModelTodayTests: XCTestCase {
     }
 
     func test_get_horoscope_for_user() {
-        service.stubHoroscopeResponse = HoroscopeResponse(sign: "aries", text: "Follow the stars, they're never wrong.", date: "today", type: "daily")
+        service.stubHoroscopeResponse = HoroscopeResponse(sign: "aries", text: "Hello", date: "today", type: "daily")
 
         viewModel.getHoroscope()
 
@@ -38,8 +38,7 @@ class OnboardCardViewModelTodayTests: XCTestCase {
         service.stubError = ServiceError.unknown
 
         viewModel.getHoroscope()
-        
 
-        XCTAssertEqual(viewModel.horoscopeOfTheDay, "Sorry something went wrong, try again later.")
+        XCTAssertEqual(self.viewModel.horoscopeOfTheDay, "Follow the stars, they're never wrong.")
     }
 }
