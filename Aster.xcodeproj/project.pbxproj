@@ -28,6 +28,9 @@
 		AC5DEAB128D0AC4400A41259 /* CardFrontViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DEAB028D0AC4400A41259 /* CardFrontViewModel.swift */; };
 		AC6BF58C28CB801B007BF723 /* AsterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6BF58B28CB801B007BF723 /* AsterCore.framework */; };
 		AC6BF58D28CB801B007BF723 /* AsterCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AC6BF58B28CB801B007BF723 /* AsterCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AC89750328E454B90049C4D4 /* OnboardCardViewModelToday.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC89750228E454B90049C4D4 /* OnboardCardViewModelToday.swift */; };
+		AC89750528E454E00049C4D4 /* OnboardCardModelViewYesterday.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC89750428E454E00049C4D4 /* OnboardCardModelViewYesterday.swift */; };
+		AC89750728E455100049C4D4 /* OnboardCardViewModelTodayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC89750628E455100049C4D4 /* OnboardCardViewModelTodayTests.swift */; };
 		ACBE539928B7672200DFC604 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE539828B7672200DFC604 /* LoginView.swift */; };
 		ACBE53B028BEAD7600DFC604 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE53AF28BEAD7600DFC604 /* LoginViewModel.swift */; };
 		ACBE53D528BFAA5100DFC604 /* ProfilViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE53D428BFAA5100DFC604 /* ProfilViewModel.swift */; };
@@ -94,6 +97,9 @@
 		AC3622DC28D206B800D82620 /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
 		AC5DEAB028D0AC4400A41259 /* CardFrontViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFrontViewModel.swift; sourceTree = "<group>"; };
 		AC6BF58B28CB801B007BF723 /* AsterCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AsterCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC89750228E454B90049C4D4 /* OnboardCardViewModelToday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardCardViewModelToday.swift; sourceTree = "<group>"; };
+		AC89750428E454E00049C4D4 /* OnboardCardModelViewYesterday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardCardModelViewYesterday.swift; sourceTree = "<group>"; };
+		AC89750628E455100049C4D4 /* OnboardCardViewModelTodayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardCardViewModelTodayTests.swift; sourceTree = "<group>"; };
 		ACBE539828B7672200DFC604 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		ACBE53AF28BEAD7600DFC604 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		ACBE53D428BFAA5100DFC604 /* ProfilViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilViewModel.swift; sourceTree = "<group>"; };
@@ -161,11 +167,12 @@
 		AC2ED91A28AD8A8B007981C3 = {
 			isa = PBXGroup;
 			children = (
-				AC2ED92528AD8A8B007981C3 /* Aster */,
 				ACE77D4028DDEF2D00E08F2B /* AsterTests */,
-				AC2ED92428AD8A8B007981C3 /* Products */,
-				A55EC04FD2F312DEF318B86E /* Pods */,
 				16D84ECE10322E31E90F0589 /* Frameworks */,
+				A55EC04FD2F312DEF318B86E /* Pods */,
+				AC2ED92428AD8A8B007981C3 /* Products */,
+				AC2ED93828AD8C15007981C3 /* Ressources */,
+				AC2ED92528AD8A8B007981C3 /* Sources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -178,15 +185,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AC2ED92528AD8A8B007981C3 /* Aster */ = {
+		AC2ED92528AD8A8B007981C3 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				AC2ED92628AD8A8B007981C3 /* AsterApp.swift */,
 				AC2ED92C28AD8A8D007981C3 /* Preview Content */,
-				AC2ED93828AD8C15007981C3 /* Ressources */,
 				AC2ED93528AD8BF5007981C3 /* Scenes */,
 			);
-			path = Aster;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		AC2ED92C28AD8A8D007981C3 /* Preview Content */ = {
@@ -249,6 +255,7 @@
 			children = (
 				AC33671528E2304C0085D52F /* StubHoroscopeService.swift */,
 				AC33671728E232AD0085D52F /* HoroscopeViewModelTests.swift */,
+				AC89750628E455100049C4D4 /* OnboardCardViewModelTodayTests.swift */,
 			);
 			path = Horoscope;
 			sourceTree = "<group>";
@@ -257,7 +264,9 @@
 			isa = PBXGroup;
 			children = (
 				AC33670B28E1AD800085D52F /* OnboardCardViewToday.swift */,
+				AC89750228E454B90049C4D4 /* OnboardCardViewModelToday.swift */,
 				AC33670D28E1ADA10085D52F /* OnboardCardViewYesterday.swift */,
+				AC89750428E454E00049C4D4 /* OnboardCardModelViewYesterday.swift */,
 			);
 			path = "Horoscope Sub View";
 			sourceTree = "<group>";
@@ -538,6 +547,8 @@
 				ACC6AB7228B6706500096209 /* ProfilView.swift in Sources */,
 				AC33670C28E1AD800085D52F /* OnboardCardViewToday.swift in Sources */,
 				ACE77D3A28D9DB9500E08F2B /* SavedCardView.swift in Sources */,
+				AC89750328E454B90049C4D4 /* OnboardCardViewModelToday.swift in Sources */,
+				AC89750528E454E00049C4D4 /* OnboardCardModelViewYesterday.swift in Sources */,
 				ACF5CA1A28CF1FAF0011CE3B /* WelcomeView.swift in Sources */,
 				AC2827B528C73300006703D4 /* TarotCardDetailView.swift in Sources */,
 				ACBE53B028BEAD7600DFC604 /* LoginViewModel.swift in Sources */,
@@ -567,6 +578,7 @@
 				AC33670628E1ABCE0085D52F /* TarotCardFrontViewModelTests.swift in Sources */,
 				AC3366FE28E0DAA80085D52F /* TarotCardDetailViewModelTests.swift in Sources */,
 				AC33670128E196DA0085D52F /* TarotCardViewModelTests.swift in Sources */,
+				AC89750728E455100049C4D4 /* OnboardCardViewModelTodayTests.swift in Sources */,
 				ACE77D4B28DDF0F800E08F2B /* WelcomeViewModelTests.swift in Sources */,
 				AC33671828E232AD0085D52F /* HoroscopeViewModelTests.swift in Sources */,
 				AC33671628E2304C0085D52F /* StubHoroscopeService.swift in Sources */,
@@ -706,7 +718,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Aster/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Sources/Preview Content\"";
 				DEVELOPMENT_TEAM = PUYAVM797H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -736,7 +748,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Aster/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Sources/Preview Content\"";
 				DEVELOPMENT_TEAM = PUYAVM797H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

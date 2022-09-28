@@ -20,6 +20,20 @@
                ReferencedContainer = "container:Aster.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AC5DEA8328CF767C00A41259"
+               BuildableName = "AsterCoreTests.xctest"
+               BlueprintName = "AsterCoreTests"
+               ReferencedContainer = "container:AsterCore/AsterCore.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -27,6 +41,7 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
+      systemAttachmentLifetime = "keepNever"
       codeCoverageEnabled = "YES"
       onlyGenerateCoverageForSpecifiedTargets = "YES">
       <CodeCoverageTargets>
@@ -37,17 +52,33 @@
             BlueprintName = "Aster"
             ReferencedContainer = "container:Aster.xcodeproj">
          </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "AC6BF57C28CB7DD5007BF723"
+            BuildableName = "AsterCore.framework"
+            BlueprintName = "AsterCore"
+            ReferencedContainer = "container:AsterCore/AsterCore.xcodeproj">
+         </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
          <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
+            skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "ACE77D3E28DDEF2C00E08F2B"
                BuildableName = "AsterTests.xctest"
                BlueprintName = "AsterTests"
                ReferencedContainer = "container:Aster.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AC5DEA8328CF767C00A41259"
+               BuildableName = "AsterCoreTests.xctest"
+               BlueprintName = "AsterCoreTests"
+               ReferencedContainer = "container:AsterCore/AsterCore.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
