@@ -25,34 +25,27 @@ class OnboardCardViewModelToday: ObservableObject {
     }
 
     // MARK: - Functions
-    func getHoroscope() {
+    func getHoroscope(completionHandler: @escaping (Result<String, ServiceError>) -> Void) {
         store.getPersistedUsers()
 
         guard let sign = store.users.first?.astrologicalSign else {
             fatalError("No sign founded")
         }
 
-        service.getHoroscope(for: sign, for: "today") { [weak self] (result: Result<HoroscopeResponse?, ServiceError>) in
-            guard let self = self else {
-                return
-            }
-
+        service.getHoroscope(for: sign, for: "today") { (result: Result<HoroscopeResponse?, ServiceError>) in
             switch result {
             case .success(let response):
                 guard let response = response else {
                     return
                 }
+
                 let horoscope = response.text.replacingOccurrences(of: "<span style=\"font-weight: 400\">", with: "")
                 let newHoroscope = horoscope.replacingOccurrences(of: "</span>", with: "")
 
-                DispatchQueue.main.async {
-                    self.horoscopeOfTheDay = newHoroscope
-                }
+                completionHandler(.success(newHoroscope))
 
             case .failure:
-                DispatchQueue.main.async {
-                    self.horoscopeOfTheDay = "Sorry something went wrong, try again later."
-                }
+                completionHandler(.failure(.unknown))
             }
         }
     }

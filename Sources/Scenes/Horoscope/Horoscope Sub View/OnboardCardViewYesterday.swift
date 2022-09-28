@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AsterCore
 
 struct OnboardCardViewYesterday: View {
     var sign: String
@@ -28,7 +29,18 @@ struct OnboardCardViewYesterday: View {
         .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
         .padding(20)
         .onAppear {
-            viewModel.getHorosocpe()
+            viewModel.getHoroscope { (result: Result<String, ServiceError>) in
+                switch result {
+                case .success(let success):
+                    DispatchQueue.main.async {
+                        viewModel.horoscopeOfYesterday = success
+                    }
+                case .failure(let failure):
+                    DispatchQueue.main.async {
+                        viewModel.horoscopeOfYesterday = failure.localizedDescription
+                    }
+                }
+            }
         }
     }
 }

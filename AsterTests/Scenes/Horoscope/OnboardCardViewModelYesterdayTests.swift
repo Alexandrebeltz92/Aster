@@ -26,18 +26,22 @@ class OnboardCardViewModelYesterdayTests: XCTestCase {
     }
 
     func test_get_horoscope_for_user() {
-        service.stubHoroscopeResponse = HoroscopeResponse(sign: "aries", text: "Hello", date: "today", type: "daily")
+        service.stubHoroscopeResponse = HoroscopeResponse(sign: "aries", text: "hello", date: "today", type: "daily")
 
-        viewModel.getHorosocpe()
-
-        XCTAssertNotNil(viewModel.horoscopeOfYesterday)
-        XCTAssertEqual(viewModel.horoscopeOfYesterday, "The Sun is looking down on you.")
+        viewModel.getHoroscope {(result: Result<String, ServiceError>) in
+            switch result {
+            case .success(let success):
+                XCTAssertEqual(success, "hello")
+            case .failure:
+                XCTFail("Should not happen")
+            }
+        }
     }
 
-    func test_get_horsocope_return_error() {
+    func test_return_error() {
         service.stubError = ServiceError.unknown
 
-        viewModel.service.getHoroscope(for: "aries", for: "yesterday") { (result: Result<HoroscopeResponse?, ServiceError>) in
+        viewModel.getHoroscope {(result: Result<String, ServiceError>) in
             switch result {
             case .success:
                 XCTFail("Should not happen")
