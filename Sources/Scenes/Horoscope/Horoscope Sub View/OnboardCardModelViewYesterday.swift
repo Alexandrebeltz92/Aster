@@ -32,7 +32,7 @@ class OnboardCardViewModelYesterday: ObservableObject {
             fatalError("No sign founded")
         }
 
-        service.getHoroscope(for: sign, for: "yesterday") { (result: Result<HoroscopeResponse?, ServiceError>) in
+        service.getHoroscope(for: sign, for: "yesterday") {(result: Result<HoroscopeResponse?, ServiceError>) in
             switch result {
             case .success(let response):
                 guard let response = response else {

@@ -13,7 +13,7 @@ class ProfilViewModel: ObservableObject {
 
     // MARK: - Properties
     var userToDisplay: User
-    var savedCardsText = "Last card saved:"
+    var savedCardsText = "Last cards saved:"
 
     let store = UserStore.instance
 

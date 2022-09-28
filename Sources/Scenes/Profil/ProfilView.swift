@@ -48,22 +48,17 @@ struct ProfilView: View {
                         .foregroundColor(.white)
                         .bold()
 
-                    Image(viewModel.userToDisplay.cards.first?.imageName ?? "")
-                        .resizable()
-                        .frame(width: 100, height: 200, alignment: .center)
-                        .cornerRadius(25)
-
-//                    ScrollView(.horizontal, showsIndicators: true) {
-//                        HStack(alignment: .center, spacing: 15) {
-//                            ForEach(viewModel.userToDisplay.cards, id: \.name) {card in
-//                                SavedCardView(card: card).onTapGesture {
-//                                    self.navigateToLearnMore = true
-//                                }.sheet(isPresented: $navigateToLearnMore) {
-//                                    TarotCardDetailView(card: card)
-//                                }
-//                            }
-//                        }.padding(EdgeInsets(top: 0, leading: 100, bottom: 0, trailing: 100))
-//                    }
+                    ScrollView(.horizontal, showsIndicators: true) {
+                        HStack(alignment: .center, spacing: 15) {
+                            ForEach(viewModel.userToDisplay.cards, id: \.name) {card in
+                                SavedCardView(card: card).onTapGesture {
+                                    self.navigateToLearnMore = true
+                                }.sheet(isPresented: $navigateToLearnMore) {
+                                    TarotCardDetailView(card: card)
+                                }
+                            }
+                        }.padding(EdgeInsets(top: 0, leading: 100, bottom: 0, trailing: 100))
+                    }
                 }
 
                 Spacer(minLength: 20)

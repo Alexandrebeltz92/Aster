@@ -11,7 +11,7 @@ import AsterCore
 struct OnboardCardViewToday: View {
     var sign: String
     @StateObject var viewModel = OnboardCardViewModelToday()
-    
+
     var body: some View {
         VStack(alignment: .leading, spacing: 60) {
             Text(viewModel.horoscopeLabelToday)

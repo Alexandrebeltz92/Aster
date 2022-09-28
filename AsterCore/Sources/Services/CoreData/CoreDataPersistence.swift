@@ -72,13 +72,11 @@ public class CoreDataPersistence: UserService {
                 return
             }
 
-            guard let userCard = user.cards.first else {
-                return
+            for card in user.cards {
+                let cardEntity = card.toEntity(context: coreDataStack.viewContext)
+
+                userToUpdate.addToCards(NSSet(array: [cardEntity]))
             }
-
-            let firstCard = userCard.toEntity(context: coreDataStack.viewContext)
-
-            userToUpdate.addToCards(NSSet(array: [firstCard]))
 
             try coreDataStack.viewContext.save()
         } catch {
