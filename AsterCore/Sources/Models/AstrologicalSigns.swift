@@ -58,7 +58,7 @@ public enum AstrologicalSigns: String, CaseIterable {
         case .capricorn:
             return DateComponents(year: Self.comparaisonYear, month: 12, day: 22+1)
         case .aquarius:
-            return DateComponents(year: Self.comparaisonYear+1, month: 1, day: 20+1)
+            return DateComponents(year: Self.comparaisonYear, month: 1, day: 20+1)
         case .pisces:
             return DateComponents(year: Self.comparaisonYear, month: 2, day: 19+1)
         }

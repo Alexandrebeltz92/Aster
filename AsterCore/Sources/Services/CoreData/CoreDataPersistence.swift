@@ -68,15 +68,13 @@ public class CoreDataPersistence: UserService {
         request.predicate = NSPredicate(format: "pseudo == %@", user.pseudo)
 
         do {
-            guard let userToUpdate = try coreDataStack.viewContext.fetch(request).first else {
+            guard let userToUpdate = try coreDataStack.viewContext.fetch(request).first,
+                  let cardEntity = user.cards.first?.toEntity(context: coreDataStack.viewContext) else {
                 return
             }
 
-            for card in user.cards {
-                let cardEntity = card.toEntity(context: coreDataStack.viewContext)
-
-                userToUpdate.addToCards(NSSet(array: [cardEntity]))
-            }
+            // TODO: Not working
+            userToUpdate.addToCards(NSSet(array: [cardEntity].reversed()))
 
             try coreDataStack.viewContext.save()
         } catch {
