@@ -73,7 +73,6 @@ public class CoreDataPersistence: UserService {
                 return
             }
 
-            // TODO: Not working
             userToUpdate.addToCards(NSSet(array: [cardEntity].reversed()))
 
             try coreDataStack.viewContext.save()

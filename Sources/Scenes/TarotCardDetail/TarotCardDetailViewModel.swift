@@ -11,7 +11,7 @@ import AsterCore
 class TarotCardDetailViewModel: ObservableObject {
 
     // MARK: - Properties
-    let store = UserStore.instance
+    let userStore = UserStore.instance
 
     var card: Card
 
@@ -21,23 +21,23 @@ class TarotCardDetailViewModel: ObservableObject {
     }
 
     func saveCard() {
-        store.getPersistedUsers()
+        userStore.getPersistedUsers()
 
-        guard let currentUser = store.users.first else {
+        guard let currentUser = userStore.users.first else {
             print("Something went wrong")
             return
         }
 
         let currentCard = card
-        currentUser.cards.append(currentCard)
 
-        store.update(user: currentUser)
+        currentUser.cards.append(currentCard)
+        userStore.update(user: currentUser)
     }
 
     func checkIfSaved(for card: Card) -> Bool {
-        store.getPersistedUsers()
+        userStore.getPersistedUsers()
 
-        guard let user = store.users.first else {
+        guard let user = userStore.users.first else {
             fatalError()
         }
 

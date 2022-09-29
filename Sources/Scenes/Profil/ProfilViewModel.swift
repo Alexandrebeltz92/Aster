@@ -15,7 +15,7 @@ class ProfilViewModel: ObservableObject {
     var userToDisplay: User
     var savedCardsText = "Last cards saved:"
 
-    let store = UserStore.instance
+    let userStore = UserStore.instance
 
     // MARK: - Initialization
     init() {
@@ -33,9 +33,9 @@ class ProfilViewModel: ObservableObject {
     }
 
     func refreshUser() {
-        store.getPersistedUsers()
+        userStore.getPersistedUsers()
 
-        guard let user = store.users.first else {
+        guard let user = userStore.users.first else {
             return
         }
 
