@@ -63,23 +63,23 @@ public class CoreDataPersistence: UserService {
         }
     }
 
-    func update(user: User) {
-        let request: NSFetchRequest<UserEntity> = UserEntity.fetchRequest()
-        request.predicate = NSPredicate(format: "pseudo == %@", user.pseudo)
-
-        do {
-            guard let userToUpdate = try coreDataStack.viewContext.fetch(request).first,
-                  let cardEntity = user.cards.first?.toEntity(context: coreDataStack.viewContext) else {
-                return
-            }
-
-            userToUpdate.addToCards(NSSet(array: [cardEntity].reversed()))
-
-            try coreDataStack.viewContext.save()
-        } catch {
-                print("Sorry a problem occured")
-            }
-    }
+//    func update(user: User) {
+//        let request: NSFetchRequest<UserEntity> = UserEntity.fetchRequest()
+//        request.predicate = NSPredicate(format: "pseudo == %@", user.pseudo)
+//
+//        do {
+//            guard let userToUpdate = try coreDataStack.viewContext.fetch(request).first,
+//                  let firstCard = user.cards.first?.toEntity(context: coreDataStack.viewContext) else {
+//                return
+//            }
+//
+//            userToUpdate.addToCards(NSSet(array: [firstCard]))
+//
+//            try coreDataStack.viewContext.save()
+//        } catch {
+//                print("Sorry a problem occured")
+//            }
+//    }
 
     func deleteAllUsers() {
         let request: NSFetchRequest<UserEntity> = UserEntity.fetchRequest()

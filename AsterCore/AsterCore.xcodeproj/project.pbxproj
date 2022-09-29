@@ -36,6 +36,9 @@
 		AC6BF5CB28CB8489007BF723 /* HoroscopeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5CA28CB8489007BF723 /* HoroscopeResponse.swift */; };
 		AC6BF5CD28CB84A4007BF723 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5CC28CB84A4007BF723 /* NetworkService.swift */; };
 		AC6BF5CF28CB84B6007BF723 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5CE28CB84B6007BF723 /* ServiceError.swift */; };
+		AC96C32B28E5CB560066A9D7 /* CardStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC96C32A28E5CB560066A9D7 /* CardStore.swift */; };
+		AC96C32F28E5CBF50066A9D7 /* CardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC96C32E28E5CBF50066A9D7 /* CardService.swift */; };
+		AC96C33128E5CCCB0066A9D7 /* CoreDataPersistenceCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC96C33028E5CCCB0066A9D7 /* CoreDataPersistenceCard.swift */; };
 		ACE77D3728D9B60000E08F2B /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE77D3628D9B60000E08F2B /* Cards.swift */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +83,9 @@
 		AC6BF5CA28CB8489007BF723 /* HoroscopeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeResponse.swift; sourceTree = "<group>"; };
 		AC6BF5CC28CB84A4007BF723 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		AC6BF5CE28CB84B6007BF723 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		AC96C32A28E5CB560066A9D7 /* CardStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStore.swift; sourceTree = "<group>"; };
+		AC96C32E28E5CBF50066A9D7 /* CardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardService.swift; sourceTree = "<group>"; };
+		AC96C33028E5CCCB0066A9D7 /* CoreDataPersistenceCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPersistenceCard.swift; sourceTree = "<group>"; };
 		ACE77D3628D9B60000E08F2B /* Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -201,8 +207,8 @@
 		AC6BF5A128CB80FF007BF723 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				AC6BF5A228CB810D007BF723 /* UserService.swift */,
-				AC6BF5A428CB813E007BF723 /* CoreDataPersistence.swift */,
+				AC96C32D28E5CBB60066A9D7 /* Card */,
+				AC96C32C28E5CBAD0066A9D7 /* User */,
 				AC6BF5A628CB8162007BF723 /* CoreDataStack.swift */,
 				AC5DEAA528D07F4800A41259 /* Aster.xcdatamodeld */,
 			);
@@ -253,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				AC6BF5C328CB83AE007BF723 /* UserStore.swift */,
+				AC96C32A28E5CB560066A9D7 /* CardStore.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -265,6 +272,24 @@
 				AC33671328E22F7B0085D52F /* ProtocolService.swift */,
 			);
 			path = HoroscopeService;
+			sourceTree = "<group>";
+		};
+		AC96C32C28E5CBAD0066A9D7 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				AC6BF5A228CB810D007BF723 /* UserService.swift */,
+				AC6BF5A428CB813E007BF723 /* CoreDataPersistence.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		AC96C32D28E5CBB60066A9D7 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				AC96C32E28E5CBF50066A9D7 /* CardService.swift */,
+				AC96C33028E5CCCB0066A9D7 /* CoreDataPersistenceCard.swift */,
+			);
+			path = Card;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,9 +419,11 @@
 			files = (
 				AC6BF5C628CB841F007BF723 /* AstrologicalSigns.swift in Sources */,
 				AC6BF5CB28CB8489007BF723 /* HoroscopeResponse.swift in Sources */,
+				AC96C33128E5CCCB0066A9D7 /* CoreDataPersistenceCard.swift in Sources */,
 				AC6BF5CD28CB84A4007BF723 /* NetworkService.swift in Sources */,
 				AC5DEAAE28D0836000A41259 /* CardEntity+CoreDataClass.swift in Sources */,
 				AC5DEAAC28D0836000A41259 /* UserEntity+CoreDataClass.swift in Sources */,
+				AC96C32F28E5CBF50066A9D7 /* CardService.swift in Sources */,
 				AC6BF5CF28CB84B6007BF723 /* ServiceError.swift in Sources */,
 				AC5DEAA728D07F4800A41259 /* Aster.xcdatamodeld in Sources */,
 				AC6BF5AC28CB8190007BF723 /* User.swift in Sources */,
@@ -407,6 +434,7 @@
 				AC6BF5AF28CB81A7007BF723 /* Card.swift in Sources */,
 				AC6BF5C128CB831D007BF723 /* UserEntity+Transformation.swift in Sources */,
 				AC6BF5A528CB813E007BF723 /* CoreDataPersistence.swift in Sources */,
+				AC96C32B28E5CB560066A9D7 /* CardStore.swift in Sources */,
 				AC6BF5A328CB810D007BF723 /* UserService.swift in Sources */,
 				ACE77D3728D9B60000E08F2B /* Cards.swift in Sources */,
 				AC33671428E22F7B0085D52F /* ProtocolService.swift in Sources */,

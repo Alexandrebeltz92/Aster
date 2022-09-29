@@ -12,6 +12,7 @@ class TarotCardDetailViewModel: ObservableObject {
 
     // MARK: - Properties
     let userStore = UserStore.instance
+    let cardStore = CardStore.instance
 
     var card: Card
 
@@ -28,10 +29,10 @@ class TarotCardDetailViewModel: ObservableObject {
             return
         }
 
-        let currentCard = card
+        cardStore.getPersistedCards(for: currentUser)
 
-        currentUser.cards.append(currentCard)
-        userStore.update(user: currentUser)
+        currentUser.cards.append(card)
+        cardStore.persist(card: card, user: currentUser)
     }
 
     func checkIfSaved(for card: Card) -> Bool {
@@ -41,7 +42,11 @@ class TarotCardDetailViewModel: ObservableObject {
             fatalError()
         }
 
-        if user.cards.contains(where: { $0 == card }) {
+        cardStore.getPersistedCards(for: user)
+
+        let cards = cardStore.cards
+
+        if user.cards.contains(where: { $0 == card }), cards.contains(where: { $0.name == card.name }) {
             return true
         } else {
             return false

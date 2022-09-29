@@ -16,7 +16,6 @@ struct TarotCardDetailView: View {
 
     var body: some View {
         ZStack {
-
             Image(card.imageName)
                 .resizable()
                 .ignoresSafeArea()
@@ -27,6 +26,23 @@ struct TarotCardDetailView: View {
                     .minimumScaleFactor(0.2)
                     .font(.subheadline)
                     .foregroundColor(.black)
+
+                if card.saved {
+                    Button("Delete from favorite") {
+                        withAnimation {
+                            self.isSaved = false
+                        }
+                    }
+                    .padding(30)
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .padding()
+                    .frame(width: 220, height: 60, alignment: .center)
+                    .background(Color.blue)
+                    .cornerRadius(35)
+                    .opacity(isSaved ? 1 : 0)
+                    .disabled(!isSaved)
+                }
 
                 if !card.saved {
                     Button("Save your card") {

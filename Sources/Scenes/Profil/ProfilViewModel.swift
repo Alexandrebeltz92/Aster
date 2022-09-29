@@ -16,6 +16,7 @@ class ProfilViewModel: ObservableObject {
     var savedCardsText = "Last cards saved:"
 
     let userStore = UserStore.instance
+    let cardStore = CardStore.instance
 
     // MARK: - Initialization
     init() {
@@ -29,6 +30,9 @@ class ProfilViewModel: ObservableObject {
             fatalError("Should not happen")
         }
 
+        CardStore.instance.getPersistedCards(for: user)
+        user.cards = CardStore.instance.cards
+
         return user
     }
 
@@ -38,6 +42,9 @@ class ProfilViewModel: ObservableObject {
         guard let user = userStore.users.first else {
             return
         }
+
+        cardStore.getPersistedCards(for: user)
+        user.cards = cardStore.cards
 
         userToDisplay = user
     }
