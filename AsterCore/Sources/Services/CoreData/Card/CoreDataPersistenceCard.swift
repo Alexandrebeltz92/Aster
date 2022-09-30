@@ -36,6 +36,7 @@ public class CoreDataPersistenceCard: CardService {
         }
 
         _ = card.toEntity(context: coreDataStack.viewContext)
+        _ = user.toEntity(context: coreDataStack.viewContext)
 
         do {
             try coreDataStack.viewContext.save()

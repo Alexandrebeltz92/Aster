@@ -28,10 +28,12 @@ struct TarotCardDetailView: View {
                     .foregroundColor(.black)
 
                 if card.saved {
-                    Button("Delete from favorite") {
+                    Button("Remove") {
                         withAnimation {
                             self.isSaved = false
                         }
+
+                        TarotCardDetailViewModel(card: card).removeCard()
                     }
                     .padding(30)
                     .font(.headline)
@@ -69,6 +71,11 @@ struct TarotCardDetailView: View {
                 .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
                 .padding(20)
         }.onAppear {
+            if TarotCardDetailViewModel(card: card).checkIfSaved(for: card) {
+                isSaved = true
+            }
+        }
+        .onAppear {
             if TarotCardDetailViewModel(card: card).checkIfSaved(for: card) {
                 isSaved = true
             }

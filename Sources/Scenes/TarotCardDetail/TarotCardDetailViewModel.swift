@@ -45,11 +45,26 @@ class TarotCardDetailViewModel: ObservableObject {
         cardStore.getPersistedCards(for: user)
 
         let cards = cardStore.cards
+        user.cards = cards.reversed()
 
-        if user.cards.contains(where: { $0 == card }), cards.contains(where: { $0.name == card.name }) {
+        if user.cards.contains(where: { $0 == card }) {
             return true
         } else {
             return false
         }
+    }
+
+    func removeCard() {
+        userStore.getPersistedUsers()
+
+        guard let currentUser = userStore.users.first else {
+            print("Something went wrong")
+            return
+        }
+
+        cardStore.getPersistedCards(for: currentUser)
+
+        currentUser.cards.removeAll(where: { $0.name == card.name })
+        cardStore.delete(card: card, user: currentUser)
     }
 }

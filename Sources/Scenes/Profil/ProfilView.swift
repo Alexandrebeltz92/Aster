@@ -58,13 +58,15 @@ struct ProfilView: View {
                                 }
                             }
                         }.padding(EdgeInsets(top: 0, leading: 100, bottom: 0, trailing: 100))
+                            .onAppear(perform: viewModel.refreshUser)
                     }
                 }
 
                 Spacer(minLength: 20)
                     .padding()
             }
-        }.onAppear(perform: viewModel.refreshUser)
+        }
+        .onAppear(perform: viewModel.refreshUser)
     }
 }
 

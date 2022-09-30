@@ -4,11 +4,10 @@
         <attribute name="descriptionCard" attributeType="String"/>
         <attribute name="imageName" attributeType="String"/>
         <attribute name="name" attributeType="String"/>
-        <relationship name="user" maxCount="1" deletionRule="Cascade" destinationEntity="UserEntity" inverseName="cards" inverseEntity="UserEntity"/>
     </entity>
     <entity name="UserEntity" representedClassName=".UserEntity" syncable="YES">
         <attribute name="pseudo" attributeType="String"/>
         <attribute name="sign" attributeType="String"/>
-        <relationship name="cards" toMany="YES" deletionRule="Cascade" destinationEntity="CardEntity" inverseName="user" inverseEntity="CardEntity"/>
+        <relationship name="cards" toMany="YES" deletionRule="Cascade" destinationEntity="CardEntity"/>
     </entity>
 </model>
