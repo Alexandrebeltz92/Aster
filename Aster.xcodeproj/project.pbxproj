@@ -167,12 +167,12 @@
 		AC2ED91A28AD8A8B007981C3 = {
 			isa = PBXGroup;
 			children = (
-				ACE77D4028DDEF2D00E08F2B /* AsterTests */,
 				16D84ECE10322E31E90F0589 /* Frameworks */,
 				A55EC04FD2F312DEF318B86E /* Pods */,
 				AC2ED92428AD8A8B007981C3 /* Products */,
 				AC2ED93828AD8C15007981C3 /* Ressources */,
 				AC2ED92528AD8A8B007981C3 /* Sources */,
+				ACE77D4028DDEF2D00E08F2B /* Tests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -355,12 +355,12 @@
 			path = "Sub Profil View";
 			sourceTree = "<group>";
 		};
-		ACE77D4028DDEF2D00E08F2B /* AsterTests */ = {
+		ACE77D4028DDEF2D00E08F2B /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				ACE77D4828DDEF3B00E08F2B /* Scenes */,
 			);
-			path = AsterTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		ACE77D4828DDEF3B00E08F2B /* Scenes */ = {

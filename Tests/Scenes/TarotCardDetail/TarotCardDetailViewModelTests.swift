@@ -54,11 +54,9 @@ class TarotCardDetailViewModelTests: XCTestCase {
 
         let currentUserCards = store.users.first?.cards
 
-        viewModel.checkIfSaved(for: card)
-
         if let response = currentUserCards?.contains(where: { $0.name == card.name }) {
             XCTAssertFalse(response)
-
+            XCTAssertFalse(viewModel.checkIfSaved(for: card))
         }
     }
 }

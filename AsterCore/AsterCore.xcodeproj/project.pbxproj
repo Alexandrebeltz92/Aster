@@ -39,6 +39,7 @@
 		AC96C32B28E5CB560066A9D7 /* CardStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC96C32A28E5CB560066A9D7 /* CardStore.swift */; };
 		AC96C32F28E5CBF50066A9D7 /* CardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC96C32E28E5CBF50066A9D7 /* CardService.swift */; };
 		AC96C33128E5CCCB0066A9D7 /* CoreDataPersistenceCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC96C33028E5CCCB0066A9D7 /* CoreDataPersistenceCard.swift */; };
+		ACB54B8128EAC80100B1CF68 /* CoreDataPersistenceCardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB54B8028EAC80100B1CF68 /* CoreDataPersistenceCardTests.swift */; };
 		ACE77D3728D9B60000E08F2B /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE77D3628D9B60000E08F2B /* Cards.swift */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +87,7 @@
 		AC96C32A28E5CB560066A9D7 /* CardStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStore.swift; sourceTree = "<group>"; };
 		AC96C32E28E5CBF50066A9D7 /* CardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardService.swift; sourceTree = "<group>"; };
 		AC96C33028E5CCCB0066A9D7 /* CoreDataPersistenceCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPersistenceCard.swift; sourceTree = "<group>"; };
+		ACB54B8028EAC80100B1CF68 /* CoreDataPersistenceCardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPersistenceCardTests.swift; sourceTree = "<group>"; };
 		ACE77D3628D9B60000E08F2B /* Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +127,7 @@
 			children = (
 				AC5DEA8E28CF76A600A41259 /* TestCoreDataStack.swift */,
 				AC5DEA9028CF76E000A41259 /* CoreDataPersistenceTests.swift */,
+				ACB54B8028EAC80100B1CF68 /* CoreDataPersistenceCardTests.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 			files = (
 				AC5DEA9628CF7F0E00A41259 /* StubNetworkService.swift in Sources */,
 				AC5DEA9E28CF803000A41259 /* XCTestCaseExtension.swift in Sources */,
+				ACB54B8128EAC80100B1CF68 /* CoreDataPersistenceCardTests.swift in Sources */,
 				AC5DEA9828CF7F2E00A41259 /* MockURLProtocol.swift in Sources */,
 				AC5DEAA428CF882000A41259 /* HoroscopeResponseTests.swift in Sources */,
 				AC5DEA9128CF76E000A41259 /* CoreDataPersistenceTests.swift in Sources */,

@@ -35,6 +35,8 @@ class CoreDataPersistenceTests: XCTestCase {
     override func tearDown() {
         super.tearDown()
 
+        coreDataPersistence.deleteAllUsers()
+
         coreDataStack = nil
         coreDataPersistence = nil
     }
