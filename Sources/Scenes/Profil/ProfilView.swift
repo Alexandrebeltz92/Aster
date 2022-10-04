@@ -15,6 +15,18 @@ struct ProfilView: View {
 
     @State private var navigateToLearnMore = false
 
+    var astroImage: UIImage {
+        if let image = UIImage(named: viewModel.userToDisplay.astrologicalSign.capitalized) {
+            return image
+        } else {
+            guard let defaultImage = UIImage(named: "defaultImage") else {
+                fatalError("Default image must be inside ressoruces")
+            }
+
+            return defaultImage
+        }
+    }
+
     var body: some View {
         ZStack {
             Image("background")
@@ -25,7 +37,7 @@ struct ProfilView: View {
                 Spacer(minLength: 20)
                     .padding()
 
-                Image(viewModel.userToDisplay.astrologicalSign)
+                Image(uiImage: astroImage)
                     .resizable()
                     .frame(width: 150, height: 150, alignment: .top)
                     .clipShape(Circle())
