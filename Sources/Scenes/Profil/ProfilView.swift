@@ -55,6 +55,7 @@ struct ProfilView: View {
                                     self.navigateToLearnMore = true
                                 }.sheet(isPresented: $navigateToLearnMore) {
                                     TarotCardDetailView(card: card)
+                                        .onDisappear(perform: viewModel.refreshUser)
                                 }
                             }
                         }.padding(EdgeInsets(top: 0, leading: 100, bottom: 0, trailing: 100))
