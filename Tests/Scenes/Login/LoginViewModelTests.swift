@@ -23,10 +23,13 @@ class LoginViewModelTests: XCTestCase {
     }
 
     func test_save() {
-        viewModel.pseudo = "James"
-        viewModel.monthOfBirth = "12"
-        viewModel.dayOfBirth = "05"
+        let birthdate = DateComponents(year: 2000, month: 01, day: 01)
+        guard let date = Calendar.current.date(from: birthdate) else {
+            return
+        }
 
+        viewModel.pseudo = "James"
+        viewModel.birthday = date
         viewModel.save()
 
         store.getPersistedUsers()

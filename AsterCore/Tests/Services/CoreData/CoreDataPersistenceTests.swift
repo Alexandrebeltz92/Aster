@@ -13,13 +13,13 @@ class CoreDataPersistenceTests: XCTestCase {
 
     let testUser = User(pseudo: "James",
                         astrologicalSign: "Aries",
-                        cards: [Card(name: "0 The Fool", imageName: "0_The_Fool", description: "", saved: false)])
+                        cards: [Card(name: "0 The Fool", imageName: "0_The_Fool", shortDescription: "", saved: false)])
 
     let testUser2 = User(pseudo: "Antoine",
                          astrologicalSign: "Leo",
-                         cards: [Card(name: "0 The Fool", imageName: "0_The_Fool", description: "", saved: false)])
+                         cards: [Card(name: "0 The Fool", imageName: "0_The_Fool", shortDescription: "", saved: false)])
 
-    let testCard = Card(name: "0 The Fool", imageName: "0_The_Fool", description: "", saved: false)
+    let testCard = Card(name: "0 The Fool", imageName: "0_The_Fool", shortDescription: "", saved: false)
 
     var coreDataPersistence: CoreDataPersistence!
     var coreDataStack: CoreDataStack!

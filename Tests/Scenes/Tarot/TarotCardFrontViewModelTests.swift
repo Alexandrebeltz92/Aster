@@ -11,7 +11,7 @@ import AsterCore
 
 class TarotCardFrontViewModelTests: XCTestCase {
 
-    let card = Card(name: "0 The Fool", imageName: "0_The_Foold", description: "", saved: false)
+    let card = Card(name: "0 The Fool", imageName: "0_The_Foold", shortDescription: "", saved: false)
 
     func testInitialization() {
         // Initialize View Model

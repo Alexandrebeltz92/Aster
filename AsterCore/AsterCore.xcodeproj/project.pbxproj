@@ -40,6 +40,7 @@
 		AC96C32F28E5CBF50066A9D7 /* CardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC96C32E28E5CBF50066A9D7 /* CardService.swift */; };
 		AC96C33128E5CCCB0066A9D7 /* CoreDataPersistenceCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC96C33028E5CCCB0066A9D7 /* CoreDataPersistenceCard.swift */; };
 		ACB54B8128EAC80100B1CF68 /* CoreDataPersistenceCardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB54B8028EAC80100B1CF68 /* CoreDataPersistenceCardTests.swift */; };
+		ACB54B8528EC8B6A00B1CF68 /* AstrologicalSignsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB54B8428EC8B6A00B1CF68 /* AstrologicalSignsTests.swift */; };
 		ACE77D3728D9B60000E08F2B /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE77D3628D9B60000E08F2B /* Cards.swift */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +89,7 @@
 		AC96C32E28E5CBF50066A9D7 /* CardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardService.swift; sourceTree = "<group>"; };
 		AC96C33028E5CCCB0066A9D7 /* CoreDataPersistenceCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPersistenceCard.swift; sourceTree = "<group>"; };
 		ACB54B8028EAC80100B1CF68 /* CoreDataPersistenceCardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPersistenceCardTests.swift; sourceTree = "<group>"; };
+		ACB54B8428EC8B6A00B1CF68 /* AstrologicalSignsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstrologicalSignsTests.swift; sourceTree = "<group>"; };
 		ACE77D3628D9B60000E08F2B /* Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,6 +137,7 @@
 		AC5DEA8528CF767C00A41259 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				ACB54B8328EC8B5300B1CF68 /* Models */,
 				AC5DEA9C28CF802200A41259 /* Extension */,
 				AC5DEA9928CF7F4900A41259 /* Ressources */,
 				AC5DEA7B28CF75D300A41259 /* Services */,
@@ -295,6 +298,14 @@
 			path = Card;
 			sourceTree = "<group>";
 		};
+		ACB54B8328EC8B5300B1CF68 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ACB54B8428EC8B6A00B1CF68 /* AstrologicalSignsTests.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -405,6 +416,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACB54B8528EC8B6A00B1CF68 /* AstrologicalSignsTests.swift in Sources */,
 				AC5DEA9628CF7F0E00A41259 /* StubNetworkService.swift in Sources */,
 				AC5DEA9E28CF803000A41259 /* XCTestCaseExtension.swift in Sources */,
 				ACB54B8128EAC80100B1CF68 /* CoreDataPersistenceCardTests.swift in Sources */,

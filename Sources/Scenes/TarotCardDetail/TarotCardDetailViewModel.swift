@@ -21,7 +21,7 @@ class TarotCardDetailViewModel: ObservableObject {
         self.card = card
     }
 
-    func saveCard() {
+    func saveCard(completionHandler: @escaping () -> Void) {
         userStore.getPersistedUsers()
 
         guard let currentUser = userStore.users.first else {
@@ -33,6 +33,8 @@ class TarotCardDetailViewModel: ObservableObject {
 
         currentUser.cards.append(card)
         cardStore.persist(card: card, user: currentUser)
+
+        completionHandler()
     }
 
     func checkIfSaved(for card: Card) -> Bool {
@@ -54,7 +56,7 @@ class TarotCardDetailViewModel: ObservableObject {
         }
     }
 
-    func removeCard() {
+    func removeCard(completionHandler: @escaping () -> Void) {
         userStore.getPersistedUsers()
 
         guard let currentUser = userStore.users.first else {
@@ -66,5 +68,7 @@ class TarotCardDetailViewModel: ObservableObject {
 
         currentUser.cards.removeAll(where: { $0.name == card.name })
         cardStore.delete(card: card, user: currentUser)
+
+        completionHandler()
     }
 }

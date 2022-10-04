@@ -12,6 +12,7 @@ import AsterCore
 class ProfilViewModel: ObservableObject {
 
     // MARK: - Properties
+    @Published
     var userToDisplay: User
     var savedCardsText = "Last cards saved:"
 

@@ -14,23 +14,19 @@ class LoginViewModel: ObservableObject {
 
     var catchPhrase = "The Stars greets you!"
     var pseudo = ""
-    var dayOfBirth = ""
-    var monthOfBirth = ""
+    var birthday: Date = Date()
 
     let store = UserStore.instance
 
      // MARK: - Functions
 
     func save() {
-        let month = Int(monthOfBirth)
-        let day = Int(dayOfBirth)
+        let month = Calendar.current.component(.month, from: birthday)
+        let day = Calendar.current.component(.day, from: birthday)
 
-        guard let newMonth = month, let newDay = day else {
-            print("something went wrong")
-            return
+        guard let sign = AstrologicalSigns.sign(for: month, day: day) else {
+            fatalError("Should not happen")
         }
-
-        let sign = AstrologicalSigns.sign(for: newMonth, day: newDay)
 
         let userToPersist = User(pseudo: pseudo,
                                  astrologicalSign: sign.rawValue,

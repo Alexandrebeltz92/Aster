@@ -27,18 +27,16 @@ struct BirthdayLoginView: View {
                     .foregroundColor(.black)
             }
 
-            HStack {
-                TextField("Day of birth", text: $viewModel.dayOfBirth)
-                    .padding()
-                    .background(lighGreyColor)
-                    .cornerRadius(15)
-                    .keyboardType(.decimalPad)
+            ZStack {
+                RoundedRectangle(cornerRadius: 20)
+                        .opacity(0.9)
+                        .foregroundColor(.white)
+                        .frame(width: 300, height: 200, alignment: .center)
 
-                TextField("Month of birth", text: $viewModel.monthOfBirth)
-                    .padding()
-                    .background(lighGreyColor)
-                    .cornerRadius(15)
-                    .keyboardType(.decimalPad)
+                DatePicker("", selection: $viewModel.birthday, displayedComponents: .date)
+                    .datePickerStyle(.wheel)
+                    .labelsHidden()
+
             }.padding(15)
 
             NavigationLink(destination: HomeView(), label: {

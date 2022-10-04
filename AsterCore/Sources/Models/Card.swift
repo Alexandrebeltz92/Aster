@@ -11,13 +11,13 @@ import SwiftUI
 public struct Card {
     public let name: String
     public let imageName: String
-    public let description: String
+    public let shortDescription: String
     public let saved: Bool
 
-    public init(name: String, imageName: String, description: String, saved: Bool) {
+    public init(name: String, imageName: String, shortDescription: String, saved: Bool) {
         self.name = name
         self.imageName = imageName
-        self.description = description
+        self.shortDescription = shortDescription
         self.saved = saved
     }
 }

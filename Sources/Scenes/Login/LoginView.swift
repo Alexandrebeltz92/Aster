@@ -22,8 +22,6 @@ struct LoginView: View {
     var username = ""
     @State
     var birthday = ""
-    @State
-    var birthMonth = ""
 
     var body: some View {
         NavigationView {

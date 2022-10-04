@@ -58,7 +58,6 @@ struct ProfilView: View {
                                 }
                             }
                         }.padding(EdgeInsets(top: 0, leading: 100, bottom: 0, trailing: 100))
-                            .onAppear(perform: viewModel.refreshUser)
                     }
                 }
 

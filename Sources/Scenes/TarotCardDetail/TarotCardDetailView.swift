@@ -12,7 +12,12 @@ struct TarotCardDetailView: View {
 
     @State
     private var isSaved = false
+    @State
+    private var showAlert = false
     var card: Card
+
+    @Environment(\.presentationMode)
+    var presentationMode
 
     var body: some View {
         ZStack {
@@ -22,7 +27,7 @@ struct TarotCardDetailView: View {
                 .scaledToFill()
 
             VStack(alignment: .center) {
-                Text(card.description)
+                Text(card.shortDescription)
                     .minimumScaleFactor(0.2)
                     .font(.subheadline)
                     .foregroundColor(.black)
@@ -31,9 +36,18 @@ struct TarotCardDetailView: View {
                     Button("Remove") {
                         withAnimation {
                             self.isSaved = false
+                            self.showAlert = true
                         }
 
-                        TarotCardDetailViewModel(card: card).removeCard()
+                        TarotCardDetailViewModel(card: card).removeCard {
+                            presentationMode.wrappedValue.dismiss()
+                        }
+                    }
+                    .alert(isPresented: $showAlert) {
+                        Alert(
+                            title: Text(""),
+                            message: Text("Card removed")
+                        )
                     }
                     .padding(30)
                     .font(.headline)
@@ -50,10 +64,19 @@ struct TarotCardDetailView: View {
                     Button("Save your card") {
                         withAnimation {
                             self.isSaved = true
+                            self.showAlert = true
                         }
 
-                        TarotCardDetailViewModel(card: card).saveCard()
-                    }.padding(30)
+                        TarotCardDetailViewModel(card: card).saveCard {
+                            presentationMode.wrappedValue.dismiss()
+                        }
+                    }.alert(isPresented: $showAlert) {
+                        Alert(
+                            title: Text(""),
+                            message: Text("Card saved")
+                        )
+                    }
+                        .padding(30)
                         .font(.headline)
                         .foregroundColor(.white)
                         .padding()
@@ -85,7 +108,7 @@ struct TarotCardDetailView: View {
 
 struct TarotCardDetailView_Previews: PreviewProvider {
 
-    static var cardPreview = Card(name: "0 The Fool", imageName: "0_The_Fool", description: "Follow the wind", saved: false)
+    static var cardPreview = Card(name: "0 The Fool", imageName: "0_The_Fool", shortDescription: "Follow the wind", saved: false)
 
     static var previews: some View {
         TarotCardDetailView(card: cardPreview)

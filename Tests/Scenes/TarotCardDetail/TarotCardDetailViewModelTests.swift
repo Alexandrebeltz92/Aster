@@ -11,7 +11,7 @@ import AsterCore
 
 class TarotCardDetailViewModelTests: XCTestCase {
     let store = UserStore.instance
-    let card = Card(name: "0 The Fool", imageName: "0_The_Fool", description: "", saved: false)
+    let card = Card(name: "0 The Fool", imageName: "0_The_Fool", shortDescription: "", saved: false)
 
     override class func setUp() {
         let user = User(pseudo: "James", astrologicalSign: "aries", cards: [])
@@ -44,7 +44,7 @@ class TarotCardDetailViewModelTests: XCTestCase {
 
         currentUser.cards.append(card)
 
-        viewModel.saveCard()
+        viewModel.saveCard { }
 
         XCTAssertEqual(currentUser.cards.count, 1)
     }

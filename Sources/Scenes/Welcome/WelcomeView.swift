@@ -16,8 +16,8 @@ struct WelcomeView: View {
         NavigationView {
             ZStack {
                 Image(viewModel.background)
-                    .scaledToFill()
                     .ignoresSafeArea()
+                    .scaledToFill()
 
                 VStack(alignment: .center, spacing: 200) {
                     VStack {

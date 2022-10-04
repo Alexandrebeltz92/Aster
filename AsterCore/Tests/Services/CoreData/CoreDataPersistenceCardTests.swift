@@ -15,8 +15,8 @@ class CoreDataPersistenceCardTests: XCTestCase {
                          astrologicalSign: "Leo",
                          cards: [])
 
-    let testCard = Card(name: "The Magicien", imageName: "1_The_Magicien", description: "", saved: false)
-    let testCard2 = Card(name: "The High Priestess", imageName: "2_The_High_Priestess", description: "", saved: false)
+    let testCard = Card(name: "The Magicien", imageName: "1_The_Magicien", shortDescription: "", saved: false)
+    let testCard2 = Card(name: "The High Priestess", imageName: "2_The_High_Priestess", shortDescription: "", saved: false)
 
     var coreDataPersistence: CoreDataPersistence!
     var coreDataPersistenceCard: CoreDataPersistenceCard!
