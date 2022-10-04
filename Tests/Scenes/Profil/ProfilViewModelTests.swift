@@ -15,6 +15,9 @@ class ProfilViewModelTests: XCTestCase {
     let store = UserStore.instance
 
     override class func setUp() {
+        UserStore.instance.getPersistedUsers()
+        UserStore.instance.deleteAllUsers()
+
         let user = User(pseudo: "James", astrologicalSign: "aries", cards: [])
         UserStore.instance.persist(user: user)
         UserStore.instance.getPersistedUsers()
@@ -34,7 +37,10 @@ class ProfilViewModelTests: XCTestCase {
 
     func test_refresh_user() {
         store.getPersistedUsers()
-        let user = viewModel.userToDisplay
+        guard let user = viewModel.userStore.users.first else {
+            return
+        }
+
         XCTAssertNotNil(user)
 
         viewModel.refreshUser()

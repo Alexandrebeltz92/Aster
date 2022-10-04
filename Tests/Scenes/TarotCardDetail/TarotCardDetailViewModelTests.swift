@@ -22,6 +22,7 @@ class TarotCardDetailViewModelTests: XCTestCase {
     override class func tearDown() {
         UserStore.instance.getPersistedUsers()
         UserStore.instance.deleteAllUsers()
+        CardStore.instance.deleteAllCardsAndUsers()
     }
 
     func testInitialization() {
