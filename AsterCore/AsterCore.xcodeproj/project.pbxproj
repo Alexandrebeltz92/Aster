@@ -1,0 +1,741 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC33671428E22F7B0085D52F /* ProtocolService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC33671328E22F7B0085D52F /* ProtocolService.swift */; };
+		AC5DEA8828CF767C00A41259 /* AsterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6BF57D28CB7DD5007BF723 /* AsterCore.framework */; platformFilter = ios; };
+		AC5DEA8F28CF76A600A41259 /* TestCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DEA8E28CF76A600A41259 /* TestCoreDataStack.swift */; };
+		AC5DEA9128CF76E000A41259 /* CoreDataPersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DEA9028CF76E000A41259 /* CoreDataPersistenceTests.swift */; };
+		AC5DEA9428CF7EDA00A41259 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DEA9328CF7EDA00A41259 /* NetworkServiceTests.swift */; };
+		AC5DEA9628CF7F0E00A41259 /* StubNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DEA9528CF7F0E00A41259 /* StubNetworkService.swift */; };
+		AC5DEA9828CF7F2E00A41259 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DEA9728CF7F2E00A41259 /* MockURLProtocol.swift */; };
+		AC5DEA9B28CF7F5C00A41259 /* Mock.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AC5DEA9A28CF7F5C00A41259 /* Mock.bundle */; };
+		AC5DEA9E28CF803000A41259 /* XCTestCaseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DEA9D28CF803000A41259 /* XCTestCaseExtension.swift */; };
+		AC5DEAA228CF86F200A41259 /* HoroscopeServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DEAA128CF86F200A41259 /* HoroscopeServiceTests.swift */; };
+		AC5DEAA428CF882000A41259 /* HoroscopeResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DEAA328CF882000A41259 /* HoroscopeResponseTests.swift */; };
+		AC5DEAA728D07F4800A41259 /* Aster.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC5DEAA528D07F4800A41259 /* Aster.xcdatamodeld */; };
+		AC5DEAAC28D0836000A41259 /* UserEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DEAA828D0836000A41259 /* UserEntity+CoreDataClass.swift */; };
+		AC5DEAAD28D0836000A41259 /* UserEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DEAA928D0836000A41259 /* UserEntity+CoreDataProperties.swift */; };
+		AC5DEAAE28D0836000A41259 /* CardEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DEAAA28D0836000A41259 /* CardEntity+CoreDataClass.swift */; };
+		AC5DEAAF28D0836000A41259 /* CardEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DEAAB28D0836000A41259 /* CardEntity+CoreDataProperties.swift */; };
+		AC6BF5A328CB810D007BF723 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5A228CB810D007BF723 /* UserService.swift */; };
+		AC6BF5A528CB813E007BF723 /* CoreDataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5A428CB813E007BF723 /* CoreDataPersistence.swift */; };
+		AC6BF5A728CB8162007BF723 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5A628CB8162007BF723 /* CoreDataStack.swift */; };
+		AC6BF5AC28CB8190007BF723 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5AB28CB8190007BF723 /* User.swift */; };
+		AC6BF5AF28CB81A7007BF723 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5AE28CB81A7007BF723 /* Card.swift */; };
+		AC6BF5BA28CB8285007BF723 /* CardEntity+Transformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5B928CB8285007BF723 /* CardEntity+Transformation.swift */; };
+		AC6BF5C128CB831D007BF723 /* UserEntity+Transformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5C028CB831D007BF723 /* UserEntity+Transformation.swift */; };
+		AC6BF5C428CB83AE007BF723 /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5C328CB83AE007BF723 /* UserStore.swift */; };
+		AC6BF5C628CB841F007BF723 /* AstrologicalSigns.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5C528CB841F007BF723 /* AstrologicalSigns.swift */; };
+		AC6BF5C928CB8477007BF723 /* HoroscopeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5C828CB8477007BF723 /* HoroscopeService.swift */; };
+		AC6BF5CB28CB8489007BF723 /* HoroscopeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5CA28CB8489007BF723 /* HoroscopeResponse.swift */; };
+		AC6BF5CD28CB84A4007BF723 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5CC28CB84A4007BF723 /* NetworkService.swift */; };
+		AC6BF5CF28CB84B6007BF723 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF5CE28CB84B6007BF723 /* ServiceError.swift */; };
+		AC96C32B28E5CB560066A9D7 /* CardStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC96C32A28E5CB560066A9D7 /* CardStore.swift */; };
+		AC96C32F28E5CBF50066A9D7 /* CardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC96C32E28E5CBF50066A9D7 /* CardService.swift */; };
+		AC96C33128E5CCCB0066A9D7 /* CoreDataPersistenceCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC96C33028E5CCCB0066A9D7 /* CoreDataPersistenceCard.swift */; };
+		ACB54B8128EAC80100B1CF68 /* CoreDataPersistenceCardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB54B8028EAC80100B1CF68 /* CoreDataPersistenceCardTests.swift */; };
+		ACB54B8528EC8B6A00B1CF68 /* AstrologicalSignsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB54B8428EC8B6A00B1CF68 /* AstrologicalSignsTests.swift */; };
+		ACE77D3728D9B60000E08F2B /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE77D3628D9B60000E08F2B /* Cards.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AC5DEA8928CF767C00A41259 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC6BF57428CB7DD5007BF723 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC6BF57C28CB7DD5007BF723;
+			remoteInfo = AsterCore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AC33671328E22F7B0085D52F /* ProtocolService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolService.swift; sourceTree = "<group>"; };
+		AC5DEA8428CF767C00A41259 /* AsterCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AsterCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC5DEA8E28CF76A600A41259 /* TestCoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoreDataStack.swift; sourceTree = "<group>"; };
+		AC5DEA9028CF76E000A41259 /* CoreDataPersistenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPersistenceTests.swift; sourceTree = "<group>"; };
+		AC5DEA9328CF7EDA00A41259 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
+		AC5DEA9528CF7F0E00A41259 /* StubNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubNetworkService.swift; sourceTree = "<group>"; };
+		AC5DEA9728CF7F2E00A41259 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		AC5DEA9A28CF7F5C00A41259 /* Mock.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Mock.bundle; sourceTree = "<group>"; };
+		AC5DEA9D28CF803000A41259 /* XCTestCaseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCaseExtension.swift; sourceTree = "<group>"; };
+		AC5DEAA128CF86F200A41259 /* HoroscopeServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeServiceTests.swift; sourceTree = "<group>"; };
+		AC5DEAA328CF882000A41259 /* HoroscopeResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeResponseTests.swift; sourceTree = "<group>"; };
+		AC5DEAA628D07F4800A41259 /* Aster.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Aster.xcdatamodel; sourceTree = "<group>"; };
+		AC5DEAA828D0836000A41259 /* UserEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AC5DEAA928D0836000A41259 /* UserEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AC5DEAAA28D0836000A41259 /* CardEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AC5DEAAB28D0836000A41259 /* CardEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AC6BF57D28CB7DD5007BF723 /* AsterCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AsterCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC6BF5A228CB810D007BF723 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		AC6BF5A428CB813E007BF723 /* CoreDataPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPersistence.swift; sourceTree = "<group>"; };
+		AC6BF5A628CB8162007BF723 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		AC6BF5AB28CB8190007BF723 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AC6BF5AE28CB81A7007BF723 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		AC6BF5B928CB8285007BF723 /* CardEntity+Transformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardEntity+Transformation.swift"; sourceTree = "<group>"; };
+		AC6BF5C028CB831D007BF723 /* UserEntity+Transformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserEntity+Transformation.swift"; sourceTree = "<group>"; };
+		AC6BF5C328CB83AE007BF723 /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
+		AC6BF5C528CB841F007BF723 /* AstrologicalSigns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstrologicalSigns.swift; sourceTree = "<group>"; };
+		AC6BF5C828CB8477007BF723 /* HoroscopeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeService.swift; sourceTree = "<group>"; };
+		AC6BF5CA28CB8489007BF723 /* HoroscopeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeResponse.swift; sourceTree = "<group>"; };
+		AC6BF5CC28CB84A4007BF723 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		AC6BF5CE28CB84B6007BF723 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		AC96C32A28E5CB560066A9D7 /* CardStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStore.swift; sourceTree = "<group>"; };
+		AC96C32E28E5CBF50066A9D7 /* CardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardService.swift; sourceTree = "<group>"; };
+		AC96C33028E5CCCB0066A9D7 /* CoreDataPersistenceCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPersistenceCard.swift; sourceTree = "<group>"; };
+		ACB54B8028EAC80100B1CF68 /* CoreDataPersistenceCardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPersistenceCardTests.swift; sourceTree = "<group>"; };
+		ACB54B8428EC8B6A00B1CF68 /* AstrologicalSignsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstrologicalSignsTests.swift; sourceTree = "<group>"; };
+		ACE77D3628D9B60000E08F2B /* Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC5DEA8128CF767C00A41259 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC5DEA8828CF767C00A41259 /* AsterCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC6BF57A28CB7DD5007BF723 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AC5DEA7B28CF75D300A41259 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AC5DEAA028CF86D800A41259 /* Horoscope */,
+				AC5DEA7D28CF75F300A41259 /* CoreData */,
+				AC5DEA9328CF7EDA00A41259 /* NetworkServiceTests.swift */,
+				AC5DEA9528CF7F0E00A41259 /* StubNetworkService.swift */,
+				AC5DEA9728CF7F2E00A41259 /* MockURLProtocol.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AC5DEA7D28CF75F300A41259 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				AC5DEA8E28CF76A600A41259 /* TestCoreDataStack.swift */,
+				AC5DEA9028CF76E000A41259 /* CoreDataPersistenceTests.swift */,
+				ACB54B8028EAC80100B1CF68 /* CoreDataPersistenceCardTests.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		AC5DEA8528CF767C00A41259 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				ACB54B8328EC8B5300B1CF68 /* Models */,
+				AC5DEA9C28CF802200A41259 /* Extension */,
+				AC5DEA9928CF7F4900A41259 /* Ressources */,
+				AC5DEA7B28CF75D300A41259 /* Services */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		AC5DEA9928CF7F4900A41259 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				AC5DEA9A28CF7F5C00A41259 /* Mock.bundle */,
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
+		AC5DEA9C28CF802200A41259 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				AC5DEA9D28CF803000A41259 /* XCTestCaseExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		AC5DEAA028CF86D800A41259 /* Horoscope */ = {
+			isa = PBXGroup;
+			children = (
+				AC5DEAA128CF86F200A41259 /* HoroscopeServiceTests.swift */,
+				AC5DEAA328CF882000A41259 /* HoroscopeResponseTests.swift */,
+			);
+			path = Horoscope;
+			sourceTree = "<group>";
+		};
+		AC6BF57328CB7DD5007BF723 = {
+			isa = PBXGroup;
+			children = (
+				AC6BF58728CB7E34007BF723 /* Sources */,
+				AC5DEA8528CF767C00A41259 /* Tests */,
+				AC6BF57E28CB7DD5007BF723 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AC6BF57E28CB7DD5007BF723 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC6BF57D28CB7DD5007BF723 /* AsterCore.framework */,
+				AC5DEA8428CF767C00A41259 /* AsterCoreTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC6BF58728CB7E34007BF723 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AC6BF5B328CB8219007BF723 /* Entities */,
+				AC6BF5A828CB8175007BF723 /* Models */,
+				AC6BF5A028CB80F8007BF723 /* Services */,
+				AC6BF5C228CB83A5007BF723 /* Store */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		AC6BF5A028CB80F8007BF723 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AC6BF5A128CB80FF007BF723 /* CoreData */,
+				AC6BF5C728CB8468007BF723 /* HoroscopeService */,
+				AC6BF5CC28CB84A4007BF723 /* NetworkService.swift */,
+				AC6BF5CE28CB84B6007BF723 /* ServiceError.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AC6BF5A128CB80FF007BF723 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				AC96C32D28E5CBB60066A9D7 /* Card */,
+				AC96C32C28E5CBAD0066A9D7 /* User */,
+				AC6BF5A628CB8162007BF723 /* CoreDataStack.swift */,
+				AC5DEAA528D07F4800A41259 /* Aster.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		AC6BF5A828CB8175007BF723 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AC6BF5C528CB841F007BF723 /* AstrologicalSigns.swift */,
+				AC6BF5AE28CB81A7007BF723 /* Card.swift */,
+				ACE77D3628D9B60000E08F2B /* Cards.swift */,
+				AC6BF5AB28CB8190007BF723 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AC6BF5B328CB8219007BF723 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				AC6BF5BB28CB82BE007BF723 /* UserEntity */,
+				AC6BF5B428CB8248007BF723 /* CardEntity */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		AC6BF5B428CB8248007BF723 /* CardEntity */ = {
+			isa = PBXGroup;
+			children = (
+				AC5DEAAA28D0836000A41259 /* CardEntity+CoreDataClass.swift */,
+				AC5DEAAB28D0836000A41259 /* CardEntity+CoreDataProperties.swift */,
+				AC6BF5B928CB8285007BF723 /* CardEntity+Transformation.swift */,
+			);
+			path = CardEntity;
+			sourceTree = "<group>";
+		};
+		AC6BF5BB28CB82BE007BF723 /* UserEntity */ = {
+			isa = PBXGroup;
+			children = (
+				AC5DEAA828D0836000A41259 /* UserEntity+CoreDataClass.swift */,
+				AC5DEAA928D0836000A41259 /* UserEntity+CoreDataProperties.swift */,
+				AC6BF5C028CB831D007BF723 /* UserEntity+Transformation.swift */,
+			);
+			path = UserEntity;
+			sourceTree = "<group>";
+		};
+		AC6BF5C228CB83A5007BF723 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				AC6BF5C328CB83AE007BF723 /* UserStore.swift */,
+				AC96C32A28E5CB560066A9D7 /* CardStore.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		AC6BF5C728CB8468007BF723 /* HoroscopeService */ = {
+			isa = PBXGroup;
+			children = (
+				AC6BF5C828CB8477007BF723 /* HoroscopeService.swift */,
+				AC6BF5CA28CB8489007BF723 /* HoroscopeResponse.swift */,
+				AC33671328E22F7B0085D52F /* ProtocolService.swift */,
+			);
+			path = HoroscopeService;
+			sourceTree = "<group>";
+		};
+		AC96C32C28E5CBAD0066A9D7 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				AC6BF5A228CB810D007BF723 /* UserService.swift */,
+				AC6BF5A428CB813E007BF723 /* CoreDataPersistence.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		AC96C32D28E5CBB60066A9D7 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				AC96C32E28E5CBF50066A9D7 /* CardService.swift */,
+				AC96C33028E5CCCB0066A9D7 /* CoreDataPersistenceCard.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		ACB54B8328EC8B5300B1CF68 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ACB54B8428EC8B6A00B1CF68 /* AstrologicalSignsTests.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		AC6BF57828CB7DD5007BF723 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		AC5DEA8328CF767C00A41259 /* AsterCoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC5DEA8B28CF767C00A41259 /* Build configuration list for PBXNativeTarget "AsterCoreTests" */;
+			buildPhases = (
+				AC5DEA8028CF767C00A41259 /* Sources */,
+				AC5DEA8128CF767C00A41259 /* Frameworks */,
+				AC5DEA8228CF767C00A41259 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC5DEA8A28CF767C00A41259 /* PBXTargetDependency */,
+			);
+			name = AsterCoreTests;
+			productName = AsterCoreTests;
+			productReference = AC5DEA8428CF767C00A41259 /* AsterCoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AC6BF57C28CB7DD5007BF723 /* AsterCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC6BF58428CB7DD5007BF723 /* Build configuration list for PBXNativeTarget "AsterCore" */;
+			buildPhases = (
+				AC6BF57828CB7DD5007BF723 /* Headers */,
+				AC6BF57928CB7DD5007BF723 /* Sources */,
+				AC6BF57A28CB7DD5007BF723 /* Frameworks */,
+				AC6BF57B28CB7DD5007BF723 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AsterCore;
+			productName = AsterCore;
+			productReference = AC6BF57D28CB7DD5007BF723 /* AsterCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC6BF57428CB7DD5007BF723 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					AC5DEA8328CF767C00A41259 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					AC6BF57C28CB7DD5007BF723 = {
+						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
+					};
+				};
+			};
+			buildConfigurationList = AC6BF57728CB7DD5007BF723 /* Build configuration list for PBXProject "AsterCore" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AC6BF57328CB7DD5007BF723;
+			productRefGroup = AC6BF57E28CB7DD5007BF723 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC6BF57C28CB7DD5007BF723 /* AsterCore */,
+				AC5DEA8328CF767C00A41259 /* AsterCoreTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC5DEA8228CF767C00A41259 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC5DEA9B28CF7F5C00A41259 /* Mock.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC6BF57B28CB7DD5007BF723 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC5DEA8028CF767C00A41259 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACB54B8528EC8B6A00B1CF68 /* AstrologicalSignsTests.swift in Sources */,
+				AC5DEA9628CF7F0E00A41259 /* StubNetworkService.swift in Sources */,
+				AC5DEA9E28CF803000A41259 /* XCTestCaseExtension.swift in Sources */,
+				ACB54B8128EAC80100B1CF68 /* CoreDataPersistenceCardTests.swift in Sources */,
+				AC5DEA9828CF7F2E00A41259 /* MockURLProtocol.swift in Sources */,
+				AC5DEAA428CF882000A41259 /* HoroscopeResponseTests.swift in Sources */,
+				AC5DEA9128CF76E000A41259 /* CoreDataPersistenceTests.swift in Sources */,
+				AC5DEA9428CF7EDA00A41259 /* NetworkServiceTests.swift in Sources */,
+				AC5DEA8F28CF76A600A41259 /* TestCoreDataStack.swift in Sources */,
+				AC5DEAA228CF86F200A41259 /* HoroscopeServiceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC6BF57928CB7DD5007BF723 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC6BF5C628CB841F007BF723 /* AstrologicalSigns.swift in Sources */,
+				AC6BF5CB28CB8489007BF723 /* HoroscopeResponse.swift in Sources */,
+				AC96C33128E5CCCB0066A9D7 /* CoreDataPersistenceCard.swift in Sources */,
+				AC6BF5CD28CB84A4007BF723 /* NetworkService.swift in Sources */,
+				AC5DEAAE28D0836000A41259 /* CardEntity+CoreDataClass.swift in Sources */,
+				AC5DEAAC28D0836000A41259 /* UserEntity+CoreDataClass.swift in Sources */,
+				AC96C32F28E5CBF50066A9D7 /* CardService.swift in Sources */,
+				AC6BF5CF28CB84B6007BF723 /* ServiceError.swift in Sources */,
+				AC5DEAA728D07F4800A41259 /* Aster.xcdatamodeld in Sources */,
+				AC6BF5AC28CB8190007BF723 /* User.swift in Sources */,
+				AC6BF5BA28CB8285007BF723 /* CardEntity+Transformation.swift in Sources */,
+				AC6BF5C928CB8477007BF723 /* HoroscopeService.swift in Sources */,
+				AC6BF5A728CB8162007BF723 /* CoreDataStack.swift in Sources */,
+				AC5DEAAD28D0836000A41259 /* UserEntity+CoreDataProperties.swift in Sources */,
+				AC6BF5AF28CB81A7007BF723 /* Card.swift in Sources */,
+				AC6BF5C128CB831D007BF723 /* UserEntity+Transformation.swift in Sources */,
+				AC6BF5A528CB813E007BF723 /* CoreDataPersistence.swift in Sources */,
+				AC96C32B28E5CB560066A9D7 /* CardStore.swift in Sources */,
+				AC6BF5A328CB810D007BF723 /* UserService.swift in Sources */,
+				ACE77D3728D9B60000E08F2B /* Cards.swift in Sources */,
+				AC33671428E22F7B0085D52F /* ProtocolService.swift in Sources */,
+				AC5DEAAF28D0836000A41259 /* CardEntity+CoreDataProperties.swift in Sources */,
+				AC6BF5C428CB83AE007BF723 /* UserStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AC5DEA8A28CF767C00A41259 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = AC6BF57C28CB7DD5007BF723 /* AsterCore */;
+			targetProxy = AC5DEA8928CF767C00A41259 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AC5DEA8C28CF767C00A41259 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PUYAVM797H;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AlexandreBeltzung.AsterCoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		AC5DEA8D28CF767C00A41259 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PUYAVM797H;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AlexandreBeltzung.AsterCoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		AC6BF58228CB7DD5007BF723 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = AlexandreBeltzung.AsterCore;
+				PRODUCT_NAME = AsterCore;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AC6BF58328CB7DD5007BF723 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = AlexandreBeltzung.AsterCore;
+				PRODUCT_NAME = AsterCore;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AC6BF58528CB7DD5007BF723 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		AC6BF58628CB7DD5007BF723 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC5DEA8B28CF767C00A41259 /* Build configuration list for PBXNativeTarget "AsterCoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC5DEA8C28CF767C00A41259 /* Debug */,
+				AC5DEA8D28CF767C00A41259 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC6BF57728CB7DD5007BF723 /* Build configuration list for PBXProject "AsterCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC6BF58228CB7DD5007BF723 /* Debug */,
+				AC6BF58328CB7DD5007BF723 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC6BF58428CB7DD5007BF723 /* Build configuration list for PBXNativeTarget "AsterCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC6BF58528CB7DD5007BF723 /* Debug */,
+				AC6BF58628CB7DD5007BF723 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AC5DEAA528D07F4800A41259 /* Aster.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AC5DEAA628D07F4800A41259 /* Aster.xcdatamodel */,
+			);
+			currentVersion = AC5DEAA628D07F4800A41259 /* Aster.xcdatamodel */;
+			path = Aster.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = AC6BF57428CB7DD5007BF723 /* Project object */;
+}

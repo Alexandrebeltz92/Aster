@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:AsterCore/AsterCore.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Aster.xcodeproj">
    </FileRef>
    <FileRef
