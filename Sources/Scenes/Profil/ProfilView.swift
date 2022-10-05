@@ -16,7 +16,7 @@ struct ProfilView: View {
     @State private var navigateToLearnMore = false
 
     var astroImage: UIImage {
-        if let image = UIImage(named: viewModel.userToDisplay.astrologicalSign.capitalized) {
+        if let image = UIImage(named: viewModel.userToDisplay.astrologicalSign) {
             return image
         } else {
             guard let defaultImage = UIImage(named: "defaultImage") else {
